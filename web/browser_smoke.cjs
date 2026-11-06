@@ -21,7 +21,9 @@ async function main() {
       if (await page.locator('#status').textContent() !== 'Ready') {
         throw new Error(await page.locator('#details').textContent());
       }
-      await page.waitForTimeout(1000);
+      await page.waitForTimeout(3000);
+      assert.equal(await py('pyglet.app.event_loop.is_running'), true);
+      assert.equal(await py('_browser_loop_error'), '');
     }
     async function coordinates(x, y) {
       const box = await page.locator('canvas').boundingBox();
@@ -49,6 +51,10 @@ async function main() {
 
     await page.goto(process.env.GAMETRIX_WEB_URL || 'http://127.0.0.1:8000/');
     await ready();
+    // Pyodide's clock occasionally produces a negative scheduling delay.
+    // It must run immediately rather than terminating the game loop.
+    await py("_timer_test=asyncio.Event(); _event_loop.call_later(-1, _timer_test.set)");
+    await page.waitForFunction(() => window.gamePython.runPython('_timer_test.is_set()'), null, { timeout: 5000 });
     const seed = await py('window.current_view.seed.text');
     await click(200, 323);
     await page.keyboard.press('End');

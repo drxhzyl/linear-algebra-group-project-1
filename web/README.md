@@ -23,11 +23,12 @@ They survive reloads in the same browser and origin, but do not synchronize
 with the desktop game or other browsers and can be deleted by clearing site
 data. The game displays a save warning if browser storage is unavailable.
 
-The browser bootstrap supplies its own draw interval, recreates pyglet's WebGL
-buffer view after WebAssembly memory growth, fixes framebuffer dimensions, and
-converts scaled browser pointer and wheel coordinates to the desktop table's
-logical coordinates. These workarounds are tied to the pinned preview versions
-and should be rechecked when upgrading Arcade or pyglet.
+The browser bootstrap supplies its own draw interval, prevents an intermittent
+Pyodide timer error, recreates pyglet's WebGL buffer view after WebAssembly
+memory growth, fixes framebuffer dimensions, and converts scaled browser
+pointer and wheel coordinates to the desktop table's logical coordinates.
+These workarounds are tied to the pinned preview versions and should be
+rechecked when upgrading Arcade, pyglet, or Pyodide.
 
 ## Verification
 
@@ -37,7 +38,7 @@ a Chrome or Chromium executable. For example, on macOS, while the local server
 is running:
 
 ```sh
-npm install --prefix web --no-save playwright-core@1.65.0
+npm install --prefix web --no-package-lock --no-save playwright-core@1.65.0
 GAMETRIX_CHROME='/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' node web/browser_smoke.cjs
 ```
 

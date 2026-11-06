@@ -1,5 +1,6 @@
 """Browser entry point; the desktop game and its save files stay separate."""
 
+import asyncio
 import os
 from pathlib import Path
 import sys
@@ -50,6 +51,19 @@ def _browser_save(self):
 
 
 app.Board.save = _browser_save
+
+# Pyodide's web loop rejects negative delays, while asyncio's normal contract
+# treats them as immediate. A timeout can become negative between call_at's
+# time check and call_later; clamp it to prevent an intermittent loop crash.
+_event_loop = asyncio.get_running_loop()
+_call_later = _event_loop.call_later
+
+
+def _browser_call_later(delay, callback, *args, context=None):
+    return _call_later(max(0.0, delay), callback, *args, context=context)
+
+
+_event_loop.call_later = _browser_call_later
 
 # Pyodide can grow its WebAssembly memory after pyglet has cached a zero-copy
 # view. Growth detaches the old ArrayBuffer; recreate the view when needed.
