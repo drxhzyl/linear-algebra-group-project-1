@@ -1,0 +1,158 @@
+{
+  "kind": "gametrix-session",
+  "version": 1,
+  "deck": "/Users/qizhengwang/Desktop/school/GameTrix/generated/deck.json",
+  "deck_sha256": "38824be5406d3dca771a06dba3b5017253913858f049328d87b5c11e3bad2035",
+  "seed": 105,
+  "objective": {
+    "id": "C04",
+    "name": "Two-way Balance",
+    "tier": "Core",
+    "shape": "Square 3–4",
+    "goal": "Make every row sum and every column sum exactly 1, with at least one negative entry.",
+    "A": [
+      [
+        1,
+        1,
+        -1
+      ],
+      [
+        -1,
+        1,
+        1
+      ],
+      [
+        1,
+        -1,
+        1
+      ]
+    ],
+    "check": "All three row sums and column sums are 1; negative entries occur.",
+    "note": "Row sums and column sums both equal to 1 force a square shape: their totals are m and n. Size 2 is excluded here because its negative-entry solutions automatically satisfy Mirror Match, reducing variety."
+  },
+  "blue": "B05",
+  "current": [
+    [
+      0,
+      0,
+      1
+    ],
+    [
+      2,
+      0,
+      -1
+    ],
+    [
+      -3,
+      -3,
+      -1
+    ]
+  ],
+  "mode": "draw",
+  "player": "student",
+  "turn_cap": 8,
+  "move_cap": 16,
+  "turn": 1,
+  "turn_operations": 0,
+  "moves": 0,
+  "status": "stopped",
+  "history": [
+    {
+      "type": "stop",
+      "turn": 1,
+      "note": "Row and column totals need different corrections; the visible same-size add and available red vectors do not show a clear useful first move."
+    }
+  ],
+  "operation_draw": [
+    "O27",
+    "O38",
+    "O07",
+    "O10",
+    "O05",
+    "O14",
+    "O28",
+    "O32",
+    "O01",
+    "O15",
+    "O35",
+    "O29",
+    "O21",
+    "O13",
+    "O11",
+    "O09",
+    "O06",
+    "O34",
+    "O31",
+    "O08",
+    "O30",
+    "O17",
+    "O20",
+    "O23",
+    "O37",
+    "O18",
+    "O02",
+    "O19",
+    "O03",
+    "O24",
+    "O12",
+    "O40",
+    "O26",
+    "O33",
+    "O39",
+    "O22",
+    "O25"
+  ],
+  "operation_hand": [
+    "O36",
+    "O04",
+    "O16"
+  ],
+  "operation_discard": [],
+  "operation_cycles": 0,
+  "red_draw": [
+    "R27",
+    "R14",
+    "R06",
+    "R13",
+    "R10",
+    "R03",
+    "R20",
+    "R08",
+    "R22",
+    "R29",
+    "R23",
+    "R05",
+    "R16",
+    "R07",
+    "R30",
+    "R11",
+    "R26",
+    "R12",
+    "R19",
+    "R18",
+    "R17",
+    "R15",
+    "R01",
+    "R09",
+    "R24"
+  ],
+  "red_hand": [
+    "R04",
+    "R25",
+    "R28",
+    "R21",
+    "R02"
+  ],
+  "red_discard": [],
+  "red_cycles": 0,
+  "student_budget": {
+    "protocol": "student_tests/PILOT_PROTOCOL.md",
+    "plans": [],
+    "previews": [],
+    "candidate_limit_per_turn": 2,
+    "preview_limit_per_turn": 1,
+    "preview_limit_total": 6
+  },
+  "stop_reason": "Row and column totals need different corrections; the visible same-size add and available red vectors do not show a clear useful first move.",
+  "experiment_phase": "pilot"
+}

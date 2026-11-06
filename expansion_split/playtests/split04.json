@@ -1,0 +1,833 @@
+{
+  "kind": "gametrix-session",
+  "version": 1,
+  "deck": "/Users/qizhengwang/Desktop/school/GameTrix/expansion_split/generated/deck.json",
+  "deck_sha256": "e16214b744b9807ead74ec891a8a6e5bedbf7424e9455343b9a11288a422d4c8",
+  "seed": 301,
+  "objective": {
+    "id": "C11",
+    "name": "Orthogonal Columns",
+    "tier": "Core",
+    "shape": "Tall: 3×2, 4×2, or 4×3",
+    "goal": "Make a tall matrix whose columns are nonzero and pairwise orthogonal, with no zero rows. Equivalently, AᵀA is diagonal with positive diagonal entries.",
+    "A": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        -1
+      ],
+      [
+        1,
+        0
+      ]
+    ],
+    "check": "AᵀA = diag(3,2), and every row is nonzero.",
+    "note": "The columns need not have unit length, so integer solutions are possible. Appending a row r adds rᵀr to AᵀA; it changes orthogonality rather than guaranteeing it. This goal is the transpose counterpart of C12."
+  },
+  "blue": "B01",
+  "current": [
+    [
+      1,
+      1,
+      0
+    ],
+    [
+      1,
+      -1,
+      0
+    ],
+    [
+      0,
+      0,
+      -2
+    ],
+    [
+      0,
+      0,
+      1
+    ]
+  ],
+  "mode": "draw",
+  "player": "split",
+  "turn_cap": 8,
+  "move_cap": 16,
+  "turn": 5,
+  "turn_operations": 1,
+  "moves": 6,
+  "status": "won",
+  "history": [
+    {
+      "type": "play",
+      "turn": 1,
+      "operation": "O49",
+      "code": "entry_plus",
+      "red": "R25",
+      "params": {
+        "axis": "row",
+        "source": null,
+        "target": null,
+        "i": 2,
+        "j": 1,
+        "factor": "L",
+        "exponent": 2,
+        "delta": 1
+      },
+      "before": [
+        [
+          1,
+          2,
+          2
+        ],
+        [
+          1,
+          -1,
+          2
+        ],
+        [
+          0,
+          -2,
+          -2
+        ]
+      ],
+      "after": [
+        [
+          1,
+          2,
+          2
+        ],
+        [
+          1,
+          -1,
+          2
+        ],
+        [
+          0,
+          -1,
+          -2
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": false,
+          "nonzero_vectors": true,
+          "orthogonal_vectors": false,
+          "no_zero_rows": true
+        },
+        "shape": [
+          3,
+          3
+        ]
+      },
+      "note": "[progress] Reduce the positive dot-product contribution shared by the last two columns.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "end_turn",
+      "turn": 1,
+      "note": "student budget test",
+      "drawn": {
+        "operations": [
+          "O32",
+          "O43",
+          "O17"
+        ],
+        "red": [
+          "R10",
+          "R18",
+          "R06",
+          "R01",
+          "R17"
+        ]
+      }
+    },
+    {
+      "type": "play",
+      "turn": 2,
+      "operation": "O43",
+      "code": "entry_plus",
+      "red": "R06",
+      "params": {
+        "axis": "row",
+        "source": null,
+        "target": null,
+        "i": 2,
+        "j": 1,
+        "factor": "L",
+        "exponent": 2,
+        "delta": 1
+      },
+      "before": [
+        [
+          1,
+          2,
+          2
+        ],
+        [
+          1,
+          -1,
+          2
+        ],
+        [
+          0,
+          -1,
+          -2
+        ]
+      ],
+      "after": [
+        [
+          1,
+          2,
+          2
+        ],
+        [
+          1,
+          -1,
+          2
+        ],
+        [
+          0,
+          0,
+          -2
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": false,
+          "nonzero_vectors": true,
+          "orthogonal_vectors": false,
+          "no_zero_rows": true
+        },
+        "shape": [
+          3,
+          3
+        ]
+      },
+      "note": "[progress] Remove the remaining bottom-row contribution between the last two columns.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "end_turn",
+      "turn": 2,
+      "note": "student budget test",
+      "drawn": {
+        "operations": [
+          "O34",
+          "O65",
+          "O61"
+        ],
+        "red": [
+          "R26",
+          "R03",
+          "R29",
+          "R13",
+          "R08"
+        ]
+      }
+    },
+    {
+      "type": "play",
+      "turn": 3,
+      "operation": "O61",
+      "code": "entry_minus",
+      "red": "R29",
+      "params": {
+        "axis": "row",
+        "source": null,
+        "target": null,
+        "i": 0,
+        "j": 1,
+        "factor": "L",
+        "exponent": 2,
+        "delta": 1
+      },
+      "before": [
+        [
+          1,
+          2,
+          2
+        ],
+        [
+          1,
+          -1,
+          2
+        ],
+        [
+          0,
+          0,
+          -2
+        ]
+      ],
+      "after": [
+        [
+          1,
+          1,
+          2
+        ],
+        [
+          1,
+          -1,
+          2
+        ],
+        [
+          0,
+          0,
+          -2
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": false,
+          "nonzero_vectors": true,
+          "orthogonal_vectors": false,
+          "no_zero_rows": true
+        },
+        "shape": [
+          3,
+          3
+        ]
+      },
+      "note": "[progress] Make the first two column dot product cancel as one minus one.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "end_turn",
+      "turn": 3,
+      "note": "student budget test",
+      "drawn": {
+        "operations": [
+          "O58",
+          "O36",
+          "O22"
+        ],
+        "red": [
+          "R02",
+          "R22",
+          "R05",
+          "R09",
+          "R28"
+        ]
+      }
+    },
+    {
+      "type": "play",
+      "turn": 4,
+      "operation": "O22",
+      "code": "append_vector",
+      "red": "R15",
+      "params": {
+        "axis": "row",
+        "source": 1,
+        "target": null,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2,
+        "delta": 1
+      },
+      "before": [
+        [
+          1,
+          1,
+          2
+        ],
+        [
+          1,
+          -1,
+          2
+        ],
+        [
+          0,
+          0,
+          -2
+        ]
+      ],
+      "after": [
+        [
+          1,
+          1,
+          2
+        ],
+        [
+          1,
+          -1,
+          2
+        ],
+        [
+          0,
+          0,
+          -2
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "nonzero_vectors": true,
+          "orthogonal_vectors": false,
+          "no_zero_rows": true
+        },
+        "shape": [
+          4,
+          3
+        ]
+      },
+      "note": "[progress] Reach the permitted tall shape with a nonzero row that preserves the first two orthogonal columns.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "play",
+      "turn": 4,
+      "operation": "O65",
+      "code": "entry_zero",
+      "red": "R04",
+      "params": {
+        "axis": "row",
+        "source": null,
+        "target": null,
+        "i": 0,
+        "j": 2,
+        "factor": "L",
+        "exponent": 2,
+        "delta": 1
+      },
+      "before": [
+        [
+          1,
+          1,
+          2
+        ],
+        [
+          1,
+          -1,
+          2
+        ],
+        [
+          0,
+          0,
+          -2
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "after": [
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          -1,
+          2
+        ],
+        [
+          0,
+          0,
+          -2
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "nonzero_vectors": true,
+          "orthogonal_vectors": false,
+          "no_zero_rows": true
+        },
+        "shape": [
+          4,
+          3
+        ]
+      },
+      "note": "[progress] Clear one overlapping entry of the third column.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "end_turn",
+      "turn": 4,
+      "note": "student budget test",
+      "drawn": {
+        "operations": [
+          "O35",
+          "O33",
+          "O78"
+        ],
+        "red": [
+          "R16",
+          "R12",
+          "R19",
+          "R30",
+          "R07"
+        ]
+      }
+    },
+    {
+      "type": "play",
+      "turn": 5,
+      "operation": "O78",
+      "code": "combine_vectors",
+      "red": null,
+      "params": {
+        "axis": "row",
+        "source": 2,
+        "target": 1,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2,
+        "delta": 1
+      },
+      "before": [
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          -1,
+          2
+        ],
+        [
+          0,
+          0,
+          -2
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "after": [
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          -1,
+          0
+        ],
+        [
+          0,
+          0,
+          -2
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": true,
+        "checks": {
+          "shape": true,
+          "nonzero_vectors": true,
+          "orthogonal_vectors": true,
+          "no_zero_rows": true
+        },
+        "shape": [
+          4,
+          3
+        ]
+      },
+      "note": "[progress] Add the negative-two-only row to clear the remaining overlap in the third column.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    }
+  ],
+  "operation_draw": [
+    "O72",
+    "O27",
+    "O55",
+    "O30",
+    "O15",
+    "O71",
+    "O21",
+    "O64",
+    "O41",
+    "O26",
+    "O66",
+    "O68",
+    "O19",
+    "O74",
+    "O29",
+    "O42",
+    "O77",
+    "O59",
+    "O44",
+    "O14",
+    "O38",
+    "O45",
+    "O25",
+    "O69",
+    "O05",
+    "O24",
+    "O62",
+    "O56",
+    "O57",
+    "O16",
+    "O12",
+    "O60",
+    "O06",
+    "O02",
+    "O09",
+    "O11",
+    "O46",
+    "O01",
+    "O40",
+    "O48",
+    "O63",
+    "O10",
+    "O50",
+    "O23",
+    "O75",
+    "O73",
+    "O37",
+    "O67",
+    "O47",
+    "O13",
+    "O07",
+    "O53",
+    "O80",
+    "O54",
+    "O31",
+    "O51",
+    "O76",
+    "O20",
+    "O08",
+    "O03",
+    "O18",
+    "O39",
+    "O79",
+    "O70",
+    "O52"
+  ],
+  "operation_hand": [
+    "O04",
+    "O28",
+    "O32",
+    "O17",
+    "O34",
+    "O58",
+    "O36",
+    "O35",
+    "O33"
+  ],
+  "operation_discard": [
+    "O49",
+    "O43",
+    "O61",
+    "O22",
+    "O65",
+    "O78"
+  ],
+  "operation_cycles": 0,
+  "red_draw": [
+    "R20",
+    "R11",
+    "R27",
+    "R24",
+    "R14"
+  ],
+  "red_hand": [
+    "R23",
+    "R21",
+    "R10",
+    "R18",
+    "R01",
+    "R17",
+    "R26",
+    "R03",
+    "R13",
+    "R08",
+    "R02",
+    "R22",
+    "R05",
+    "R09",
+    "R28",
+    "R16",
+    "R12",
+    "R19",
+    "R30",
+    "R07"
+  ],
+  "red_discard": [
+    "R25",
+    "R06",
+    "R29",
+    "R15",
+    "R04"
+  ],
+  "red_cycles": 0,
+  "student_budget": {
+    "protocol": "expansion_split/PROTOCOL.md",
+    "fixed_horizon": true,
+    "plans": [
+      {
+        "id": 1,
+        "turn": 1,
+        "at_move": 0,
+        "operation": "O49",
+        "red": "R25",
+        "params": {
+          "axis": "row",
+          "source": null,
+          "target": null,
+          "i": 2,
+          "j": 1,
+          "factor": "L",
+          "exponent": 2,
+          "delta": 1
+        },
+        "note": "[progress] Reduce the positive dot-product contribution shared by the last two columns.",
+        "attempted": true
+      },
+      {
+        "id": 2,
+        "turn": 2,
+        "at_move": 1,
+        "operation": "O43",
+        "red": "R06",
+        "params": {
+          "axis": "row",
+          "source": null,
+          "target": null,
+          "i": 2,
+          "j": 1,
+          "factor": "L",
+          "exponent": 2,
+          "delta": 1
+        },
+        "note": "[progress] Remove the remaining bottom-row contribution between the last two columns.",
+        "attempted": true
+      },
+      {
+        "id": 3,
+        "turn": 3,
+        "at_move": 2,
+        "operation": "O61",
+        "red": "R29",
+        "params": {
+          "axis": "row",
+          "source": null,
+          "target": null,
+          "i": 0,
+          "j": 1,
+          "factor": "L",
+          "exponent": 2,
+          "delta": 1
+        },
+        "note": "[progress] Make the first two column dot product cancel as one minus one.",
+        "attempted": true
+      },
+      {
+        "id": 4,
+        "turn": 4,
+        "at_move": 3,
+        "operation": "O22",
+        "red": "R15",
+        "params": {
+          "axis": "row",
+          "source": 1,
+          "target": null,
+          "i": null,
+          "j": null,
+          "factor": "L",
+          "exponent": 2,
+          "delta": 1
+        },
+        "note": "[progress] Reach the permitted tall shape with a nonzero row that preserves the first two orthogonal columns.",
+        "attempted": true
+      },
+      {
+        "id": 5,
+        "turn": 4,
+        "at_move": 4,
+        "operation": "O65",
+        "red": "R04",
+        "params": {
+          "axis": "row",
+          "source": null,
+          "target": null,
+          "i": 0,
+          "j": 2,
+          "factor": "L",
+          "exponent": 2,
+          "delta": 1
+        },
+        "note": "[progress] Clear one overlapping entry of the third column.",
+        "attempted": true
+      },
+      {
+        "id": 6,
+        "turn": 5,
+        "at_move": 5,
+        "operation": "O78",
+        "red": null,
+        "params": {
+          "axis": "row",
+          "source": 2,
+          "target": 1,
+          "i": null,
+          "j": null,
+          "factor": "L",
+          "exponent": 2,
+          "delta": 1
+        },
+        "note": "[progress] Add the negative-two-only row to clear the remaining overlap in the third column.",
+        "attempted": true
+      }
+    ],
+    "previews": [],
+    "candidate_limit_per_turn": 2,
+    "preview_limit_per_turn": 1,
+    "preview_limit_total": 6
+  },
+  "experiment_phase": "split_signs_fixed_horizon"
+}

@@ -1,0 +1,557 @@
+{
+  "kind": "gametrix-session",
+  "version": 1,
+  "deck": "/Users/qizhengwang/Desktop/school/GameTrix/playtests/deck_used.json",
+  "deck_sha256": "a71ff8f4cd105b923a74f191cd32e1ded855a2792d72c4005c74dd57f03615c3",
+  "seed": 203,
+  "objective": {
+    "id": "C08",
+    "name": "Projection",
+    "tier": "Advanced",
+    "shape": "Square 3–4",
+    "goal": "Make a non-diagonal rank-2 matrix satisfying A² = A.",
+    "A": [
+      [
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "check": "A² = A and rank(A) = 2; A is non-diagonal.",
+    "note": "A 2×2 rank-2 idempotent must be I₂ and therefore cannot qualify. Low-rank red cards provide useful ingredients, but making a matrix singular alone is insufficient."
+  },
+  "blue": "B09",
+  "current": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      3,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      1
+    ]
+  ],
+  "mode": "open",
+  "player": "play_advanced",
+  "turn_cap": 8,
+  "move_cap": 8,
+  "turn": 1,
+  "turn_operations": 6,
+  "moves": 6,
+  "status": "won",
+  "history": [
+    {
+      "type": "play",
+      "turn": 1,
+      "operation": "O25",
+      "code": "replace_vector",
+      "red": "R03",
+      "params": {
+        "axis": "row",
+        "source": 0,
+        "target": 0,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2
+      },
+      "before": [
+        [
+          3,
+          -1,
+          0
+        ],
+        [
+          -3,
+          0,
+          0
+        ],
+        [
+          1,
+          -1,
+          -2
+        ]
+      ],
+      "after": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          -3,
+          0,
+          0
+        ],
+        [
+          1,
+          -1,
+          -2
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "non_diagonal": true,
+          "rank_two": true,
+          "idempotent": false
+        },
+        "shape": [
+          3,
+          3
+        ]
+      },
+      "note": "Normalize the first row so the rank-one product has first coordinate one.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "play",
+      "turn": 1,
+      "operation": "O11",
+      "code": "multiply",
+      "red": "R13",
+      "params": {
+        "axis": "row",
+        "source": null,
+        "target": null,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2
+      },
+      "before": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          -3,
+          0,
+          0
+        ],
+        [
+          1,
+          -1,
+          -2
+        ]
+      ],
+      "after": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          -3,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "non_diagonal": true,
+          "rank_two": false,
+          "idempotent": true
+        },
+        "shape": [
+          3,
+          3
+        ]
+      },
+      "note": "Collapse to u e1T with e1T u equal to one.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "play",
+      "turn": 1,
+      "operation": "O37",
+      "code": "negate",
+      "red": null,
+      "params": {
+        "axis": "row",
+        "source": null,
+        "target": null,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2
+      },
+      "before": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          -3,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "after": [
+        [
+          -1,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "non_diagonal": true,
+          "rank_two": false,
+          "idempotent": false
+        },
+        "shape": [
+          3,
+          3
+        ]
+      },
+      "note": "Negate the rank-one idempotent.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "play",
+      "turn": 1,
+      "operation": "O33",
+      "code": "shift_plus",
+      "red": null,
+      "params": {
+        "axis": "row",
+        "source": null,
+        "target": null,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2
+      },
+      "before": [
+        [
+          -1,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "after": [
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          4,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "non_diagonal": true,
+          "rank_two": true,
+          "idempotent": false
+        },
+        "shape": [
+          3,
+          3
+        ]
+      },
+      "note": "Take its complementary rank-two non-diagonal projection.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "play",
+      "turn": 1,
+      "operation": "O36",
+      "code": "shift_minus",
+      "red": null,
+      "params": {
+        "axis": "row",
+        "source": null,
+        "target": null,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2
+      },
+      "before": [
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          4,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "after": [
+        [
+          -1,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "non_diagonal": true,
+          "rank_two": false,
+          "idempotent": false
+        },
+        "shape": [
+          3,
+          3
+        ]
+      },
+      "note": "Correct the entrywise shift; the complement requires an identity card.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "play",
+      "turn": 1,
+      "operation": "O06",
+      "code": "subtract",
+      "red": "R04",
+      "params": {
+        "axis": "row",
+        "source": null,
+        "target": null,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2
+      },
+      "before": [
+        [
+          -1,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "after": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          3,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": true,
+        "checks": {
+          "shape": true,
+          "non_diagonal": true,
+          "rank_two": true,
+          "idempotent": true
+        },
+        "shape": [
+          3,
+          3
+        ]
+      },
+      "note": "Subtract minus identity to finish I minus the rank-one idempotent.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    }
+  ],
+  "operation_draw": [],
+  "operation_hand": [
+    "O01",
+    "O02",
+    "O03",
+    "O04",
+    "O05",
+    "O07",
+    "O08",
+    "O09",
+    "O10",
+    "O12",
+    "O13",
+    "O14",
+    "O15",
+    "O16",
+    "O17",
+    "O18",
+    "O19",
+    "O20",
+    "O21",
+    "O22",
+    "O23",
+    "O24",
+    "O26",
+    "O27",
+    "O28",
+    "O29",
+    "O30",
+    "O31",
+    "O32",
+    "O34",
+    "O35",
+    "O38",
+    "O39",
+    "O40"
+  ],
+  "operation_discard": [
+    "O25",
+    "O11",
+    "O37",
+    "O33",
+    "O36",
+    "O06"
+  ],
+  "operation_cycles": 0,
+  "red_draw": [],
+  "red_hand": [
+    "R01",
+    "R02",
+    "R05",
+    "R06",
+    "R07",
+    "R08",
+    "R09",
+    "R10",
+    "R11",
+    "R12",
+    "R14",
+    "R15",
+    "R16",
+    "R17",
+    "R18",
+    "R19",
+    "R20",
+    "R21",
+    "R22",
+    "R23",
+    "R24",
+    "R25",
+    "R26",
+    "R27",
+    "R28",
+    "R29",
+    "R30"
+  ],
+  "red_discard": [
+    "R03",
+    "R13",
+    "R04"
+  ],
+  "red_cycles": 0
+}

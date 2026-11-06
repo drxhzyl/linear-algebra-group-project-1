@@ -1,0 +1,1038 @@
+{
+  "kind": "gametrix-session",
+  "version": 1,
+  "deck": "/Users/qizhengwang/Desktop/school/GameTrix/playtests/deck_used.json",
+  "deck_sha256": "a71ff8f4cd105b923a74f191cd32e1ded855a2792d72c4005c74dd57f03615c3",
+  "seed": 303,
+  "objective": {
+    "id": "C13",
+    "name": "Rectangular Balance",
+    "tier": "Core",
+    "shape": "Any non-square shape, each dimension 2–4",
+    "goal": "For an m×n matrix with m ≠ n, make every row sum n and every column sum m, with at least one negative entry.",
+    "A": [
+      [
+        -1,
+        3,
+        1
+      ],
+      [
+        3,
+        -1,
+        1
+      ]
+    ],
+    "check": "Here m = 2 and n = 3: each row sums to 3 and each column sums to 2; negative entries occur.",
+    "note": "These totals agree at mn, so rectangular solutions are possible. The negative-entry requirement excludes the all-ones matrix. Appending changes both the shape and the required row or column sums; check the complete result again."
+  },
+  "blue": "B03",
+  "current": [
+    [
+      1,
+      1,
+      1
+    ],
+    [
+      2,
+      3,
+      -2
+    ],
+    [
+      1,
+      1,
+      1
+    ],
+    [
+      0,
+      -1,
+      4
+    ]
+  ],
+  "mode": "draw",
+  "player": "play_rectangular",
+  "turn_cap": 8,
+  "move_cap": 16,
+  "turn": 7,
+  "turn_operations": 2,
+  "moves": 10,
+  "status": "won",
+  "history": [
+    {
+      "type": "play",
+      "turn": 1,
+      "operation": "O21",
+      "code": "append_vector",
+      "red": "R23",
+      "params": {
+        "axis": "column",
+        "source": 0,
+        "target": null,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2
+      },
+      "before": [
+        [
+          0,
+          -1,
+          0
+        ],
+        [
+          0,
+          1,
+          -3
+        ],
+        [
+          1,
+          2,
+          0
+        ]
+      ],
+      "after": [
+        [
+          0,
+          -1,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          -3,
+          0
+        ],
+        [
+          1,
+          2,
+          0,
+          -1
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "row_sums_n": false,
+          "column_sums_m": false,
+          "negative_entry": true
+        },
+        "shape": [
+          3,
+          4
+        ]
+      },
+      "note": "Append (1,0,-1), reaching a valid rectangular shape while bringing two row sums nearer zero for a possible uniform shift plan.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "end_turn",
+      "turn": 1,
+      "note": "",
+      "drawn": {
+        "operations": [
+          "O05",
+          "O33",
+          "O29"
+        ],
+        "red": [
+          "R11",
+          "R03",
+          "R22",
+          "R12",
+          "R01"
+        ]
+      }
+    },
+    {
+      "type": "play",
+      "turn": 2,
+      "operation": "O29",
+      "code": "transpose",
+      "red": null,
+      "params": {
+        "axis": "row",
+        "source": null,
+        "target": null,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2
+      },
+      "before": [
+        [
+          0,
+          -1,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          -3,
+          0
+        ],
+        [
+          1,
+          2,
+          0,
+          -1
+        ]
+      ],
+      "after": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          -1,
+          1,
+          2
+        ],
+        [
+          0,
+          -3,
+          0
+        ],
+        [
+          1,
+          0,
+          -1
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "row_sums_n": false,
+          "column_sums_m": false,
+          "negative_entry": true
+        },
+        "shape": [
+          4,
+          3
+        ]
+      },
+      "note": "Transpose to 4 by 3 so a later 3 by 2 product can reach 4 by 2 and replacement columns can impose balance.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "end_turn",
+      "turn": 2,
+      "note": "",
+      "drawn": {
+        "operations": [
+          "O35",
+          "O31",
+          "O07"
+        ],
+        "red": [
+          "R29",
+          "R15",
+          "R30",
+          "R13",
+          "R04"
+        ]
+      }
+    },
+    {
+      "type": "play",
+      "turn": 3,
+      "operation": "O31",
+      "code": "swap",
+      "red": null,
+      "params": {
+        "axis": "row",
+        "source": null,
+        "target": null,
+        "i": 0,
+        "j": 3,
+        "factor": "L",
+        "exponent": 2
+      },
+      "before": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          -1,
+          1,
+          2
+        ],
+        [
+          0,
+          -3,
+          0
+        ],
+        [
+          1,
+          0,
+          -1
+        ]
+      ],
+      "after": [
+        [
+          1,
+          0,
+          -1
+        ],
+        [
+          -1,
+          1,
+          2
+        ],
+        [
+          0,
+          -3,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "row_sums_n": false,
+          "column_sums_m": false,
+          "negative_entry": true
+        },
+        "shape": [
+          4,
+          3
+        ]
+      },
+      "note": "Keep the rectangular shape and preserve scarce balance edits while seeking multiplication to reach two columns.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "end_turn",
+      "turn": 3,
+      "note": "",
+      "drawn": {
+        "operations": [
+          "O25",
+          "O18",
+          "O34"
+        ],
+        "red": [
+          "R14",
+          "R07",
+          "R18",
+          "R26",
+          "R27"
+        ]
+      }
+    },
+    {
+      "type": "play",
+      "turn": 4,
+      "operation": "O26",
+      "code": "replace_vector",
+      "red": "R26",
+      "params": {
+        "axis": "column",
+        "source": 2,
+        "target": 1,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2
+      },
+      "before": [
+        [
+          1,
+          0,
+          -1
+        ],
+        [
+          -1,
+          1,
+          2
+        ],
+        [
+          0,
+          -3,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "after": [
+        [
+          1,
+          -1,
+          -1
+        ],
+        [
+          -1,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "row_sums_n": false,
+          "column_sums_m": false,
+          "negative_entry": true
+        },
+        "shape": [
+          4,
+          3
+        ]
+      },
+      "note": "Begin a zero-margin 4 by 3 cycle: choose column (-1,0,0,1), whose sum is zero.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "play",
+      "turn": 4,
+      "operation": "O25",
+      "code": "replace_vector",
+      "red": "R05",
+      "params": {
+        "axis": "column",
+        "source": 1,
+        "target": 2,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2
+      },
+      "before": [
+        [
+          1,
+          -1,
+          -1
+        ],
+        [
+          -1,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ]
+      ],
+      "after": [
+        [
+          1,
+          -1,
+          0
+        ],
+        [
+          -1,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "row_sums_n": false,
+          "column_sums_m": false,
+          "negative_entry": true
+        },
+        "shape": [
+          4,
+          3
+        ]
+      },
+      "note": "Set third column to e1; next add -e3 so all margins vanish.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "play",
+      "turn": 4,
+      "operation": "O20",
+      "code": "add_vector",
+      "red": "R06",
+      "params": {
+        "axis": "column",
+        "source": 3,
+        "target": 2,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2
+      },
+      "before": [
+        [
+          1,
+          -1,
+          0
+        ],
+        [
+          -1,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "after": [
+        [
+          1,
+          -1,
+          0
+        ],
+        [
+          -1,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          -1
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "row_sums_n": false,
+          "column_sums_m": false,
+          "negative_entry": true
+        },
+        "shape": [
+          4,
+          3
+        ]
+      },
+      "note": "Add (0,0,0,-1); all row and column sums are now zero. Need amplitude above one before shifting to retain a negative entry.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "end_turn",
+      "turn": 4,
+      "note": "",
+      "drawn": {
+        "operations": [
+          "O24",
+          "O23",
+          "O37"
+        ],
+        "red": [
+          "R17",
+          "R10",
+          "R19",
+          "R16",
+          "R25"
+        ]
+      }
+    },
+    {
+      "type": "play",
+      "turn": 5,
+      "operation": "O37",
+      "code": "negate",
+      "red": null,
+      "params": {
+        "axis": "row",
+        "source": null,
+        "target": null,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2
+      },
+      "before": [
+        [
+          1,
+          -1,
+          0
+        ],
+        [
+          -1,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          -1
+        ]
+      ],
+      "after": [
+        [
+          -1,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          -1
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          -1,
+          1
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "row_sums_n": false,
+          "column_sums_m": false,
+          "negative_entry": true
+        },
+        "shape": [
+          4,
+          3
+        ]
+      },
+      "note": "Negate the zero-margin cycle, preserving all margins while waiting for amplitude scaling; a shift alone would erase every negative entry.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "end_turn",
+      "turn": 5,
+      "note": "",
+      "drawn": {
+        "operations": [
+          "O08",
+          "O32",
+          "O09"
+        ],
+        "red": [
+          "R08",
+          "R28",
+          "R21",
+          "R09",
+          "R24"
+        ]
+      }
+    },
+    {
+      "type": "play",
+      "turn": 6,
+      "operation": "O32",
+      "code": "swap",
+      "red": null,
+      "params": {
+        "axis": "row",
+        "source": null,
+        "target": null,
+        "i": 0,
+        "j": 1,
+        "factor": "L",
+        "exponent": 2
+      },
+      "before": [
+        [
+          -1,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          -1
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          -1,
+          1
+        ]
+      ],
+      "after": [
+        [
+          1,
+          0,
+          -1
+        ],
+        [
+          -1,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          -1,
+          1
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "row_sums_n": false,
+          "column_sums_m": false,
+          "negative_entry": true
+        },
+        "shape": [
+          4,
+          3
+        ]
+      },
+      "note": "Swap zero-sum rows, preserving zero margins; the visible R14 product would amplify this cycle enough to retain negative entries after a shift.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "end_turn",
+      "turn": 6,
+      "note": "",
+      "drawn": {
+        "operations": [
+          "O12",
+          "O17",
+          "O30"
+        ],
+        "red": [
+          "R26",
+          "R23",
+          "R06",
+          "R05"
+        ]
+      }
+    },
+    {
+      "type": "play",
+      "turn": 7,
+      "operation": "O12",
+      "code": "multiply",
+      "red": "R14",
+      "params": {
+        "axis": "row",
+        "source": null,
+        "target": null,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2
+      },
+      "before": [
+        [
+          1,
+          0,
+          -1
+        ],
+        [
+          -1,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          -1,
+          1
+        ]
+      ],
+      "after": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          2,
+          -3
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          -1,
+          -2,
+          3
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "row_sums_n": false,
+          "column_sums_m": false,
+          "negative_entry": true
+        },
+        "shape": [
+          4,
+          3
+        ]
+      },
+      "note": "R14 has equal row sums, so right multiplication preserves zero row margins; its product amplifies cycle entries to magnitude 3 while keeping column margins zero.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "play",
+      "turn": 7,
+      "operation": "O33",
+      "code": "shift_plus",
+      "red": null,
+      "params": {
+        "axis": "row",
+        "source": null,
+        "target": null,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2
+      },
+      "before": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          2,
+          -3
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          -1,
+          -2,
+          3
+        ]
+      ],
+      "after": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          2,
+          3,
+          -2
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          -1,
+          4
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": true,
+        "checks": {
+          "shape": true,
+          "row_sums_n": true,
+          "column_sums_m": true,
+          "negative_entry": true
+        },
+        "shape": [
+          4,
+          3
+        ]
+      },
+      "note": "Add one to every entry: each three-entry row sums to 3, each four-entry column to 4, and entries below -1 remain negative.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    }
+  ],
+  "operation_draw": [
+    "O38",
+    "O13",
+    "O15",
+    "O19",
+    "O39",
+    "O14",
+    "O27",
+    "O40",
+    "O10",
+    "O28",
+    "O22",
+    "O11",
+    "O02",
+    "O03",
+    "O06",
+    "O36",
+    "O01",
+    "O04",
+    "O16"
+  ],
+  "operation_hand": [
+    "O05",
+    "O35",
+    "O07",
+    "O18",
+    "O34",
+    "O24",
+    "O23",
+    "O08",
+    "O09",
+    "O17",
+    "O30"
+  ],
+  "operation_discard": [
+    "O21",
+    "O29",
+    "O31",
+    "O26",
+    "O25",
+    "O20",
+    "O37",
+    "O32",
+    "O12",
+    "O33"
+  ],
+  "operation_cycles": 0,
+  "red_draw": [],
+  "red_hand": [
+    "R20",
+    "R02",
+    "R11",
+    "R03",
+    "R22",
+    "R12",
+    "R01",
+    "R29",
+    "R15",
+    "R30",
+    "R13",
+    "R04",
+    "R07",
+    "R18",
+    "R27",
+    "R17",
+    "R10",
+    "R19",
+    "R16",
+    "R25",
+    "R08",
+    "R28",
+    "R21",
+    "R09",
+    "R24",
+    "R26",
+    "R23",
+    "R06",
+    "R05"
+  ],
+  "red_discard": [
+    "R14"
+  ],
+  "red_cycles": 1
+}

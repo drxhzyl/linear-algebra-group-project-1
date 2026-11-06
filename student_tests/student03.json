@@ -1,0 +1,289 @@
+{
+  "kind": "gametrix-session",
+  "version": 1,
+  "deck": "/Users/qizhengwang/Desktop/school/GameTrix/generated/deck.json",
+  "deck_sha256": "38824be5406d3dca771a06dba3b5017253913858f049328d87b5c11e3bad2035",
+  "seed": 206,
+  "objective": {
+    "id": "C08",
+    "name": "Projection",
+    "tier": "Advanced",
+    "shape": "Square 3–4",
+    "goal": "Make a non-diagonal rank-2 matrix satisfying A² = A.",
+    "A": [
+      [
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "check": "A² = A and rank(A) = 2; A is non-diagonal.",
+    "note": "A 2×2 rank-2 idempotent must be I₂ and therefore cannot qualify. Low-rank red cards provide useful ingredients, but making a matrix singular alone is insufficient."
+  },
+  "blue": "B12",
+  "current": [
+    [
+      2,
+      -2,
+      -1
+    ],
+    [
+      0,
+      -1,
+      -2
+    ],
+    [
+      0,
+      1,
+      0
+    ]
+  ],
+  "mode": "draw",
+  "player": "student",
+  "turn_cap": 8,
+  "move_cap": 16,
+  "turn": 2,
+  "turn_operations": 0,
+  "moves": 1,
+  "status": "stopped",
+  "history": [
+    {
+      "type": "play",
+      "turn": 1,
+      "operation": "O03",
+      "code": "add",
+      "red": "R12",
+      "params": {
+        "axis": "row",
+        "source": null,
+        "target": null,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2
+      },
+      "before": [
+        [
+          1,
+          0,
+          -1
+        ],
+        [
+          0,
+          1,
+          -3
+        ],
+        [
+          0,
+          -1,
+          0
+        ]
+      ],
+      "after": [
+        [
+          2,
+          -2,
+          -1
+        ],
+        [
+          0,
+          -1,
+          -2
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "non_diagonal": true,
+          "rank_two": false,
+          "idempotent": false
+        },
+        "shape": [
+          3,
+          3
+        ]
+      },
+      "note": "Add the available square card to see whether its entries simplify the matrix toward a projection.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "end_turn",
+      "turn": 1,
+      "note": "student budget test",
+      "drawn": {
+        "operations": [
+          "O09",
+          "O30",
+          "O11"
+        ],
+        "red": [
+          "R30",
+          "R21",
+          "R02",
+          "R23",
+          "R03"
+        ]
+      }
+    },
+    {
+      "type": "stop",
+      "turn": 2,
+      "note": "After one square-card addition, the matrix did not show a simple projection pattern; I cannot identify a sensible next correction from the visible cards."
+    }
+  ],
+  "operation_draw": [
+    "O19",
+    "O12",
+    "O13",
+    "O35",
+    "O29",
+    "O20",
+    "O02",
+    "O32",
+    "O15",
+    "O18",
+    "O38",
+    "O05",
+    "O04",
+    "O16",
+    "O40",
+    "O23",
+    "O37",
+    "O24",
+    "O25",
+    "O21",
+    "O01",
+    "O36",
+    "O28",
+    "O39",
+    "O34",
+    "O27",
+    "O17",
+    "O26",
+    "O10",
+    "O07",
+    "O06",
+    "O33",
+    "O31",
+    "O08"
+  ],
+  "operation_hand": [
+    "O22",
+    "O14",
+    "O09",
+    "O30",
+    "O11"
+  ],
+  "operation_discard": [
+    "O03"
+  ],
+  "operation_cycles": 0,
+  "red_draw": [
+    "R28",
+    "R09",
+    "R19",
+    "R20",
+    "R15",
+    "R17",
+    "R24",
+    "R08",
+    "R18",
+    "R10",
+    "R11",
+    "R22",
+    "R14",
+    "R29",
+    "R27",
+    "R13",
+    "R26",
+    "R04",
+    "R01",
+    "R06"
+  ],
+  "red_hand": [
+    "R25",
+    "R07",
+    "R16",
+    "R05",
+    "R30",
+    "R21",
+    "R02",
+    "R23",
+    "R03"
+  ],
+  "red_discard": [
+    "R12"
+  ],
+  "red_cycles": 0,
+  "student_budget": {
+    "protocol": "student_tests/PILOT_PROTOCOL.md",
+    "plans": [
+      {
+        "id": 1,
+        "turn": 1,
+        "at_move": 0,
+        "operation": "O03",
+        "red": "R12",
+        "params": {
+          "axis": "row",
+          "source": null,
+          "target": null,
+          "i": null,
+          "j": null,
+          "factor": "L",
+          "exponent": 2
+        },
+        "note": "Add the available square card to see whether its entries simplify the matrix toward a projection.",
+        "attempted": true
+      }
+    ],
+    "previews": [
+      {
+        "turn": 1,
+        "plan": 1,
+        "result": [
+          [
+            2,
+            -2,
+            -1
+          ],
+          [
+            0,
+            -1,
+            -2
+          ],
+          [
+            0,
+            1,
+            0
+          ]
+        ]
+      }
+    ],
+    "candidate_limit_per_turn": 2,
+    "preview_limit_per_turn": 1,
+    "preview_limit_total": 6
+  },
+  "stop_reason": "After one square-card addition, the matrix did not show a simple projection pattern; I cannot identify a sensible next correction from the visible cards.",
+  "experiment_phase": "pilot"
+}

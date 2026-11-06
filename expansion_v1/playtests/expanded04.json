@@ -1,0 +1,977 @@
+{
+  "kind": "gametrix-session",
+  "version": 1,
+  "deck": "/Users/qizhengwang/Desktop/school/GameTrix/expansion_v1/generated/deck.json",
+  "deck_sha256": "6b4dbefcef29ef761a91ab941ebdfac8afc069bae317785331e44e564902cdc1",
+  "seed": 301,
+  "objective": {
+    "id": "C11",
+    "name": "Orthogonal Columns",
+    "tier": "Core",
+    "shape": "Tall: 3×2, 4×2, or 4×3",
+    "goal": "Make a tall matrix whose columns are nonzero and pairwise orthogonal, with no zero rows. Equivalently, AᵀA is diagonal with positive diagonal entries.",
+    "A": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        -1
+      ],
+      [
+        1,
+        0
+      ]
+    ],
+    "check": "AᵀA = diag(3,2), and every row is nonzero.",
+    "note": "The columns need not have unit length, so integer solutions are possible. Appending a row r adds rᵀr to AᵀA; it changes orthogonality rather than guaranteeing it. This goal is the transpose counterpart of C12."
+  },
+  "blue": "B01",
+  "current": [
+    [
+      1,
+      0,
+      -1
+    ],
+    [
+      2,
+      -1,
+      0
+    ],
+    [
+      2,
+      1,
+      0
+    ],
+    [
+      1,
+      0,
+      1
+    ]
+  ],
+  "mode": "draw",
+  "player": "expanded",
+  "turn_cap": 8,
+  "move_cap": 16,
+  "turn": 6,
+  "turn_operations": 2,
+  "moves": 7,
+  "status": "won",
+  "history": [
+    {
+      "type": "play",
+      "turn": 1,
+      "operation": "O28",
+      "code": "transpose",
+      "red": null,
+      "params": {
+        "axis": "row",
+        "source": null,
+        "target": null,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2,
+        "delta": 1
+      },
+      "before": [
+        [
+          1,
+          2,
+          2
+        ],
+        [
+          1,
+          -1,
+          2
+        ],
+        [
+          0,
+          -2,
+          -2
+        ]
+      ],
+      "after": [
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          2,
+          -1,
+          -2
+        ],
+        [
+          2,
+          2,
+          -2
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": false,
+          "nonzero_vectors": true,
+          "orthogonal_vectors": false,
+          "no_zero_rows": true
+        },
+        "shape": [
+          3,
+          3
+        ]
+      },
+      "note": "[stall] Transpose while waiting for a card that can reach a tall shape.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "end_turn",
+      "turn": 1,
+      "note": "student budget test",
+      "drawn": {
+        "operations": [
+          "O32",
+          "O43",
+          "O17"
+        ],
+        "red": [
+          "R10",
+          "R18",
+          "R06",
+          "R01",
+          "R17"
+        ]
+      }
+    },
+    {
+      "type": "play",
+      "turn": 2,
+      "operation": "O49",
+      "code": "entry_tweak",
+      "red": "R06",
+      "params": {
+        "axis": "row",
+        "source": null,
+        "target": null,
+        "i": 2,
+        "j": 1,
+        "factor": "L",
+        "exponent": 2,
+        "delta": -1
+      },
+      "before": [
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          2,
+          -1,
+          -2
+        ],
+        [
+          2,
+          2,
+          -2
+        ]
+      ],
+      "after": [
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          2,
+          -1,
+          -2
+        ],
+        [
+          2,
+          1,
+          -2
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": false,
+          "nonzero_vectors": true,
+          "orthogonal_vectors": false,
+          "no_zero_rows": true
+        },
+        "shape": [
+          3,
+          3
+        ]
+      },
+      "note": "[progress] Reduce the positive dot product contribution from the bottom row.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "end_turn",
+      "turn": 2,
+      "note": "student budget test",
+      "drawn": {
+        "operations": [
+          "O34",
+          "O65",
+          "O61"
+        ],
+        "red": [
+          "R26",
+          "R03",
+          "R29",
+          "R13",
+          "R08"
+        ]
+      }
+    },
+    {
+      "type": "play",
+      "turn": 3,
+      "operation": "O65",
+      "code": "entry_zero",
+      "red": "R29",
+      "params": {
+        "axis": "row",
+        "source": null,
+        "target": null,
+        "i": 0,
+        "j": 1,
+        "factor": "L",
+        "exponent": 2,
+        "delta": 1
+      },
+      "before": [
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          2,
+          -1,
+          -2
+        ],
+        [
+          2,
+          1,
+          -2
+        ]
+      ],
+      "after": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          -1,
+          -2
+        ],
+        [
+          2,
+          1,
+          -2
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": false,
+          "nonzero_vectors": true,
+          "orthogonal_vectors": false,
+          "no_zero_rows": true
+        },
+        "shape": [
+          3,
+          3
+        ]
+      },
+      "note": "[progress] Remove the last positive contribution between the first two columns.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "end_turn",
+      "turn": 3,
+      "note": "student budget test",
+      "drawn": {
+        "operations": [
+          "O58",
+          "O36",
+          "O22"
+        ],
+        "red": [
+          "R02",
+          "R22",
+          "R05",
+          "R09",
+          "R28"
+        ]
+      }
+    },
+    {
+      "type": "play",
+      "turn": 4,
+      "operation": "O22",
+      "code": "append_vector",
+      "red": "R03",
+      "params": {
+        "axis": "row",
+        "source": 0,
+        "target": null,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2,
+        "delta": 1
+      },
+      "before": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          -1,
+          -2
+        ],
+        [
+          2,
+          1,
+          -2
+        ]
+      ],
+      "after": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          -1,
+          -2
+        ],
+        [
+          2,
+          1,
+          -2
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "nonzero_vectors": true,
+          "orthogonal_vectors": false,
+          "no_zero_rows": true
+        },
+        "shape": [
+          4,
+          3
+        ]
+      },
+      "note": "[progress] Reach a permitted tall shape while preserving the first two columns dot product.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "end_turn",
+      "turn": 4,
+      "note": "student budget test",
+      "drawn": {
+        "operations": [
+          "O35",
+          "O33",
+          "O78"
+        ],
+        "red": [
+          "R16",
+          "R12",
+          "R19",
+          "R30",
+          "R07"
+        ]
+      }
+    },
+    {
+      "type": "play",
+      "turn": 5,
+      "operation": "O78",
+      "code": "combine_vectors",
+      "red": null,
+      "params": {
+        "axis": "column",
+        "source": 0,
+        "target": 2,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2,
+        "delta": 1
+      },
+      "before": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          -1,
+          -2
+        ],
+        [
+          2,
+          1,
+          -2
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "after": [
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          2,
+          -1,
+          0
+        ],
+        [
+          2,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "nonzero_vectors": true,
+          "orthogonal_vectors": false,
+          "no_zero_rows": true
+        },
+        "shape": [
+          4,
+          3
+        ]
+      },
+      "note": "[progress] Cancel the two minus twos in the third column.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "end_turn",
+      "turn": 5,
+      "note": "student budget test",
+      "drawn": {
+        "operations": [
+          "O72",
+          "O27",
+          "O55"
+        ],
+        "red": [
+          "R20",
+          "R11",
+          "R27",
+          "R24",
+          "R14"
+        ]
+      }
+    },
+    {
+      "type": "play",
+      "turn": 6,
+      "operation": "O43",
+      "code": "entry_tweak",
+      "red": "R01",
+      "params": {
+        "axis": "row",
+        "source": null,
+        "target": null,
+        "i": 0,
+        "j": 2,
+        "factor": "L",
+        "exponent": 2,
+        "delta": -1
+      },
+      "before": [
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          2,
+          -1,
+          0
+        ],
+        [
+          2,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ]
+      ],
+      "after": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          -1,
+          0
+        ],
+        [
+          2,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "nonzero_vectors": true,
+          "orthogonal_vectors": false,
+          "no_zero_rows": true
+        },
+        "shape": [
+          4,
+          3
+        ]
+      },
+      "note": "[progress] Reduce one of the two positive contributions between columns zero and two.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "play",
+      "turn": 6,
+      "operation": "O61",
+      "code": "entry_tweak",
+      "red": "R02",
+      "params": {
+        "axis": "row",
+        "source": null,
+        "target": null,
+        "i": 0,
+        "j": 2,
+        "factor": "L",
+        "exponent": 2,
+        "delta": -1
+      },
+      "before": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          -1,
+          0
+        ],
+        [
+          2,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ]
+      ],
+      "after": [
+        [
+          1,
+          0,
+          -1
+        ],
+        [
+          2,
+          -1,
+          0
+        ],
+        [
+          2,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": true,
+        "checks": {
+          "shape": true,
+          "nonzero_vectors": true,
+          "orthogonal_vectors": true,
+          "no_zero_rows": true
+        },
+        "shape": [
+          4,
+          3
+        ]
+      },
+      "note": "[progress] Make the top contribution negative to cancel the bottom positive contribution.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    }
+  ],
+  "operation_draw": [
+    "O30",
+    "O15",
+    "O71",
+    "O21",
+    "O64",
+    "O41",
+    "O26",
+    "O66",
+    "O68",
+    "O19",
+    "O74",
+    "O29",
+    "O42",
+    "O77",
+    "O59",
+    "O44",
+    "O14",
+    "O38",
+    "O45",
+    "O25",
+    "O69",
+    "O05",
+    "O24",
+    "O62",
+    "O56",
+    "O57",
+    "O16",
+    "O12",
+    "O60",
+    "O06",
+    "O02",
+    "O09",
+    "O11",
+    "O46",
+    "O01",
+    "O40",
+    "O48",
+    "O63",
+    "O10",
+    "O50",
+    "O23",
+    "O75",
+    "O73",
+    "O37",
+    "O67",
+    "O47",
+    "O13",
+    "O07",
+    "O53",
+    "O80",
+    "O54",
+    "O31",
+    "O51",
+    "O76",
+    "O20",
+    "O08",
+    "O03",
+    "O18",
+    "O39",
+    "O79",
+    "O70",
+    "O52"
+  ],
+  "operation_hand": [
+    "O04",
+    "O32",
+    "O17",
+    "O34",
+    "O58",
+    "O36",
+    "O35",
+    "O33",
+    "O72",
+    "O27",
+    "O55"
+  ],
+  "operation_discard": [
+    "O28",
+    "O49",
+    "O65",
+    "O22",
+    "O78",
+    "O43",
+    "O61"
+  ],
+  "operation_cycles": 0,
+  "red_draw": [],
+  "red_hand": [
+    "R25",
+    "R04",
+    "R23",
+    "R15",
+    "R21",
+    "R10",
+    "R18",
+    "R17",
+    "R26",
+    "R13",
+    "R08",
+    "R22",
+    "R05",
+    "R09",
+    "R28",
+    "R16",
+    "R12",
+    "R19",
+    "R30",
+    "R07",
+    "R20",
+    "R11",
+    "R27",
+    "R24",
+    "R14"
+  ],
+  "red_discard": [
+    "R06",
+    "R29",
+    "R03",
+    "R01",
+    "R02"
+  ],
+  "red_cycles": 0,
+  "student_budget": {
+    "protocol": "expansion_v1/PROTOCOL.md",
+    "fixed_horizon": true,
+    "plans": [
+      {
+        "id": 1,
+        "turn": 1,
+        "at_move": 0,
+        "operation": "O28",
+        "red": null,
+        "params": {
+          "axis": "row",
+          "source": null,
+          "target": null,
+          "i": null,
+          "j": null,
+          "factor": "L",
+          "exponent": 2,
+          "delta": 1
+        },
+        "note": "[stall] Transpose while waiting for a card that can reach a tall shape.",
+        "attempted": true
+      },
+      {
+        "id": 2,
+        "turn": 2,
+        "at_move": 1,
+        "operation": "O49",
+        "red": "R06",
+        "params": {
+          "axis": "row",
+          "source": null,
+          "target": null,
+          "i": 2,
+          "j": 1,
+          "factor": "L",
+          "exponent": 2,
+          "delta": -1
+        },
+        "note": "[progress] Reduce the positive dot product contribution from the bottom row.",
+        "attempted": true
+      },
+      {
+        "id": 3,
+        "turn": 3,
+        "at_move": 2,
+        "operation": "O65",
+        "red": "R29",
+        "params": {
+          "axis": "row",
+          "source": null,
+          "target": null,
+          "i": 0,
+          "j": 1,
+          "factor": "L",
+          "exponent": 2,
+          "delta": 1
+        },
+        "note": "[progress] Remove the last positive contribution between the first two columns.",
+        "attempted": true
+      },
+      {
+        "id": 4,
+        "turn": 4,
+        "at_move": 3,
+        "operation": "O22",
+        "red": "R03",
+        "params": {
+          "axis": "row",
+          "source": 0,
+          "target": null,
+          "i": null,
+          "j": null,
+          "factor": "L",
+          "exponent": 2,
+          "delta": 1
+        },
+        "note": "[progress] Reach a permitted tall shape while preserving the first two columns dot product.",
+        "attempted": true
+      },
+      {
+        "id": 5,
+        "turn": 5,
+        "at_move": 4,
+        "operation": "O78",
+        "red": null,
+        "params": {
+          "axis": "column",
+          "source": 0,
+          "target": 2,
+          "i": null,
+          "j": null,
+          "factor": "L",
+          "exponent": 2,
+          "delta": 1
+        },
+        "note": "[progress] Cancel the two minus twos in the third column.",
+        "attempted": true
+      },
+      {
+        "id": 6,
+        "turn": 6,
+        "at_move": 5,
+        "operation": "O43",
+        "red": "R01",
+        "params": {
+          "axis": "row",
+          "source": null,
+          "target": null,
+          "i": 0,
+          "j": 2,
+          "factor": "L",
+          "exponent": 2,
+          "delta": -1
+        },
+        "note": "[progress] Reduce one of the two positive contributions between columns zero and two.",
+        "attempted": true
+      },
+      {
+        "id": 7,
+        "turn": 6,
+        "at_move": 6,
+        "operation": "O61",
+        "red": "R02",
+        "params": {
+          "axis": "row",
+          "source": null,
+          "target": null,
+          "i": 0,
+          "j": 2,
+          "factor": "L",
+          "exponent": 2,
+          "delta": -1
+        },
+        "note": "[progress] Make the top contribution negative to cancel the bottom positive contribution.",
+        "attempted": true
+      }
+    ],
+    "previews": [
+      {
+        "turn": 5,
+        "plan": 5,
+        "result": [
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            2,
+            -1,
+            0
+          ],
+          [
+            2,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ]
+        ]
+      }
+    ],
+    "candidate_limit_per_turn": 2,
+    "preview_limit_per_turn": 1,
+    "preview_limit_total": 6
+  },
+  "experiment_phase": "expansion_fixed_horizon"
+}

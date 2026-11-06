@@ -1,0 +1,158 @@
+{
+  "kind": "gametrix-session",
+  "version": 1,
+  "deck": "/Users/qizhengwang/Desktop/school/GameTrix/generated/deck.json",
+  "deck_sha256": "38824be5406d3dca771a06dba3b5017253913858f049328d87b5c11e3bad2035",
+  "seed": 101,
+  "objective": {
+    "id": "C01",
+    "name": "Mirror Match",
+    "tier": "Core",
+    "shape": "Square 2–4",
+    "goal": "Make an invertible, non-diagonal symmetric matrix: Aᵀ = A and det(A) ≠ 0.",
+    "A": [
+      [
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        1
+      ]
+    ],
+    "check": "Aᵀ = A, det(A) = −1, and off-diagonal entries are nonzero.",
+    "note": "Transpose alone does not turn an asymmetric matrix into a symmetric one. A suitable interchange or red-card correction can finish this goal."
+  },
+  "blue": "B01",
+  "current": [
+    [
+      1,
+      2,
+      2
+    ],
+    [
+      1,
+      -1,
+      2
+    ],
+    [
+      0,
+      -2,
+      -2
+    ]
+  ],
+  "mode": "draw",
+  "player": "student",
+  "turn_cap": 8,
+  "move_cap": 16,
+  "turn": 1,
+  "turn_operations": 0,
+  "moves": 0,
+  "status": "stopped",
+  "history": [
+    {
+      "type": "stop",
+      "turn": 1,
+      "note": "The only same-size red card has no obvious way to cancel the visible off-diagonal mismatches; transpose alone would not make the matrix symmetric."
+    }
+  ],
+  "operation_draw": [
+    "O17",
+    "O33",
+    "O31",
+    "O32",
+    "O24",
+    "O04",
+    "O23",
+    "O35",
+    "O36",
+    "O08",
+    "O16",
+    "O34",
+    "O07",
+    "O15",
+    "O02",
+    "O37",
+    "O40",
+    "O05",
+    "O11",
+    "O01",
+    "O10",
+    "O25",
+    "O14",
+    "O38",
+    "O21",
+    "O18",
+    "O30",
+    "O20",
+    "O12",
+    "O39",
+    "O03",
+    "O06",
+    "O26",
+    "O29",
+    "O19",
+    "O27",
+    "O13"
+  ],
+  "operation_hand": [
+    "O22",
+    "O28",
+    "O09"
+  ],
+  "operation_discard": [],
+  "operation_cycles": 0,
+  "red_draw": [
+    "R10",
+    "R26",
+    "R20",
+    "R03",
+    "R30",
+    "R29",
+    "R22",
+    "R14",
+    "R01",
+    "R06",
+    "R08",
+    "R13",
+    "R23",
+    "R12",
+    "R09",
+    "R28",
+    "R27",
+    "R02",
+    "R05",
+    "R18",
+    "R15",
+    "R24",
+    "R16",
+    "R07",
+    "R04"
+  ],
+  "red_hand": [
+    "R19",
+    "R17",
+    "R21",
+    "R11",
+    "R25"
+  ],
+  "red_discard": [],
+  "red_cycles": 0,
+  "student_budget": {
+    "protocol": "student_tests/PILOT_PROTOCOL.md",
+    "plans": [],
+    "previews": [],
+    "candidate_limit_per_turn": 2,
+    "preview_limit_per_turn": 1,
+    "preview_limit_total": 6
+  },
+  "stop_reason": "The only same-size red card has no obvious way to cancel the visible off-diagonal mismatches; transpose alone would not make the matrix symmetric.",
+  "experiment_phase": "pilot"
+}

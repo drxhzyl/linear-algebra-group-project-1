@@ -1,0 +1,146 @@
+{
+  "kind": "gametrix-student-summary",
+  "phase": "formal",
+  "cases": [
+    {
+      "name": "student07",
+      "paired_original": "core01",
+      "seed": 101,
+      "objective": "C01",
+      "blue": "B01",
+      "mode": "draw",
+      "status": "stopped",
+      "moves": 3,
+      "turn": 3,
+      "candidates": 3,
+      "previews": 2,
+      "invalid_previews": 0,
+      "replay_verified": true,
+      "budget_verified": true,
+      "stop_reason": "Three turns played. One reflected corner pair matches, but the remaining mismatches need different corrections and I see no simple useful next move in the current hand.",
+      "prior_result": {
+        "status": "stopped",
+        "moves": 7,
+        "turn": 8
+      }
+    },
+    {
+      "name": "student08",
+      "paired_original": "core05",
+      "seed": 105,
+      "objective": "C04",
+      "blue": "B05",
+      "mode": "draw",
+      "status": "stopped",
+      "moves": 3,
+      "turn": 3,
+      "candidates": 4,
+      "previews": 2,
+      "invalid_previews": 1,
+      "replay_verified": true,
+      "budget_verified": true,
+      "stop_reason": "Three turns played. The first two rows visibly balance, but the bottom row remains very negative; I see no simple correction in this hand that preserves those rows.",
+      "prior_result": {
+        "status": "stopped",
+        "moves": 7,
+        "turn": 8
+      }
+    },
+    {
+      "name": "student09",
+      "paired_original": "advanced06",
+      "seed": 206,
+      "objective": "C08",
+      "blue": "B12",
+      "mode": "draw",
+      "status": "stopped",
+      "moves": 3,
+      "turn": 3,
+      "candidates": 4,
+      "previews": 1,
+      "invalid_previews": 0,
+      "replay_verified": true,
+      "budget_verified": true,
+      "stop_reason": "After three legal turns the last row is simpler, but I cannot see a useful correction toward A squared equals A with the available operations.",
+      "prior_result": {
+        "status": "won",
+        "moves": 7,
+        "turn": 7
+      }
+    },
+    {
+      "name": "student10",
+      "paired_original": "rect01",
+      "seed": 301,
+      "objective": "C11",
+      "blue": "B01",
+      "mode": "draw",
+      "status": "stopped",
+      "moves": 3,
+      "turn": 3,
+      "candidates": 3,
+      "previews": 2,
+      "invalid_previews": 0,
+      "replay_verified": true,
+      "budget_verified": true,
+      "stop_reason": "The matrix now has the required tall shape and only two columns, but I see no simple next correction to make those columns orthogonal with the available operations.",
+      "prior_result": {
+        "status": "won",
+        "moves": 4,
+        "turn": 3
+      }
+    },
+    {
+      "name": "student11",
+      "paired_original": "rect03",
+      "seed": 303,
+      "objective": "C13",
+      "blue": "B03",
+      "mode": "draw",
+      "status": "stopped",
+      "moves": 3,
+      "turn": 3,
+      "candidates": 3,
+      "previews": 1,
+      "invalid_previews": 0,
+      "replay_verified": true,
+      "budget_verified": true,
+      "stop_reason": "Three legal turns produced a rectangle and a useful row correction, but I see no simple next move to balance the remaining rows and columns with this hand.",
+      "prior_result": {
+        "status": "won",
+        "moves": 10,
+        "turn": 7
+      }
+    },
+    {
+      "name": "student12",
+      "paired_original": "rect06",
+      "seed": 306,
+      "objective": "C14",
+      "blue": "B06",
+      "mode": "draw",
+      "status": "stopped",
+      "moves": 3,
+      "turn": 3,
+      "candidates": 3,
+      "previews": 1,
+      "invalid_previews": 0,
+      "replay_verified": true,
+      "budget_verified": true,
+      "stop_reason": "After three legal turns the matrix is wide and one row has zero sum, but I have no simple next correction that also addresses orthogonality with the available operations.",
+      "prior_result": {
+        "status": "won",
+        "moves": 11,
+        "turn": 7
+      }
+    }
+  ],
+  "totals": {
+    "episodes": 6,
+    "wins": 0,
+    "moves": 18,
+    "candidates": 20,
+    "previews": 9
+  },
+  "caveat": "All six voluntarily stopped after three played turns with preview budget remaining. No causal claim about budget effect or human difficulty. Pilot retained separately. Prior runs differ in agent and protocol."
+}

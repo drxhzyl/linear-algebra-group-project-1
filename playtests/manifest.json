@@ -1,0 +1,186 @@
+{
+  "kind": "gametrix-playtest-manifest",
+  "note": "Preassigned exploratory cases; do not replace failures. Open-mode and draw-mode results must be separated.",
+  "cases": [
+    {
+      "group": "core",
+      "name": "core01",
+      "objective": "C01",
+      "blue": "B01",
+      "mode": "draw",
+      "seed": 101,
+      "turn_cap": 8,
+      "move_cap": 16
+    },
+    {
+      "group": "core",
+      "name": "core02",
+      "objective": "C02+",
+      "blue": "B02",
+      "mode": "draw",
+      "seed": 102,
+      "turn_cap": 8,
+      "move_cap": 16
+    },
+    {
+      "group": "core",
+      "name": "core03",
+      "objective": "C02-",
+      "blue": "B03",
+      "mode": "open",
+      "seed": 103,
+      "turn_cap": 8,
+      "move_cap": 8
+    },
+    {
+      "group": "core",
+      "name": "core04",
+      "objective": "C03",
+      "blue": "B04",
+      "mode": "open",
+      "seed": 104,
+      "turn_cap": 8,
+      "move_cap": 8
+    },
+    {
+      "group": "core",
+      "name": "core05",
+      "objective": "C04",
+      "blue": "B05",
+      "mode": "draw",
+      "seed": 105,
+      "turn_cap": 8,
+      "move_cap": 16
+    },
+    {
+      "group": "core",
+      "name": "core06",
+      "objective": "C07",
+      "blue": "B06",
+      "mode": "open",
+      "seed": 106,
+      "turn_cap": 8,
+      "move_cap": 8
+    },
+    {
+      "group": "advanced",
+      "name": "advanced01",
+      "objective": "C05",
+      "blue": "B07",
+      "mode": "open",
+      "seed": 201,
+      "turn_cap": 8,
+      "move_cap": 8
+    },
+    {
+      "group": "advanced",
+      "name": "advanced02",
+      "objective": "C06",
+      "blue": "B08",
+      "mode": "draw",
+      "seed": 202,
+      "turn_cap": 8,
+      "move_cap": 16
+    },
+    {
+      "group": "advanced",
+      "name": "advanced03",
+      "objective": "C08",
+      "blue": "B09",
+      "mode": "open",
+      "seed": 203,
+      "turn_cap": 8,
+      "move_cap": 8
+    },
+    {
+      "group": "advanced",
+      "name": "advanced04",
+      "objective": "C09",
+      "blue": "B10",
+      "mode": "draw",
+      "seed": 204,
+      "turn_cap": 8,
+      "move_cap": 16
+    },
+    {
+      "group": "advanced",
+      "name": "advanced05",
+      "objective": "C10",
+      "blue": "B11",
+      "mode": "open",
+      "seed": 205,
+      "turn_cap": 8,
+      "move_cap": 8
+    },
+    {
+      "group": "advanced",
+      "name": "advanced06",
+      "objective": "C08",
+      "blue": "B12",
+      "mode": "draw",
+      "seed": 206,
+      "turn_cap": 8,
+      "move_cap": 16
+    },
+    {
+      "group": "rectangular",
+      "name": "rect01",
+      "objective": "C11",
+      "blue": "B01",
+      "mode": "draw",
+      "seed": 301,
+      "turn_cap": 8,
+      "move_cap": 16
+    },
+    {
+      "group": "rectangular",
+      "name": "rect02",
+      "objective": "C12",
+      "blue": "B02",
+      "mode": "open",
+      "seed": 302,
+      "turn_cap": 8,
+      "move_cap": 8
+    },
+    {
+      "group": "rectangular",
+      "name": "rect03",
+      "objective": "C13",
+      "blue": "B03",
+      "mode": "draw",
+      "seed": 303,
+      "turn_cap": 8,
+      "move_cap": 16
+    },
+    {
+      "group": "rectangular",
+      "name": "rect04",
+      "objective": "C14",
+      "blue": "B04",
+      "mode": "open",
+      "seed": 304,
+      "turn_cap": 8,
+      "move_cap": 8
+    },
+    {
+      "group": "rectangular",
+      "name": "rect05",
+      "objective": "C11",
+      "blue": "B05",
+      "mode": "open",
+      "seed": 305,
+      "turn_cap": 8,
+      "move_cap": 8
+    },
+    {
+      "group": "rectangular",
+      "name": "rect06",
+      "objective": "C14",
+      "blue": "B06",
+      "mode": "draw",
+      "seed": 306,
+      "turn_cap": 8,
+      "move_cap": 16
+    }
+  ]
+}

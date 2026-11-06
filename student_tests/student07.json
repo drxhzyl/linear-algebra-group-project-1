@@ -1,0 +1,503 @@
+{
+  "kind": "gametrix-session",
+  "version": 1,
+  "deck": "/Users/qizhengwang/Desktop/school/GameTrix/generated/deck.json",
+  "deck_sha256": "38824be5406d3dca771a06dba3b5017253913858f049328d87b5c11e3bad2035",
+  "seed": 101,
+  "objective": {
+    "id": "C01",
+    "name": "Mirror Match",
+    "tier": "Core",
+    "shape": "Square 2–4",
+    "goal": "Make an invertible, non-diagonal symmetric matrix: Aᵀ = A and det(A) ≠ 0.",
+    "A": [
+      [
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        1
+      ]
+    ],
+    "check": "Aᵀ = A, det(A) = −1, and off-diagonal entries are nonzero.",
+    "note": "Transpose alone does not turn an asymmetric matrix into a symmetric one. A suitable interchange or red-card correction can finish this goal."
+  },
+  "blue": "B01",
+  "current": [
+    [
+      2,
+      -2,
+      2
+    ],
+    [
+      -1,
+      3,
+      2
+    ],
+    [
+      2,
+      -3,
+      -3
+    ]
+  ],
+  "mode": "draw",
+  "player": "student_formal",
+  "turn_cap": 8,
+  "move_cap": 16,
+  "turn": 3,
+  "turn_operations": 1,
+  "moves": 3,
+  "status": "stopped",
+  "history": [
+    {
+      "type": "play",
+      "turn": 1,
+      "operation": "O09",
+      "code": "subtract",
+      "red": "R11",
+      "params": {
+        "axis": "row",
+        "source": null,
+        "target": null,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2
+      },
+      "before": [
+        [
+          1,
+          2,
+          2
+        ],
+        [
+          1,
+          -1,
+          2
+        ],
+        [
+          0,
+          -2,
+          -2
+        ]
+      ],
+      "after": [
+        [
+          -1,
+          3,
+          2
+        ],
+        [
+          1,
+          -2,
+          2
+        ],
+        [
+          2,
+          -3,
+          -3
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "symmetric": false,
+          "invertible": true,
+          "non_diagonal": true
+        },
+        "shape": [
+          3,
+          3
+        ]
+      },
+      "note": "Subtract R11 to make the bottom-left entry match the top-right 2.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "end_turn",
+      "turn": 1,
+      "note": "student budget test",
+      "drawn": {
+        "operations": [
+          "O17",
+          "O33",
+          "O31"
+        ],
+        "red": [
+          "R10",
+          "R26",
+          "R20",
+          "R03",
+          "R30"
+        ]
+      }
+    },
+    {
+      "type": "play",
+      "turn": 2,
+      "operation": "O17",
+      "code": "add_vector",
+      "red": "R21",
+      "params": {
+        "axis": "column",
+        "source": 1,
+        "target": 0,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2
+      },
+      "before": [
+        [
+          -1,
+          3,
+          2
+        ],
+        [
+          1,
+          -2,
+          2
+        ],
+        [
+          2,
+          -3,
+          -3
+        ]
+      ],
+      "after": [
+        [
+          -1,
+          3,
+          2
+        ],
+        [
+          2,
+          -2,
+          2
+        ],
+        [
+          2,
+          -3,
+          -3
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "symmetric": false,
+          "invertible": true,
+          "non_diagonal": true
+        },
+        "shape": [
+          3,
+          3
+        ]
+      },
+      "note": "Raise entry (1,0) from 1 toward its reflected entry 3, preserving the matched corner pair.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "end_turn",
+      "turn": 2,
+      "note": "student budget test",
+      "drawn": {
+        "operations": [
+          "O32",
+          "O24",
+          "O04"
+        ],
+        "red": [
+          "R29",
+          "R22",
+          "R14",
+          "R01",
+          "R06"
+        ]
+      }
+    },
+    {
+      "type": "play",
+      "turn": 3,
+      "operation": "O31",
+      "code": "swap",
+      "red": null,
+      "params": {
+        "axis": "row",
+        "source": null,
+        "target": null,
+        "i": 0,
+        "j": 1,
+        "factor": "L",
+        "exponent": 2
+      },
+      "before": [
+        [
+          -1,
+          3,
+          2
+        ],
+        [
+          2,
+          -2,
+          2
+        ],
+        [
+          2,
+          -3,
+          -3
+        ]
+      ],
+      "after": [
+        [
+          2,
+          -2,
+          2
+        ],
+        [
+          -1,
+          3,
+          2
+        ],
+        [
+          2,
+          -3,
+          -3
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "symmetric": false,
+          "invertible": true,
+          "non_diagonal": true
+        },
+        "shape": [
+          3,
+          3
+        ]
+      },
+      "note": "Try interchanging the first two rows; their final entries are both 2, so the matched corner pair stays.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "stop",
+      "turn": 3,
+      "note": "Three turns played. One reflected corner pair matches, but the remaining mismatches need different corrections and I see no simple useful next move in the current hand."
+    }
+  ],
+  "operation_draw": [
+    "O23",
+    "O35",
+    "O36",
+    "O08",
+    "O16",
+    "O34",
+    "O07",
+    "O15",
+    "O02",
+    "O37",
+    "O40",
+    "O05",
+    "O11",
+    "O01",
+    "O10",
+    "O25",
+    "O14",
+    "O38",
+    "O21",
+    "O18",
+    "O30",
+    "O20",
+    "O12",
+    "O39",
+    "O03",
+    "O06",
+    "O26",
+    "O29",
+    "O19",
+    "O27",
+    "O13"
+  ],
+  "operation_hand": [
+    "O22",
+    "O28",
+    "O33",
+    "O32",
+    "O24",
+    "O04"
+  ],
+  "operation_discard": [
+    "O09",
+    "O17",
+    "O31"
+  ],
+  "operation_cycles": 0,
+  "red_draw": [
+    "R08",
+    "R13",
+    "R23",
+    "R12",
+    "R09",
+    "R28",
+    "R27",
+    "R02",
+    "R05",
+    "R18",
+    "R15",
+    "R24",
+    "R16",
+    "R07",
+    "R04"
+  ],
+  "red_hand": [
+    "R19",
+    "R17",
+    "R25",
+    "R10",
+    "R26",
+    "R20",
+    "R03",
+    "R30",
+    "R29",
+    "R22",
+    "R14",
+    "R01",
+    "R06"
+  ],
+  "red_discard": [
+    "R11",
+    "R21"
+  ],
+  "red_cycles": 0,
+  "student_budget": {
+    "protocol": "student_tests/PROTOCOL.md",
+    "plans": [
+      {
+        "id": 1,
+        "turn": 1,
+        "at_move": 0,
+        "operation": "O09",
+        "red": "R11",
+        "params": {
+          "axis": "row",
+          "source": null,
+          "target": null,
+          "i": null,
+          "j": null,
+          "factor": "L",
+          "exponent": 2
+        },
+        "note": "Subtract R11 to make the bottom-left entry match the top-right 2.",
+        "attempted": true
+      },
+      {
+        "id": 2,
+        "turn": 2,
+        "at_move": 1,
+        "operation": "O17",
+        "red": "R21",
+        "params": {
+          "axis": "column",
+          "source": 1,
+          "target": 0,
+          "i": null,
+          "j": null,
+          "factor": "L",
+          "exponent": 2
+        },
+        "note": "Raise entry (1,0) from 1 toward its reflected entry 3, preserving the matched corner pair.",
+        "attempted": true
+      },
+      {
+        "id": 3,
+        "turn": 3,
+        "at_move": 2,
+        "operation": "O31",
+        "red": null,
+        "params": {
+          "axis": "row",
+          "source": null,
+          "target": null,
+          "i": 0,
+          "j": 1,
+          "factor": "L",
+          "exponent": 2
+        },
+        "note": "Try interchanging the first two rows; their final entries are both 2, so the matched corner pair stays.",
+        "attempted": true
+      }
+    ],
+    "previews": [
+      {
+        "turn": 1,
+        "plan": 1,
+        "result": [
+          [
+            -1,
+            3,
+            2
+          ],
+          [
+            1,
+            -2,
+            2
+          ],
+          [
+            2,
+            -3,
+            -3
+          ]
+        ]
+      },
+      {
+        "turn": 3,
+        "plan": 3,
+        "result": [
+          [
+            2,
+            -2,
+            2
+          ],
+          [
+            -1,
+            3,
+            2
+          ],
+          [
+            2,
+            -3,
+            -3
+          ]
+        ]
+      }
+    ],
+    "candidate_limit_per_turn": 2,
+    "preview_limit_per_turn": 1,
+    "preview_limit_total": 6
+  },
+  "experiment_phase": "formal",
+  "stop_reason": "Three turns played. One reflected corner pair matches, but the remaining mismatches need different corrections and I see no simple useful next move in the current hand."
+}

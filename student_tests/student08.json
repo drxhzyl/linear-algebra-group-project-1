@@ -1,0 +1,505 @@
+{
+  "kind": "gametrix-session",
+  "version": 1,
+  "deck": "/Users/qizhengwang/Desktop/school/GameTrix/generated/deck.json",
+  "deck_sha256": "38824be5406d3dca771a06dba3b5017253913858f049328d87b5c11e3bad2035",
+  "seed": 105,
+  "objective": {
+    "id": "C04",
+    "name": "Two-way Balance",
+    "tier": "Core",
+    "shape": "Square 3–4",
+    "goal": "Make every row sum and every column sum exactly 1, with at least one negative entry.",
+    "A": [
+      [
+        1,
+        1,
+        -1
+      ],
+      [
+        -1,
+        1,
+        1
+      ],
+      [
+        1,
+        -1,
+        1
+      ]
+    ],
+    "check": "All three row sums and column sums are 1; negative entries occur.",
+    "note": "Row sums and column sums both equal to 1 force a square shape: their totals are m and n. Size 2 is excluded here because its negative-entry solutions automatically satisfy Mirror Match, reducing variety."
+  },
+  "blue": "B05",
+  "current": [
+    [
+      0,
+      1,
+      0
+    ],
+    [
+      1,
+      -1,
+      1
+    ],
+    [
+      -2,
+      -1,
+      -2
+    ]
+  ],
+  "mode": "draw",
+  "player": "student_formal",
+  "turn_cap": 8,
+  "move_cap": 16,
+  "turn": 3,
+  "turn_operations": 1,
+  "moves": 3,
+  "status": "stopped",
+  "history": [
+    {
+      "type": "play",
+      "turn": 1,
+      "operation": "O16",
+      "code": "add_vector",
+      "red": "R21",
+      "params": {
+        "axis": "column",
+        "source": 2,
+        "target": 1,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2
+      },
+      "before": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          -1
+        ],
+        [
+          -3,
+          -3,
+          -1
+        ]
+      ],
+      "after": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          -1
+        ],
+        [
+          -3,
+          -2,
+          -1
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "row_sums_one": false,
+          "column_sums_one": false,
+          "negative_entry": true
+        },
+        "shape": [
+          3,
+          3
+        ]
+      },
+      "note": "The first candidate had length 4. Use a length-3 column to raise just the bottom middle -3, preserving the first two rows.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "end_turn",
+      "turn": 1,
+      "note": "student budget test",
+      "drawn": {
+        "operations": [
+          "O27",
+          "O38",
+          "O07"
+        ],
+        "red": [
+          "R27",
+          "R14",
+          "R06",
+          "R13",
+          "R10"
+        ]
+      }
+    },
+    {
+      "type": "play",
+      "turn": 2,
+      "operation": "O07",
+      "code": "subtract",
+      "red": "R14",
+      "params": {
+        "axis": "row",
+        "source": null,
+        "target": null,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2
+      },
+      "before": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          -1
+        ],
+        [
+          -3,
+          -2,
+          -1
+        ]
+      ],
+      "after": [
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          2,
+          -1,
+          1
+        ],
+        [
+          -2,
+          -1,
+          -2
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "row_sums_one": false,
+          "column_sums_one": false,
+          "negative_entry": true
+        },
+        "shape": [
+          3,
+          3
+        ]
+      },
+      "note": "Subtract R14 to raise the first two negative entries of the bottom row; preview the other changes.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "end_turn",
+      "turn": 2,
+      "note": "student budget test",
+      "drawn": {
+        "operations": [
+          "O10",
+          "O05",
+          "O14"
+        ],
+        "red": [
+          "R03",
+          "R20",
+          "R08",
+          "R22",
+          "R29"
+        ]
+      }
+    },
+    {
+      "type": "play",
+      "turn": 3,
+      "operation": "O10",
+      "code": "subtract",
+      "red": "R13",
+      "params": {
+        "axis": "row",
+        "source": null,
+        "target": null,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2
+      },
+      "before": [
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          2,
+          -1,
+          1
+        ],
+        [
+          -2,
+          -1,
+          -2
+        ]
+      ],
+      "after": [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          -1,
+          1
+        ],
+        [
+          -2,
+          -1,
+          -2
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "row_sums_one": false,
+          "column_sums_one": false,
+          "negative_entry": true
+        },
+        "shape": [
+          3,
+          3
+        ]
+      },
+      "note": "Lower the first entry in each of the first two rows by 1; the first row then reads [0,1,0].",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "stop",
+      "turn": 3,
+      "note": "Three turns played. The first two rows visibly balance, but the bottom row remains very negative; I see no simple correction in this hand that preserves those rows."
+    }
+  ],
+  "operation_draw": [
+    "O28",
+    "O32",
+    "O01",
+    "O15",
+    "O35",
+    "O29",
+    "O21",
+    "O13",
+    "O11",
+    "O09",
+    "O06",
+    "O34",
+    "O31",
+    "O08",
+    "O30",
+    "O17",
+    "O20",
+    "O23",
+    "O37",
+    "O18",
+    "O02",
+    "O19",
+    "O03",
+    "O24",
+    "O12",
+    "O40",
+    "O26",
+    "O33",
+    "O39",
+    "O22",
+    "O25"
+  ],
+  "operation_hand": [
+    "O36",
+    "O04",
+    "O27",
+    "O38",
+    "O05",
+    "O14"
+  ],
+  "operation_discard": [
+    "O16",
+    "O07",
+    "O10"
+  ],
+  "operation_cycles": 0,
+  "red_draw": [
+    "R23",
+    "R05",
+    "R16",
+    "R07",
+    "R30",
+    "R11",
+    "R26",
+    "R12",
+    "R19",
+    "R18",
+    "R17",
+    "R15",
+    "R01",
+    "R09",
+    "R24"
+  ],
+  "red_hand": [
+    "R04",
+    "R25",
+    "R28",
+    "R02",
+    "R27",
+    "R06",
+    "R10",
+    "R03",
+    "R20",
+    "R08",
+    "R22",
+    "R29"
+  ],
+  "red_discard": [
+    "R21",
+    "R14",
+    "R13"
+  ],
+  "red_cycles": 0,
+  "student_budget": {
+    "protocol": "student_tests/PROTOCOL.md",
+    "plans": [
+      {
+        "id": 1,
+        "turn": 1,
+        "at_move": 0,
+        "operation": "O16",
+        "red": "R25",
+        "params": {
+          "axis": "row",
+          "source": 0,
+          "target": 2,
+          "i": null,
+          "j": null,
+          "factor": "L",
+          "exponent": 2
+        },
+        "note": "Raise the two -3 entries in the last row while leaving the first two rows alone.",
+        "attempted": false
+      },
+      {
+        "id": 2,
+        "turn": 1,
+        "at_move": 0,
+        "operation": "O16",
+        "red": "R21",
+        "params": {
+          "axis": "column",
+          "source": 2,
+          "target": 1,
+          "i": null,
+          "j": null,
+          "factor": "L",
+          "exponent": 2
+        },
+        "note": "The first candidate had length 4. Use a length-3 column to raise just the bottom middle -3, preserving the first two rows.",
+        "attempted": true
+      },
+      {
+        "id": 3,
+        "turn": 2,
+        "at_move": 1,
+        "operation": "O07",
+        "red": "R14",
+        "params": {
+          "axis": "row",
+          "source": null,
+          "target": null,
+          "i": null,
+          "j": null,
+          "factor": "L",
+          "exponent": 2
+        },
+        "note": "Subtract R14 to raise the first two negative entries of the bottom row; preview the other changes.",
+        "attempted": true
+      },
+      {
+        "id": 4,
+        "turn": 3,
+        "at_move": 2,
+        "operation": "O10",
+        "red": "R13",
+        "params": {
+          "axis": "row",
+          "source": null,
+          "target": null,
+          "i": null,
+          "j": null,
+          "factor": "L",
+          "exponent": 2
+        },
+        "note": "Lower the first entry in each of the first two rows by 1; the first row then reads [0,1,0].",
+        "attempted": true
+      }
+    ],
+    "previews": [
+      {
+        "turn": 1,
+        "plan": 1,
+        "error": "Source and target vectors must have the same length"
+      },
+      {
+        "turn": 2,
+        "plan": 3,
+        "result": [
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            2,
+            -1,
+            1
+          ],
+          [
+            -2,
+            -1,
+            -2
+          ]
+        ]
+      }
+    ],
+    "candidate_limit_per_turn": 2,
+    "preview_limit_per_turn": 1,
+    "preview_limit_total": 6
+  },
+  "experiment_phase": "formal",
+  "stop_reason": "Three turns played. The first two rows visibly balance, but the bottom row remains very negative; I see no simple correction in this hand that preserves those rows."
+}

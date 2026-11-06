@@ -1,0 +1,376 @@
+[
+  {
+    "id": "C01",
+    "name": "Mirror Match",
+    "tier": "Core",
+    "shape": "Square 2–4",
+    "goal": "Make an invertible, non-diagonal symmetric matrix: Aᵀ = A and det(A) ≠ 0.",
+    "A": [
+      [
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        1
+      ]
+    ],
+    "check": "Aᵀ = A, det(A) = −1, and off-diagonal entries are nonzero.",
+    "note": "Transpose alone does not turn an asymmetric matrix into a symmetric one. A suitable interchange or red-card correction can finish this goal."
+  },
+  {
+    "id": "C02+",
+    "name": "Signed Identity +",
+    "tier": "Core",
+    "shape": "Square 2–4",
+    "goal": "Make I_n for n = 2, 3, or 4.",
+    "A": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "check": "This is I₃ and wins the +1 variant. Negating it wins the −1 variant.",
+    "note": "LU can finish the +1 variant from an upper triangular matrix by choosing L = I. Dimension changes may make a smaller identity easier to construct; generation tests must include those routes.",
+    "sign": 1
+  },
+  {
+    "id": "C02-",
+    "name": "Signed Identity -",
+    "tier": "Core",
+    "shape": "Square 2–4",
+    "goal": "Make -I_n for n = 2, 3, or 4.",
+    "A": [
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        -1,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "check": "This is -I₃ and wins the -1 variant.",
+    "note": "LU can finish the +1 variant from an upper triangular matrix by choosing L = I. Dimension changes may make a smaller identity easier to construct; generation tests must include those routes.",
+    "sign": -1
+  },
+  {
+    "id": "C03",
+    "name": "Diagonal Diversity",
+    "tier": "Core",
+    "shape": "Square 3–4",
+    "goal": "Make a diagonal matrix with every diagonal entry nonzero and at least three distinct diagonal values.",
+    "A": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        2,
+        0
+      ],
+      [
+        0,
+        0,
+        3
+      ]
+    ],
+    "check": "The diagonal values 1, 2, and 3 are nonzero and distinct.",
+    "note": "A 2×2 matrix cannot qualify. For an invertible lower triangular A with the required diagonal values, choosing U from LU can finish the goal."
+  },
+  {
+    "id": "C04",
+    "name": "Two-way Balance",
+    "tier": "Core",
+    "shape": "Square 3–4",
+    "goal": "Make every row sum and every column sum exactly 1, with at least one negative entry.",
+    "A": [
+      [
+        1,
+        1,
+        -1
+      ],
+      [
+        -1,
+        1,
+        1
+      ],
+      [
+        1,
+        -1,
+        1
+      ]
+    ],
+    "check": "All three row sums and column sums are 1; negative entries occur.",
+    "note": "Row sums and column sums both equal to 1 force a square shape: their totals are m and n. Size 2 is excluded here because its negative-entry solutions automatically satisfy Mirror Match, reducing variety."
+  },
+  {
+    "id": "C05",
+    "name": "Opposite Reflection",
+    "tier": "Core",
+    "shape": "Square 2–4",
+    "goal": "Make a nonzero skew-symmetric matrix: Aᵀ = −A.",
+    "A": [
+      [
+        0,
+        1,
+        -1
+      ],
+      [
+        -1,
+        0,
+        1
+      ],
+      [
+        1,
+        -1,
+        0
+      ]
+    ],
+    "check": "The diagonal is zero and opposite entries have opposite signs; A is nonzero.",
+    "note": "A real skew-symmetric matrix of odd size is singular; even sizes may be invertible. A single interchange can finish some specially arranged matrices, so check actual opening hands rather than assuming uniform difficulty."
+  },
+  {
+    "id": "C06",
+    "name": "Return to Start",
+    "tier": "Core",
+    "shape": "Square 2–4",
+    "goal": "Make a non-diagonal matrix with A² = Iₙ.",
+    "A": [
+      [
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        -1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "check": "A² = I₃; the off-diagonal 1 makes A non-diagonal.",
+    "note": "From I, swapping two rows or two columns produces a valid non-diagonal involution. Non-diagonal is required, so diagonal sign patterns and ±I alone do not win."
+  },
+  {
+    "id": "C07",
+    "name": "Volume-Preserving Mix",
+    "tier": "Core",
+    "shape": "Square 2–4",
+    "goal": "Make det(A) = 1, with at least two nonzero entries in every row and every column.",
+    "A": [
+      [
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1
+      ]
+    ],
+    "check": "det(A) = 1; each row and column contains at least two nonzero entries.",
+    "note": "LU no longer gives an automatic win: L has only one nonzero entry in its first row, and U has at most one in its last row. Fixed printed constants also remove arbitrary determinant tuning."
+  },
+  {
+    "id": "C08",
+    "name": "Projection",
+    "tier": "Advanced",
+    "shape": "Square 3–4",
+    "goal": "Make a non-diagonal rank-2 matrix satisfying A² = A.",
+    "A": [
+      [
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "check": "A² = A and rank(A) = 2; A is non-diagonal.",
+    "note": "A 2×2 rank-2 idempotent must be I₂ and therefore cannot qualify. Low-rank red cards provide useful ingredients, but making a matrix singular alone is insufficient."
+  },
+  {
+    "id": "C09",
+    "name": "Three-step Collapse",
+    "tier": "Advanced",
+    "shape": "Square 3–4",
+    "goal": "Make A³ = 0 while A² ≠ 0.",
+    "A": [
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "check": "A² has a 1 in position (1,3), while A³ is the zero matrix.",
+    "note": "Size 2 cannot have nilpotency index 3. Zero matrices and rank-1 shortcuts do not qualify. Check powers exactly rather than treating a zero determinant as sufficient."
+  },
+  {
+    "id": "C10",
+    "name": "Three-step Return",
+    "tier": "Advanced",
+    "shape": "Square 2–4",
+    "goal": "Make A³ = Iₙ, with A not a signed permutation matrix. A signed permutation matrix has exactly one nonzero entry in every row and column, and those entries are ±1.",
+    "A": [
+      [
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        -1,
+        0
+      ]
+    ],
+    "check": "A³ = I₃; rows with two nonzero entries show that A is not a signed permutation matrix.",
+    "note": "The exclusion prevents a simple three-cycle permutation from completing the goal. Over real matrices, triangular LU outputs cannot produce a nontrivial order-3 solution."
+  },
+  {
+    "id": "C11",
+    "name": "Orthogonal Columns",
+    "tier": "Core",
+    "shape": "Tall: 3×2, 4×2, or 4×3",
+    "goal": "Make a tall matrix whose columns are nonzero and pairwise orthogonal, with no zero rows. Equivalently, AᵀA is diagonal with positive diagonal entries.",
+    "A": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        -1
+      ],
+      [
+        1,
+        0
+      ]
+    ],
+    "check": "AᵀA = diag(3,2), and every row is nonzero.",
+    "note": "The columns need not have unit length, so integer solutions are possible. Appending a row r adds rᵀr to AᵀA; it changes orthogonality rather than guaranteeing it. This goal is the transpose counterpart of C12."
+  },
+  {
+    "id": "C12",
+    "name": "Orthogonal Rows",
+    "tier": "Core",
+    "shape": "Wide: 2×3, 2×4, or 3×4",
+    "goal": "Make a wide matrix whose rows are nonzero and pairwise orthogonal, with no zero columns. Equivalently, AAᵀ is diagonal with positive diagonal entries.",
+    "A": [
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        -1,
+        0
+      ]
+    ],
+    "check": "AAᵀ = diag(3,2), and every column is nonzero.",
+    "note": "Transpose converts a completed C11 matrix into a C12 matrix. Appending a column can alter row dot products, providing a reason to change dimensions rather than merely adding empty space."
+  },
+  {
+    "id": "C13",
+    "name": "Rectangular Balance",
+    "tier": "Core",
+    "shape": "Any non-square shape, each dimension 2–4",
+    "goal": "For an m×n matrix with m ≠ n, make every row sum n and every column sum m, with at least one negative entry.",
+    "A": [
+      [
+        -1,
+        3,
+        1
+      ],
+      [
+        3,
+        -1,
+        1
+      ]
+    ],
+    "check": "Here m = 2 and n = 3: each row sums to 3 and each column sums to 2; negative entries occur.",
+    "note": "These totals agree at mn, so rectangular solutions are possible. The negative-entry requirement excludes the all-ones matrix. Appending changes both the shape and the required row or column sums; check the complete result again."
+  },
+  {
+    "id": "C14",
+    "name": "Zero-sum Orthogonal Rows",
+    "tier": "Advanced",
+    "shape": "Wide: 2×3, 2×4, or 3×4",
+    "goal": "Make a wide matrix with nonzero pairwise orthogonal rows, every row sum 0, and no zero columns. Equivalently, A1ₙ = 0 and AAᵀ is diagonal with positive diagonal entries, where 1ₙ is the column vector of n ones.",
+    "A": [
+      [
+        1,
+        -1,
+        0
+      ],
+      [
+        1,
+        1,
+        -2
+      ]
+    ],
+    "check": "Both row sums are 0, their dot product is 0, and AAᵀ = diag(2,6). No column is zero.",
+    "note": "This intentionally strengthens C12 by putting the all-ones vector in the nullspace. Wide shape is necessary: independent zero-sum rows lie in an (n−1)-dimensional subspace."
+  }
+]

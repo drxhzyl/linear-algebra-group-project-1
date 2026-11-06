@@ -1,0 +1,500 @@
+{
+  "kind": "gametrix-session",
+  "version": 1,
+  "deck": "/Users/qizhengwang/Desktop/school/GameTrix/generated/deck.json",
+  "deck_sha256": "38824be5406d3dca771a06dba3b5017253913858f049328d87b5c11e3bad2035",
+  "seed": 206,
+  "objective": {
+    "id": "C08",
+    "name": "Projection",
+    "tier": "Advanced",
+    "shape": "Square 3–4",
+    "goal": "Make a non-diagonal rank-2 matrix satisfying A² = A.",
+    "A": [
+      [
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "check": "A² = A and rank(A) = 2; A is non-diagonal.",
+    "note": "A 2×2 rank-2 idempotent must be I₂ and therefore cannot qualify. Low-rank red cards provide useful ingredients, but making a matrix singular alone is insufficient."
+  },
+  "blue": "B12",
+  "current": [
+    [
+      2,
+      -2,
+      -1
+    ],
+    [
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      -1
+    ]
+  ],
+  "mode": "draw",
+  "player": "student_formal",
+  "turn_cap": 8,
+  "move_cap": 16,
+  "turn": 3,
+  "turn_operations": 1,
+  "moves": 3,
+  "status": "stopped",
+  "history": [
+    {
+      "type": "play",
+      "turn": 1,
+      "operation": "O03",
+      "code": "add",
+      "red": "R12",
+      "params": {
+        "axis": "row",
+        "source": null,
+        "target": null,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2
+      },
+      "before": [
+        [
+          1,
+          0,
+          -1
+        ],
+        [
+          0,
+          1,
+          -3
+        ],
+        [
+          0,
+          -1,
+          0
+        ]
+      ],
+      "after": [
+        [
+          2,
+          -2,
+          -1
+        ],
+        [
+          0,
+          -1,
+          -2
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "non_diagonal": true,
+          "rank_two": false,
+          "idempotent": false
+        },
+        "shape": [
+          3,
+          3
+        ]
+      },
+      "note": "Reduce the visible -3 entry to -2 while retaining square shape.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "end_turn",
+      "turn": 1,
+      "note": "student budget test",
+      "drawn": {
+        "operations": [
+          "O09",
+          "O30",
+          "O11"
+        ],
+        "red": [
+          "R30",
+          "R21",
+          "R02",
+          "R23",
+          "R03"
+        ]
+      }
+    },
+    {
+      "type": "play",
+      "turn": 2,
+      "operation": "O30",
+      "code": "swap",
+      "red": null,
+      "params": {
+        "axis": "row",
+        "source": null,
+        "target": null,
+        "i": 1,
+        "j": 2,
+        "factor": "L",
+        "exponent": 2
+      },
+      "before": [
+        [
+          2,
+          -2,
+          -1
+        ],
+        [
+          0,
+          -1,
+          -2
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "after": [
+        [
+          2,
+          -2,
+          -1
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          -1,
+          -2
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "non_diagonal": true,
+          "rank_two": false,
+          "idempotent": false
+        },
+        "shape": [
+          3,
+          3
+        ]
+      },
+      "note": "Move the sparse row with a 1 into the middle diagonal position.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "end_turn",
+      "turn": 2,
+      "note": "student budget test",
+      "drawn": {
+        "operations": [
+          "O19",
+          "O12",
+          "O13"
+        ],
+        "red": [
+          "R28",
+          "R09",
+          "R19",
+          "R20",
+          "R15"
+        ]
+      }
+    },
+    {
+      "type": "play",
+      "turn": 3,
+      "operation": "O19",
+      "code": "add_vector",
+      "red": "R09",
+      "params": {
+        "axis": "row",
+        "source": 2,
+        "target": 2,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2
+      },
+      "before": [
+        [
+          2,
+          -2,
+          -1
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          -1,
+          -2
+        ]
+      ],
+      "after": [
+        [
+          2,
+          -2,
+          -1
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          -1
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "non_diagonal": true,
+          "rank_two": false,
+          "idempotent": false
+        },
+        "shape": [
+          3,
+          3
+        ]
+      },
+      "note": "Clear the -1 in the last row and reduce the last entry toward zero.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "stop",
+      "turn": 3,
+      "note": "After three legal turns the last row is simpler, but I cannot see a useful correction toward A squared equals A with the available operations."
+    }
+  ],
+  "operation_draw": [
+    "O35",
+    "O29",
+    "O20",
+    "O02",
+    "O32",
+    "O15",
+    "O18",
+    "O38",
+    "O05",
+    "O04",
+    "O16",
+    "O40",
+    "O23",
+    "O37",
+    "O24",
+    "O25",
+    "O21",
+    "O01",
+    "O36",
+    "O28",
+    "O39",
+    "O34",
+    "O27",
+    "O17",
+    "O26",
+    "O10",
+    "O07",
+    "O06",
+    "O33",
+    "O31",
+    "O08"
+  ],
+  "operation_hand": [
+    "O22",
+    "O14",
+    "O09",
+    "O11",
+    "O12",
+    "O13"
+  ],
+  "operation_discard": [
+    "O03",
+    "O30",
+    "O19"
+  ],
+  "operation_cycles": 0,
+  "red_draw": [
+    "R17",
+    "R24",
+    "R08",
+    "R18",
+    "R10",
+    "R11",
+    "R22",
+    "R14",
+    "R29",
+    "R27",
+    "R13",
+    "R26",
+    "R04",
+    "R01",
+    "R06"
+  ],
+  "red_hand": [
+    "R25",
+    "R07",
+    "R16",
+    "R05",
+    "R30",
+    "R21",
+    "R02",
+    "R23",
+    "R03",
+    "R28",
+    "R19",
+    "R20",
+    "R15"
+  ],
+  "red_discard": [
+    "R12",
+    "R09"
+  ],
+  "red_cycles": 0,
+  "student_budget": {
+    "protocol": "student_tests/PROTOCOL.md",
+    "plans": [
+      {
+        "id": 1,
+        "turn": 1,
+        "at_move": 0,
+        "operation": "O14",
+        "red": "R07",
+        "params": {
+          "axis": "row",
+          "source": null,
+          "target": null,
+          "i": null,
+          "j": null,
+          "factor": "L",
+          "exponent": 2
+        },
+        "note": "Try the sparse square multiplier while keeping the required square shape.",
+        "attempted": false
+      },
+      {
+        "id": 2,
+        "turn": 1,
+        "at_move": 0,
+        "operation": "O03",
+        "red": "R12",
+        "params": {
+          "axis": "row",
+          "source": null,
+          "target": null,
+          "i": null,
+          "j": null,
+          "factor": "L",
+          "exponent": 2
+        },
+        "note": "Reduce the visible -3 entry to -2 while retaining square shape.",
+        "attempted": true
+      },
+      {
+        "id": 3,
+        "turn": 2,
+        "at_move": 1,
+        "operation": "O30",
+        "red": null,
+        "params": {
+          "axis": "row",
+          "source": null,
+          "target": null,
+          "i": 1,
+          "j": 2,
+          "factor": "L",
+          "exponent": 2
+        },
+        "note": "Move the sparse row with a 1 into the middle diagonal position.",
+        "attempted": true
+      },
+      {
+        "id": 4,
+        "turn": 3,
+        "at_move": 2,
+        "operation": "O19",
+        "red": "R09",
+        "params": {
+          "axis": "row",
+          "source": 2,
+          "target": 2,
+          "i": null,
+          "j": null,
+          "factor": "L",
+          "exponent": 2
+        },
+        "note": "Clear the -1 in the last row and reduce the last entry toward zero.",
+        "attempted": true
+      }
+    ],
+    "previews": [
+      {
+        "turn": 1,
+        "plan": 1,
+        "result": [
+          [
+            0,
+            0,
+            -1
+          ],
+          [
+            -3,
+            1,
+            -3
+          ],
+          [
+            0,
+            -1,
+            0
+          ]
+        ]
+      }
+    ],
+    "candidate_limit_per_turn": 2,
+    "preview_limit_per_turn": 1,
+    "preview_limit_total": 6
+  },
+  "experiment_phase": "formal",
+  "stop_reason": "After three legal turns the last row is simpler, but I cannot see a useful correction toward A squared equals A with the available operations."
+}

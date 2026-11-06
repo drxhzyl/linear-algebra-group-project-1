@@ -3,6 +3,7 @@ __pycache__/
 *.py[cod]
 digital/saves/
 tmp/
+output/pdf/
 .DS_Store
 .pytest_cache/
 .env

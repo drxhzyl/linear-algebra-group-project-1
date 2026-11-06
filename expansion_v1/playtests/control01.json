@@ -1,0 +1,1116 @@
+{
+  "kind": "gametrix-session",
+  "version": 1,
+  "deck": "/Users/qizhengwang/Desktop/school/GameTrix/expansion_v1/generated/baseline_deck.json",
+  "deck_sha256": "38824be5406d3dca771a06dba3b5017253913858f049328d87b5c11e3bad2035",
+  "seed": 101,
+  "objective": {
+    "id": "C01",
+    "name": "Mirror Match",
+    "tier": "Core",
+    "shape": "Square 2–4",
+    "goal": "Make an invertible, non-diagonal symmetric matrix: Aᵀ = A and det(A) ≠ 0.",
+    "A": [
+      [
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        1
+      ]
+    ],
+    "check": "Aᵀ = A, det(A) = −1, and off-diagonal entries are nonzero.",
+    "note": "Transpose alone does not turn an asymmetric matrix into a symmetric one. A suitable interchange or red-card correction can finish this goal."
+  },
+  "blue": "B01",
+  "current": [
+    [
+      4,
+      2,
+      0
+    ],
+    [
+      2,
+      -1,
+      0
+    ],
+    [
+      0,
+      1,
+      -3
+    ]
+  ],
+  "mode": "draw",
+  "player": "control",
+  "turn_cap": 8,
+  "move_cap": 16,
+  "turn": 8,
+  "turn_operations": 2,
+  "moves": 9,
+  "status": "turn_limit",
+  "history": [
+    {
+      "type": "play",
+      "turn": 1,
+      "operation": "O28",
+      "code": "transpose",
+      "red": null,
+      "params": {
+        "axis": "row",
+        "source": null,
+        "target": null,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2,
+        "delta": 1
+      },
+      "before": [
+        [
+          1,
+          2,
+          2
+        ],
+        [
+          1,
+          -1,
+          2
+        ],
+        [
+          0,
+          -2,
+          -2
+        ]
+      ],
+      "after": [
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          2,
+          -1,
+          -2
+        ],
+        [
+          2,
+          2,
+          -2
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "symmetric": false,
+          "invertible": true,
+          "non_diagonal": true
+        },
+        "shape": [
+          3,
+          3
+        ]
+      },
+      "note": "[stall] Transpose to keep a square shape while waiting for a pair edit.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "end_turn",
+      "turn": 1,
+      "note": "student budget test",
+      "drawn": {
+        "operations": [
+          "O17",
+          "O33",
+          "O31"
+        ],
+        "red": [
+          "R10",
+          "R26",
+          "R20",
+          "R03",
+          "R30"
+        ]
+      }
+    },
+    {
+      "type": "play",
+      "turn": 2,
+      "operation": "O17",
+      "code": "add_vector",
+      "red": "R17",
+      "params": {
+        "axis": "row",
+        "source": 1,
+        "target": 0,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2,
+        "delta": 1
+      },
+      "before": [
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          2,
+          -1,
+          -2
+        ],
+        [
+          2,
+          2,
+          -2
+        ]
+      ],
+      "after": [
+        [
+          2,
+          1,
+          1
+        ],
+        [
+          2,
+          -1,
+          -2
+        ],
+        [
+          2,
+          2,
+          -2
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "symmetric": false,
+          "invertible": true,
+          "non_diagonal": true
+        },
+        "shape": [
+          3,
+          3
+        ]
+      },
+      "note": "[progress] Raise the top middle entry to match the reflected 2.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "end_turn",
+      "turn": 2,
+      "note": "student budget test",
+      "drawn": {
+        "operations": [
+          "O32",
+          "O24",
+          "O04"
+        ],
+        "red": [
+          "R29",
+          "R22",
+          "R14",
+          "R01",
+          "R06"
+        ]
+      }
+    },
+    {
+      "type": "play",
+      "turn": 3,
+      "operation": "O09",
+      "code": "subtract",
+      "red": "R14",
+      "params": {
+        "axis": "row",
+        "source": null,
+        "target": null,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2,
+        "delta": 1
+      },
+      "before": [
+        [
+          2,
+          1,
+          1
+        ],
+        [
+          2,
+          -1,
+          -2
+        ],
+        [
+          2,
+          2,
+          -2
+        ]
+      ],
+      "after": [
+        [
+          3,
+          2,
+          0
+        ],
+        [
+          2,
+          -2,
+          0
+        ],
+        [
+          3,
+          3,
+          -3
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "symmetric": false,
+          "invertible": true,
+          "non_diagonal": true
+        },
+        "shape": [
+          3,
+          3
+        ]
+      },
+      "note": "[progress] Subtract the negative top-middle entry to match the reflected 2.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "end_turn",
+      "turn": 3,
+      "note": "student budget test",
+      "drawn": {
+        "operations": [
+          "O23",
+          "O35",
+          "O36"
+        ],
+        "red": [
+          "R08",
+          "R13",
+          "R23",
+          "R12",
+          "R09"
+        ]
+      }
+    },
+    {
+      "type": "play",
+      "turn": 4,
+      "operation": "O04",
+      "code": "add",
+      "red": "R08",
+      "params": {
+        "axis": "row",
+        "source": null,
+        "target": null,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2,
+        "delta": 1
+      },
+      "before": [
+        [
+          3,
+          2,
+          0
+        ],
+        [
+          2,
+          -2,
+          0
+        ],
+        [
+          3,
+          3,
+          -3
+        ]
+      ],
+      "after": [
+        [
+          4,
+          2,
+          0
+        ],
+        [
+          2,
+          -1,
+          0
+        ],
+        [
+          2,
+          3,
+          -2
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "symmetric": false,
+          "invertible": true,
+          "non_diagonal": true
+        },
+        "shape": [
+          3,
+          3
+        ]
+      },
+      "note": "[progress] Reduce the bottom-left mismatch by one while keeping the matched upper pair.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "end_turn",
+      "turn": 4,
+      "note": "student budget test",
+      "drawn": {
+        "operations": [
+          "O08",
+          "O16",
+          "O34"
+        ],
+        "red": [
+          "R28",
+          "R27",
+          "R02",
+          "R05",
+          "R18"
+        ]
+      }
+    },
+    {
+      "type": "play",
+      "turn": 5,
+      "operation": "O16",
+      "code": "add_vector",
+      "red": "R26",
+      "params": {
+        "axis": "row",
+        "source": 0,
+        "target": 2,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2,
+        "delta": 1
+      },
+      "before": [
+        [
+          4,
+          2,
+          0
+        ],
+        [
+          2,
+          -1,
+          0
+        ],
+        [
+          2,
+          3,
+          -2
+        ]
+      ],
+      "after": [
+        [
+          4,
+          2,
+          0
+        ],
+        [
+          2,
+          -1,
+          0
+        ],
+        [
+          3,
+          2,
+          -3
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "symmetric": false,
+          "invertible": true,
+          "non_diagonal": true
+        },
+        "shape": [
+          3,
+          3
+        ]
+      },
+      "note": "[progress] Reduce the bottom-middle mismatch by adding the negative entry.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "end_turn",
+      "turn": 5,
+      "note": "student budget test",
+      "drawn": {
+        "operations": [
+          "O07",
+          "O15",
+          "O02"
+        ],
+        "red": [
+          "R15",
+          "R24",
+          "R16",
+          "R07",
+          "R04"
+        ]
+      }
+    },
+    {
+      "type": "play",
+      "turn": 6,
+      "operation": "O08",
+      "code": "subtract",
+      "red": "R07",
+      "params": {
+        "axis": "row",
+        "source": null,
+        "target": null,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2,
+        "delta": 1
+      },
+      "before": [
+        [
+          4,
+          2,
+          0
+        ],
+        [
+          2,
+          -1,
+          0
+        ],
+        [
+          3,
+          2,
+          -3
+        ]
+      ],
+      "after": [
+        [
+          3,
+          2,
+          0
+        ],
+        [
+          2,
+          -2,
+          0
+        ],
+        [
+          2,
+          2,
+          -4
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "symmetric": false,
+          "invertible": true,
+          "non_diagonal": true
+        },
+        "shape": [
+          3,
+          3
+        ]
+      },
+      "note": "[progress] Reduce the bottom-left mismatch without changing the matched pair.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "end_turn",
+      "turn": 6,
+      "note": "student budget test",
+      "drawn": {
+        "operations": [
+          "O37",
+          "O40",
+          "O05"
+        ],
+        "red": [
+          "R08",
+          "R07",
+          "R17",
+          "R14",
+          "R26"
+        ]
+      }
+    },
+    {
+      "type": "play",
+      "turn": 7,
+      "operation": "O02",
+      "code": "add",
+      "red": "R08",
+      "params": {
+        "axis": "row",
+        "source": null,
+        "target": null,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2,
+        "delta": 1
+      },
+      "before": [
+        [
+          3,
+          2,
+          0
+        ],
+        [
+          2,
+          -2,
+          0
+        ],
+        [
+          2,
+          2,
+          -4
+        ]
+      ],
+      "after": [
+        [
+          4,
+          2,
+          0
+        ],
+        [
+          2,
+          -1,
+          0
+        ],
+        [
+          1,
+          2,
+          -3
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "symmetric": false,
+          "invertible": true,
+          "non_diagonal": true
+        },
+        "shape": [
+          3,
+          3
+        ]
+      },
+      "note": "[progress] Bring the bottom-left entry one closer to its reflected zero.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "end_turn",
+      "turn": 7,
+      "note": "student budget test",
+      "drawn": {
+        "operations": [
+          "O11",
+          "O01",
+          "O10"
+        ],
+        "red": [
+          "R08"
+        ]
+      }
+    },
+    {
+      "type": "play",
+      "turn": 8,
+      "operation": "O05",
+      "code": "add",
+      "red": "R08",
+      "params": {
+        "axis": "row",
+        "source": null,
+        "target": null,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2,
+        "delta": 1
+      },
+      "before": [
+        [
+          4,
+          2,
+          0
+        ],
+        [
+          2,
+          -1,
+          0
+        ],
+        [
+          1,
+          2,
+          -3
+        ]
+      ],
+      "after": [
+        [
+          5,
+          2,
+          0
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          -2
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "symmetric": false,
+          "invertible": true,
+          "non_diagonal": true
+        },
+        "shape": [
+          3,
+          3
+        ]
+      },
+      "note": "[progress] Clear bottom-left to match the top-right zero.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "play",
+      "turn": 8,
+      "operation": "O07",
+      "code": "subtract",
+      "red": "R09",
+      "params": {
+        "axis": "row",
+        "source": null,
+        "target": null,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2,
+        "delta": 1
+      },
+      "before": [
+        [
+          5,
+          2,
+          0
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          -2
+        ]
+      ],
+      "after": [
+        [
+          4,
+          2,
+          0
+        ],
+        [
+          2,
+          -1,
+          0
+        ],
+        [
+          0,
+          1,
+          -3
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "symmetric": false,
+          "invertible": true,
+          "non_diagonal": true
+        },
+        "shape": [
+          3,
+          3
+        ]
+      },
+      "note": "[progress] Reduce the remaining bottom-middle mismatch by one.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "end_turn",
+      "turn": 8,
+      "note": "student budget test",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    }
+  ],
+  "operation_draw": [
+    "O25",
+    "O14",
+    "O38",
+    "O21",
+    "O18",
+    "O30",
+    "O20",
+    "O12",
+    "O39",
+    "O03",
+    "O06",
+    "O26",
+    "O29",
+    "O19",
+    "O27",
+    "O13"
+  ],
+  "operation_hand": [
+    "O22",
+    "O33",
+    "O31",
+    "O32",
+    "O24",
+    "O23",
+    "O35",
+    "O36",
+    "O34",
+    "O15",
+    "O37",
+    "O40",
+    "O11",
+    "O01",
+    "O10"
+  ],
+  "operation_discard": [
+    "O28",
+    "O17",
+    "O09",
+    "O04",
+    "O16",
+    "O08",
+    "O02",
+    "O05",
+    "O07"
+  ],
+  "operation_cycles": 0,
+  "red_draw": [],
+  "red_hand": [
+    "R19",
+    "R21",
+    "R11",
+    "R25",
+    "R10",
+    "R20",
+    "R03",
+    "R30",
+    "R29",
+    "R22",
+    "R01",
+    "R06",
+    "R13",
+    "R23",
+    "R12",
+    "R28",
+    "R27",
+    "R02",
+    "R05",
+    "R18",
+    "R15",
+    "R24",
+    "R16",
+    "R04",
+    "R07",
+    "R17",
+    "R14",
+    "R26"
+  ],
+  "red_discard": [
+    "R08",
+    "R09"
+  ],
+  "red_cycles": 2,
+  "student_budget": {
+    "protocol": "expansion_v1/PROTOCOL.md",
+    "fixed_horizon": true,
+    "plans": [
+      {
+        "id": 1,
+        "turn": 1,
+        "at_move": 0,
+        "operation": "O28",
+        "red": null,
+        "params": {
+          "axis": "row",
+          "source": null,
+          "target": null,
+          "i": null,
+          "j": null,
+          "factor": "L",
+          "exponent": 2,
+          "delta": 1
+        },
+        "note": "[stall] Transpose to keep a square shape while waiting for a pair edit.",
+        "attempted": true
+      },
+      {
+        "id": 2,
+        "turn": 2,
+        "at_move": 1,
+        "operation": "O17",
+        "red": "R17",
+        "params": {
+          "axis": "row",
+          "source": 1,
+          "target": 0,
+          "i": null,
+          "j": null,
+          "factor": "L",
+          "exponent": 2,
+          "delta": 1
+        },
+        "note": "[progress] Raise the top middle entry to match the reflected 2.",
+        "attempted": true
+      },
+      {
+        "id": 3,
+        "turn": 3,
+        "at_move": 2,
+        "operation": "O09",
+        "red": "R14",
+        "params": {
+          "axis": "row",
+          "source": null,
+          "target": null,
+          "i": null,
+          "j": null,
+          "factor": "L",
+          "exponent": 2,
+          "delta": 1
+        },
+        "note": "[progress] Subtract the negative top-middle entry to match the reflected 2.",
+        "attempted": true
+      },
+      {
+        "id": 4,
+        "turn": 4,
+        "at_move": 3,
+        "operation": "O04",
+        "red": "R08",
+        "params": {
+          "axis": "row",
+          "source": null,
+          "target": null,
+          "i": null,
+          "j": null,
+          "factor": "L",
+          "exponent": 2,
+          "delta": 1
+        },
+        "note": "[progress] Reduce the bottom-left mismatch by one while keeping the matched upper pair.",
+        "attempted": true
+      },
+      {
+        "id": 5,
+        "turn": 5,
+        "at_move": 4,
+        "operation": "O16",
+        "red": "R26",
+        "params": {
+          "axis": "row",
+          "source": 0,
+          "target": 2,
+          "i": null,
+          "j": null,
+          "factor": "L",
+          "exponent": 2,
+          "delta": 1
+        },
+        "note": "[progress] Reduce the bottom-middle mismatch by adding the negative entry.",
+        "attempted": true
+      },
+      {
+        "id": 6,
+        "turn": 6,
+        "at_move": 5,
+        "operation": "O08",
+        "red": "R07",
+        "params": {
+          "axis": "row",
+          "source": null,
+          "target": null,
+          "i": null,
+          "j": null,
+          "factor": "L",
+          "exponent": 2,
+          "delta": 1
+        },
+        "note": "[progress] Reduce the bottom-left mismatch without changing the matched pair.",
+        "attempted": true
+      },
+      {
+        "id": 7,
+        "turn": 7,
+        "at_move": 6,
+        "operation": "O02",
+        "red": "R08",
+        "params": {
+          "axis": "row",
+          "source": null,
+          "target": null,
+          "i": null,
+          "j": null,
+          "factor": "L",
+          "exponent": 2,
+          "delta": 1
+        },
+        "note": "[progress] Bring the bottom-left entry one closer to its reflected zero.",
+        "attempted": true
+      },
+      {
+        "id": 8,
+        "turn": 8,
+        "at_move": 7,
+        "operation": "O05",
+        "red": "R08",
+        "params": {
+          "axis": "row",
+          "source": null,
+          "target": null,
+          "i": null,
+          "j": null,
+          "factor": "L",
+          "exponent": 2,
+          "delta": 1
+        },
+        "note": "[progress] Clear bottom-left to match the top-right zero.",
+        "attempted": true
+      },
+      {
+        "id": 9,
+        "turn": 8,
+        "at_move": 8,
+        "operation": "O07",
+        "red": "R09",
+        "params": {
+          "axis": "row",
+          "source": null,
+          "target": null,
+          "i": null,
+          "j": null,
+          "factor": "L",
+          "exponent": 2,
+          "delta": 1
+        },
+        "note": "[progress] Reduce the remaining bottom-middle mismatch by one.",
+        "attempted": true
+      }
+    ],
+    "previews": [
+      {
+        "turn": 3,
+        "plan": 3,
+        "result": [
+          [
+            3,
+            2,
+            0
+          ],
+          [
+            2,
+            -2,
+            0
+          ],
+          [
+            3,
+            3,
+            -3
+          ]
+        ]
+      }
+    ],
+    "candidate_limit_per_turn": 2,
+    "preview_limit_per_turn": 1,
+    "preview_limit_total": 6
+  },
+  "experiment_phase": "expansion_fixed_horizon"
+}

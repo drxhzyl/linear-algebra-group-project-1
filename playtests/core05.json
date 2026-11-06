@@ -1,0 +1,761 @@
+{
+  "kind": "gametrix-session",
+  "version": 1,
+  "deck": "/Users/qizhengwang/Desktop/school/GameTrix/playtests/deck_used.json",
+  "deck_sha256": "a71ff8f4cd105b923a74f191cd32e1ded855a2792d72c4005c74dd57f03615c3",
+  "seed": 105,
+  "objective": {
+    "id": "C04",
+    "name": "Two-way Balance",
+    "tier": "Core",
+    "shape": "Square 3–4",
+    "goal": "Make every row sum and every column sum exactly 1, with at least one negative entry.",
+    "A": [
+      [
+        1,
+        1,
+        -1
+      ],
+      [
+        -1,
+        1,
+        1
+      ],
+      [
+        1,
+        -1,
+        1
+      ]
+    ],
+    "check": "All three row sums and column sums are 1; negative entries occur.",
+    "note": "Row sums and column sums both equal to 1 force a square shape: their totals are m and n. Size 2 is excluded here because its negative-entry solutions automatically satisfy Mirror Match, reducing variety."
+  },
+  "blue": "B05",
+  "current": [
+    [
+      3,
+      2,
+      -4
+    ],
+    [
+      0,
+      0,
+      -1
+    ],
+    [
+      1,
+      2,
+      0
+    ]
+  ],
+  "mode": "draw",
+  "player": "play_core",
+  "turn_cap": 8,
+  "move_cap": 16,
+  "turn": 8,
+  "turn_operations": 0,
+  "moves": 7,
+  "status": "stopped",
+  "history": [
+    {
+      "type": "play",
+      "turn": 1,
+      "operation": "O04",
+      "code": "add",
+      "red": "R04",
+      "params": {
+        "axis": "row",
+        "source": null,
+        "target": null,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2
+      },
+      "before": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          -1
+        ],
+        [
+          -3,
+          -3,
+          -1
+        ]
+      ],
+      "after": [
+        [
+          -1,
+          0,
+          1
+        ],
+        [
+          2,
+          -1,
+          -1
+        ],
+        [
+          -3,
+          -3,
+          -2
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "row_sums_one": false,
+          "column_sums_one": false,
+          "negative_entry": true
+        },
+        "shape": [
+          3,
+          3
+        ]
+      },
+      "note": "Use the only same-shape red card available; its row/column-sum effect is exact but moves this hand away from balance, so draw for new tools next turn.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "end_turn",
+      "turn": 1,
+      "note": "",
+      "drawn": {
+        "operations": [
+          "O27",
+          "O38",
+          "O07"
+        ],
+        "red": [
+          "R27",
+          "R14",
+          "R06",
+          "R13",
+          "R10"
+        ]
+      }
+    },
+    {
+      "type": "play",
+      "turn": 2,
+      "operation": "O27",
+      "code": "transpose",
+      "red": null,
+      "params": {
+        "axis": "row",
+        "source": null,
+        "target": null,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2
+      },
+      "before": [
+        [
+          -1,
+          0,
+          1
+        ],
+        [
+          2,
+          -1,
+          -1
+        ],
+        [
+          -3,
+          -3,
+          -2
+        ]
+      ],
+      "after": [
+        [
+          -1,
+          2,
+          -3
+        ],
+        [
+          0,
+          -1,
+          -3
+        ],
+        [
+          1,
+          -1,
+          -2
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "row_sums_one": false,
+          "column_sums_one": false,
+          "negative_entry": true
+        },
+        "shape": [
+          3,
+          3
+        ]
+      },
+      "note": "Transpose swaps the row and column sum profiles exactly; this exposes the other side of the balance mismatch while preserving all entries.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "end_turn",
+      "turn": 2,
+      "note": "",
+      "drawn": {
+        "operations": [
+          "O10",
+          "O05",
+          "O14"
+        ],
+        "red": [
+          "R03",
+          "R20",
+          "R08",
+          "R22",
+          "R29"
+        ]
+      }
+    },
+    {
+      "type": "play",
+      "turn": 3,
+      "operation": "O07",
+      "code": "subtract",
+      "red": "R14",
+      "params": {
+        "axis": "row",
+        "source": null,
+        "target": null,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2
+      },
+      "before": [
+        [
+          -1,
+          2,
+          -3
+        ],
+        [
+          0,
+          -1,
+          -3
+        ],
+        [
+          1,
+          -1,
+          -2
+        ]
+      ],
+      "after": [
+        [
+          0,
+          3,
+          -4
+        ],
+        [
+          0,
+          -2,
+          -1
+        ],
+        [
+          2,
+          0,
+          -3
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "row_sums_one": false,
+          "column_sums_one": false,
+          "negative_entry": true
+        },
+        "shape": [
+          3,
+          3
+        ]
+      },
+      "note": "Subtract R14; it moves row sums from (-2,-4,-2) to (-1,-3,-1), a measurable partial balance correction while retaining a negative entry.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "end_turn",
+      "turn": 3,
+      "note": "",
+      "drawn": {
+        "operations": [
+          "O28",
+          "O32",
+          "O01"
+        ],
+        "red": [
+          "R23",
+          "R05",
+          "R16",
+          "R07",
+          "R30"
+        ]
+      }
+    },
+    {
+      "type": "play",
+      "turn": 4,
+      "operation": "O16",
+      "code": "add_vector",
+      "red": "R07",
+      "params": {
+        "axis": "row",
+        "source": 2,
+        "target": 2,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2
+      },
+      "before": [
+        [
+          0,
+          3,
+          -4
+        ],
+        [
+          0,
+          -2,
+          -1
+        ],
+        [
+          2,
+          0,
+          -3
+        ]
+      ],
+      "after": [
+        [
+          0,
+          3,
+          -4
+        ],
+        [
+          0,
+          -2,
+          -1
+        ],
+        [
+          3,
+          0,
+          -2
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "row_sums_one": false,
+          "column_sums_one": false,
+          "negative_entry": true
+        },
+        "shape": [
+          3,
+          3
+        ]
+      },
+      "note": "Add R07 row 2 with sum 2 to row 2, bringing that row sum from -1 to 1 while keeping a negative entry.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "end_turn",
+      "turn": 4,
+      "note": "",
+      "drawn": {
+        "operations": [
+          "O15",
+          "O35",
+          "O29"
+        ],
+        "red": [
+          "R11",
+          "R26",
+          "R12",
+          "R19",
+          "R18"
+        ]
+      }
+    },
+    {
+      "type": "play",
+      "turn": 5,
+      "operation": "O05",
+      "code": "add",
+      "red": "R11",
+      "params": {
+        "axis": "row",
+        "source": null,
+        "target": null,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2
+      },
+      "before": [
+        [
+          0,
+          3,
+          -4
+        ],
+        [
+          0,
+          -2,
+          -1
+        ],
+        [
+          3,
+          0,
+          -2
+        ]
+      ],
+      "after": [
+        [
+          2,
+          2,
+          -4
+        ],
+        [
+          0,
+          -1,
+          -1
+        ],
+        [
+          1,
+          1,
+          -1
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "row_sums_one": false,
+          "column_sums_one": false,
+          "negative_entry": true
+        },
+        "shape": [
+          3,
+          3
+        ]
+      },
+      "note": "Add R11; its row/column sums improve two deficient row sums and move the last column from -7 to -6 while retaining negative entries.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "end_turn",
+      "turn": 5,
+      "note": "",
+      "drawn": {
+        "operations": [
+          "O21",
+          "O13",
+          "O11"
+        ],
+        "red": [
+          "R17",
+          "R15",
+          "R01",
+          "R09",
+          "R24"
+        ]
+      }
+    },
+    {
+      "type": "play",
+      "turn": 6,
+      "operation": "O01",
+      "code": "add",
+      "red": "R09",
+      "params": {
+        "axis": "row",
+        "source": null,
+        "target": null,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2
+      },
+      "before": [
+        [
+          2,
+          2,
+          -4
+        ],
+        [
+          0,
+          -1,
+          -1
+        ],
+        [
+          1,
+          1,
+          -1
+        ]
+      ],
+      "after": [
+        [
+          3,
+          2,
+          -4
+        ],
+        [
+          0,
+          0,
+          -1
+        ],
+        [
+          1,
+          2,
+          0
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "row_sums_one": false,
+          "column_sums_one": false,
+          "negative_entry": true
+        },
+        "shape": [
+          3,
+          3
+        ]
+      },
+      "note": "Add R09; its total sum is +4, matching the matrix's total-sum deficit exactly, and it makes row 0 sum 1.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "end_turn",
+      "turn": 6,
+      "note": "",
+      "drawn": {
+        "operations": [
+          "O09",
+          "O06",
+          "O34"
+        ],
+        "red": [
+          "R09",
+          "R11",
+          "R04",
+          "R07",
+          "R14"
+        ]
+      }
+    },
+    {
+      "type": "play",
+      "turn": 7,
+      "operation": "O14",
+      "code": "multiply",
+      "red": "R03",
+      "params": {
+        "axis": "row",
+        "source": null,
+        "target": null,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2
+      },
+      "before": [
+        [
+          3,
+          2,
+          -4
+        ],
+        [
+          0,
+          0,
+          -1
+        ],
+        [
+          1,
+          2,
+          0
+        ]
+      ],
+      "after": [
+        [
+          3,
+          2,
+          -4
+        ],
+        [
+          0,
+          0,
+          -1
+        ],
+        [
+          1,
+          2,
+          0
+        ]
+      ],
+      "changed": false,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "row_sums_one": false,
+          "column_sums_one": false,
+          "negative_entry": true
+        },
+        "shape": [
+          3,
+          3
+        ]
+      },
+      "note": "Multiply by I3, an exact legal unchanged move; current same-shape cards do not repair the unequal column sums, so I cycle to the final assigned draw.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "end_turn",
+      "turn": 7,
+      "note": "",
+      "drawn": {
+        "operations": [
+          "O31",
+          "O08",
+          "O30"
+        ],
+        "red": [
+          "R03"
+        ]
+      }
+    },
+    {
+      "type": "stop",
+      "turn": 8,
+      "note": "Stopped at the start of turn 8 with all row/column sums still unequal. No legal-action deadlock occurred; this was a bounded unresolved plan, not an impossibility result."
+    }
+  ],
+  "operation_draw": [
+    "O17",
+    "O20",
+    "O23",
+    "O37",
+    "O18",
+    "O02",
+    "O19",
+    "O03",
+    "O24",
+    "O12",
+    "O40",
+    "O26",
+    "O33",
+    "O39",
+    "O22",
+    "O25"
+  ],
+  "operation_hand": [
+    "O36",
+    "O38",
+    "O10",
+    "O28",
+    "O32",
+    "O15",
+    "O35",
+    "O29",
+    "O21",
+    "O13",
+    "O11",
+    "O09",
+    "O06",
+    "O34",
+    "O31",
+    "O08",
+    "O30"
+  ],
+  "operation_discard": [
+    "O04",
+    "O27",
+    "O07",
+    "O16",
+    "O05",
+    "O01",
+    "O14"
+  ],
+  "operation_cycles": 0,
+  "red_draw": [],
+  "red_hand": [
+    "R25",
+    "R28",
+    "R21",
+    "R02",
+    "R27",
+    "R06",
+    "R13",
+    "R10",
+    "R20",
+    "R08",
+    "R22",
+    "R29",
+    "R23",
+    "R05",
+    "R16",
+    "R30",
+    "R26",
+    "R12",
+    "R19",
+    "R18",
+    "R17",
+    "R15",
+    "R01",
+    "R24",
+    "R09",
+    "R11",
+    "R04",
+    "R07",
+    "R14",
+    "R03"
+  ],
+  "red_discard": [],
+  "red_cycles": 2,
+  "stop_reason": "Stopped at the start of turn 8 with all row/column sums still unequal. No legal-action deadlock occurred; this was a bounded unresolved plan, not an impossibility result."
+}

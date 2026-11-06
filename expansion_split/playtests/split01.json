@@ -1,0 +1,698 @@
+{
+  "kind": "gametrix-session",
+  "version": 1,
+  "deck": "/Users/qizhengwang/Desktop/school/GameTrix/expansion_split/generated/deck.json",
+  "deck_sha256": "e16214b744b9807ead74ec891a8a6e5bedbf7424e9455343b9a11288a422d4c8",
+  "seed": 101,
+  "objective": {
+    "id": "C01",
+    "name": "Mirror Match",
+    "tier": "Core",
+    "shape": "Square 2–4",
+    "goal": "Make an invertible, non-diagonal symmetric matrix: Aᵀ = A and det(A) ≠ 0.",
+    "A": [
+      [
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        1
+      ]
+    ],
+    "check": "Aᵀ = A, det(A) = −1, and off-diagonal entries are nonzero.",
+    "note": "Transpose alone does not turn an asymmetric matrix into a symmetric one. A suitable interchange or red-card correction can finish this goal."
+  },
+  "blue": "B01",
+  "current": [
+    [
+      1,
+      2,
+      0
+    ],
+    [
+      2,
+      -1,
+      1
+    ],
+    [
+      0,
+      1,
+      -2
+    ]
+  ],
+  "mode": "draw",
+  "player": "split",
+  "turn_cap": 8,
+  "move_cap": 16,
+  "turn": 4,
+  "turn_operations": 1,
+  "moves": 5,
+  "status": "won",
+  "history": [
+    {
+      "type": "play",
+      "turn": 1,
+      "operation": "O66",
+      "code": "entry_zero",
+      "red": "R19",
+      "params": {
+        "axis": "row",
+        "source": null,
+        "target": null,
+        "i": 0,
+        "j": 2,
+        "factor": "L",
+        "exponent": 2,
+        "delta": 1
+      },
+      "before": [
+        [
+          1,
+          2,
+          2
+        ],
+        [
+          1,
+          -1,
+          2
+        ],
+        [
+          0,
+          -2,
+          -2
+        ]
+      ],
+      "after": [
+        [
+          1,
+          2,
+          0
+        ],
+        [
+          1,
+          -1,
+          2
+        ],
+        [
+          0,
+          -2,
+          -2
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "symmetric": false,
+          "invertible": true,
+          "non_diagonal": true
+        },
+        "shape": [
+          3,
+          3
+        ]
+      },
+      "note": "[progress] Match the zero in the reflected bottom-left entry.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "end_turn",
+      "turn": 1,
+      "note": "student budget test",
+      "drawn": {
+        "operations": [
+          "O48",
+          "O11",
+          "O28"
+        ],
+        "red": [
+          "R10",
+          "R26",
+          "R20",
+          "R03",
+          "R30"
+        ]
+      }
+    },
+    {
+      "type": "play",
+      "turn": 2,
+      "operation": "O48",
+      "code": "entry_plus",
+      "red": "R17",
+      "params": {
+        "axis": "row",
+        "source": null,
+        "target": null,
+        "i": 1,
+        "j": 0,
+        "factor": "L",
+        "exponent": 2,
+        "delta": 1
+      },
+      "before": [
+        [
+          1,
+          2,
+          0
+        ],
+        [
+          1,
+          -1,
+          2
+        ],
+        [
+          0,
+          -2,
+          -2
+        ]
+      ],
+      "after": [
+        [
+          1,
+          2,
+          0
+        ],
+        [
+          2,
+          -1,
+          2
+        ],
+        [
+          0,
+          -2,
+          -2
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "symmetric": false,
+          "invertible": true,
+          "non_diagonal": true
+        },
+        "shape": [
+          3,
+          3
+        ]
+      },
+      "note": "[progress] Raise the lower entry to match its reflected two.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "end_turn",
+      "turn": 2,
+      "note": "student budget test",
+      "drawn": {
+        "operations": [
+          "O67",
+          "O46",
+          "O30"
+        ],
+        "red": [
+          "R29",
+          "R22",
+          "R14",
+          "R01",
+          "R06"
+        ]
+      }
+    },
+    {
+      "type": "play",
+      "turn": 3,
+      "operation": "O67",
+      "code": "entry_zero",
+      "red": "R21",
+      "params": {
+        "axis": "row",
+        "source": null,
+        "target": null,
+        "i": 2,
+        "j": 1,
+        "factor": "L",
+        "exponent": 2,
+        "delta": 1
+      },
+      "before": [
+        [
+          1,
+          2,
+          0
+        ],
+        [
+          2,
+          -1,
+          2
+        ],
+        [
+          0,
+          -2,
+          -2
+        ]
+      ],
+      "after": [
+        [
+          1,
+          2,
+          0
+        ],
+        [
+          2,
+          -1,
+          2
+        ],
+        [
+          0,
+          0,
+          -2
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "symmetric": false,
+          "invertible": true,
+          "non_diagonal": true
+        },
+        "shape": [
+          3,
+          3
+        ]
+      },
+      "note": "[progress] Clear the negative entry in the last unmatched reflected pair.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "play",
+      "turn": 3,
+      "operation": "O46",
+      "code": "entry_plus",
+      "red": "R25",
+      "params": {
+        "axis": "row",
+        "source": null,
+        "target": null,
+        "i": 2,
+        "j": 1,
+        "factor": "L",
+        "exponent": 2,
+        "delta": 1
+      },
+      "before": [
+        [
+          1,
+          2,
+          0
+        ],
+        [
+          2,
+          -1,
+          2
+        ],
+        [
+          0,
+          0,
+          -2
+        ]
+      ],
+      "after": [
+        [
+          1,
+          2,
+          0
+        ],
+        [
+          2,
+          -1,
+          2
+        ],
+        [
+          0,
+          1,
+          -2
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "symmetric": false,
+          "invertible": true,
+          "non_diagonal": true
+        },
+        "shape": [
+          3,
+          3
+        ]
+      },
+      "note": "[progress] Bring the cleared entry one step toward its reflected two.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "end_turn",
+      "turn": 3,
+      "note": "student budget test",
+      "drawn": {
+        "operations": [
+          "O29",
+          "O16",
+          "O64"
+        ],
+        "red": [
+          "R08",
+          "R13",
+          "R23",
+          "R12",
+          "R09"
+        ]
+      }
+    },
+    {
+      "type": "play",
+      "turn": 4,
+      "operation": "O64",
+      "code": "entry_minus",
+      "red": "R26",
+      "params": {
+        "axis": "row",
+        "source": null,
+        "target": null,
+        "i": 1,
+        "j": 2,
+        "factor": "L",
+        "exponent": 2,
+        "delta": 1
+      },
+      "before": [
+        [
+          1,
+          2,
+          0
+        ],
+        [
+          2,
+          -1,
+          2
+        ],
+        [
+          0,
+          1,
+          -2
+        ]
+      ],
+      "after": [
+        [
+          1,
+          2,
+          0
+        ],
+        [
+          2,
+          -1,
+          1
+        ],
+        [
+          0,
+          1,
+          -2
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": true,
+        "checks": {
+          "shape": true,
+          "symmetric": true,
+          "invertible": true,
+          "non_diagonal": true
+        },
+        "shape": [
+          3,
+          3
+        ]
+      },
+      "note": "[progress] Lower the two to match the reflected one with the available minus card.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    }
+  ],
+  "operation_draw": [
+    "O51",
+    "O75",
+    "O20",
+    "O34",
+    "O15",
+    "O47",
+    "O65",
+    "O68",
+    "O19",
+    "O18",
+    "O33",
+    "O77",
+    "O62",
+    "O35",
+    "O31",
+    "O60",
+    "O61",
+    "O08",
+    "O39",
+    "O76",
+    "O40",
+    "O71",
+    "O73",
+    "O01",
+    "O43",
+    "O10",
+    "O14",
+    "O41",
+    "O45",
+    "O07",
+    "O27",
+    "O21",
+    "O69",
+    "O38",
+    "O44",
+    "O50",
+    "O70",
+    "O24",
+    "O55",
+    "O74",
+    "O53",
+    "O04",
+    "O63",
+    "O03",
+    "O72",
+    "O26",
+    "O32",
+    "O80",
+    "O57",
+    "O09",
+    "O13",
+    "O59",
+    "O06",
+    "O49",
+    "O17",
+    "O42",
+    "O02",
+    "O78",
+    "O56",
+    "O23",
+    "O79",
+    "O05",
+    "O12",
+    "O52",
+    "O58",
+    "O37",
+    "O54",
+    "O25"
+  ],
+  "operation_hand": [
+    "O36",
+    "O22",
+    "O11",
+    "O28",
+    "O30",
+    "O29",
+    "O16"
+  ],
+  "operation_discard": [
+    "O66",
+    "O48",
+    "O67",
+    "O46",
+    "O64"
+  ],
+  "operation_cycles": 0,
+  "red_draw": [
+    "R28",
+    "R27",
+    "R02",
+    "R05",
+    "R18",
+    "R15",
+    "R24",
+    "R16",
+    "R07",
+    "R04"
+  ],
+  "red_hand": [
+    "R11",
+    "R10",
+    "R20",
+    "R03",
+    "R30",
+    "R29",
+    "R22",
+    "R14",
+    "R01",
+    "R06",
+    "R08",
+    "R13",
+    "R23",
+    "R12",
+    "R09"
+  ],
+  "red_discard": [
+    "R19",
+    "R17",
+    "R21",
+    "R25",
+    "R26"
+  ],
+  "red_cycles": 0,
+  "student_budget": {
+    "protocol": "expansion_split/PROTOCOL.md",
+    "fixed_horizon": true,
+    "plans": [
+      {
+        "id": 1,
+        "turn": 1,
+        "at_move": 0,
+        "operation": "O66",
+        "red": "R19",
+        "params": {
+          "axis": "row",
+          "source": null,
+          "target": null,
+          "i": 0,
+          "j": 2,
+          "factor": "L",
+          "exponent": 2,
+          "delta": 1
+        },
+        "note": "[progress] Match the zero in the reflected bottom-left entry.",
+        "attempted": true
+      },
+      {
+        "id": 2,
+        "turn": 2,
+        "at_move": 1,
+        "operation": "O48",
+        "red": "R17",
+        "params": {
+          "axis": "row",
+          "source": null,
+          "target": null,
+          "i": 1,
+          "j": 0,
+          "factor": "L",
+          "exponent": 2,
+          "delta": 1
+        },
+        "note": "[progress] Raise the lower entry to match its reflected two.",
+        "attempted": true
+      },
+      {
+        "id": 3,
+        "turn": 3,
+        "at_move": 2,
+        "operation": "O67",
+        "red": "R21",
+        "params": {
+          "axis": "row",
+          "source": null,
+          "target": null,
+          "i": 2,
+          "j": 1,
+          "factor": "L",
+          "exponent": 2,
+          "delta": 1
+        },
+        "note": "[progress] Clear the negative entry in the last unmatched reflected pair.",
+        "attempted": true
+      },
+      {
+        "id": 4,
+        "turn": 3,
+        "at_move": 3,
+        "operation": "O46",
+        "red": "R25",
+        "params": {
+          "axis": "row",
+          "source": null,
+          "target": null,
+          "i": 2,
+          "j": 1,
+          "factor": "L",
+          "exponent": 2,
+          "delta": 1
+        },
+        "note": "[progress] Bring the cleared entry one step toward its reflected two.",
+        "attempted": true
+      },
+      {
+        "id": 5,
+        "turn": 4,
+        "at_move": 4,
+        "operation": "O64",
+        "red": "R26",
+        "params": {
+          "axis": "row",
+          "source": null,
+          "target": null,
+          "i": 1,
+          "j": 2,
+          "factor": "L",
+          "exponent": 2,
+          "delta": 1
+        },
+        "note": "[progress] Lower the two to match the reflected one with the available minus card.",
+        "attempted": true
+      }
+    ],
+    "previews": [],
+    "candidate_limit_per_turn": 2,
+    "preview_limit_per_turn": 1,
+    "preview_limit_total": 6
+  },
+  "experiment_phase": "split_signs_fixed_horizon"
+}

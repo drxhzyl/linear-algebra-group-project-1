@@ -1,0 +1,12 @@
+{
+  "directory": "/Users/qizhengwang/Desktop/school/GameTrix/generated",
+  "seed": 20261028,
+  "counts": {
+    "blue": 12,
+    "red": 30,
+    "operations": 40,
+    "objectives": 15
+  },
+  "status": "provisional: not universally certified or balance-tested",
+  "blue_candidate_attempts": 90
+}

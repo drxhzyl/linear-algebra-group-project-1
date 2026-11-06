@@ -1,0 +1,285 @@
+{
+  "kind": "gametrix-session",
+  "version": 1,
+  "deck": "/Users/qizhengwang/Desktop/school/GameTrix/expansion_split/generated/deck.json",
+  "deck_sha256": "e16214b744b9807ead74ec891a8a6e5bedbf7424e9455343b9a11288a422d4c8",
+  "seed": 206,
+  "objective": {
+    "id": "C08",
+    "name": "Projection",
+    "tier": "Advanced",
+    "shape": "Square 3–4",
+    "goal": "Make a non-diagonal rank-2 matrix satisfying A² = A.",
+    "A": [
+      [
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "check": "A² = A and rank(A) = 2; A is non-diagonal.",
+    "note": "A 2×2 rank-2 idempotent must be I₂ and therefore cannot qualify. Low-rank red cards provide useful ingredients, but making a matrix singular alone is insufficient."
+  },
+  "blue": "B12",
+  "current": [
+    [
+      1,
+      0,
+      -1
+    ],
+    [
+      0,
+      1,
+      -3
+    ],
+    [
+      0,
+      0,
+      0
+    ]
+  ],
+  "mode": "draw",
+  "player": "split",
+  "turn_cap": 8,
+  "move_cap": 16,
+  "turn": 1,
+  "turn_operations": 1,
+  "moves": 1,
+  "status": "won",
+  "history": [
+    {
+      "type": "play",
+      "turn": 1,
+      "operation": "O47",
+      "code": "entry_plus",
+      "red": "R25",
+      "params": {
+        "axis": "row",
+        "source": null,
+        "target": null,
+        "i": 2,
+        "j": 1,
+        "factor": "L",
+        "exponent": 2,
+        "delta": 1
+      },
+      "before": [
+        [
+          1,
+          0,
+          -1
+        ],
+        [
+          0,
+          1,
+          -3
+        ],
+        [
+          0,
+          -1,
+          0
+        ]
+      ],
+      "after": [
+        [
+          1,
+          0,
+          -1
+        ],
+        [
+          0,
+          1,
+          -3
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": true,
+        "checks": {
+          "shape": true,
+          "non_diagonal": true,
+          "rank_two": true,
+          "idempotent": true
+        },
+        "shape": [
+          3,
+          3
+        ]
+      },
+      "note": "[progress] Clear the negative entry in the last row.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    }
+  ],
+  "operation_draw": [
+    "O07",
+    "O67",
+    "O01",
+    "O71",
+    "O56",
+    "O60",
+    "O14",
+    "O23",
+    "O49",
+    "O55",
+    "O65",
+    "O77",
+    "O29",
+    "O40",
+    "O45",
+    "O52",
+    "O50",
+    "O62",
+    "O03",
+    "O48",
+    "O68",
+    "O24",
+    "O16",
+    "O39",
+    "O08",
+    "O53",
+    "O36",
+    "O74",
+    "O72",
+    "O21",
+    "O79",
+    "O73",
+    "O44",
+    "O31",
+    "O06",
+    "O26",
+    "O17",
+    "O76",
+    "O70",
+    "O37",
+    "O43",
+    "O59",
+    "O12",
+    "O35",
+    "O28",
+    "O30",
+    "O18",
+    "O57",
+    "O38",
+    "O42",
+    "O41",
+    "O25",
+    "O78",
+    "O05",
+    "O04",
+    "O58",
+    "O09",
+    "O63",
+    "O46",
+    "O33",
+    "O20",
+    "O80",
+    "O64",
+    "O32",
+    "O69",
+    "O22",
+    "O02",
+    "O27",
+    "O54",
+    "O34",
+    "O51",
+    "O19",
+    "O13",
+    "O11",
+    "O66",
+    "O61",
+    "O15"
+  ],
+  "operation_hand": [
+    "O10",
+    "O75"
+  ],
+  "operation_discard": [
+    "O47"
+  ],
+  "operation_cycles": 0,
+  "red_draw": [
+    "R30",
+    "R21",
+    "R02",
+    "R23",
+    "R03",
+    "R28",
+    "R09",
+    "R19",
+    "R20",
+    "R15",
+    "R17",
+    "R24",
+    "R08",
+    "R18",
+    "R10",
+    "R11",
+    "R22",
+    "R14",
+    "R29",
+    "R27",
+    "R13",
+    "R26",
+    "R04",
+    "R01",
+    "R06"
+  ],
+  "red_hand": [
+    "R07",
+    "R12",
+    "R16",
+    "R05"
+  ],
+  "red_discard": [
+    "R25"
+  ],
+  "red_cycles": 0,
+  "student_budget": {
+    "protocol": "expansion_split/PROTOCOL.md",
+    "fixed_horizon": true,
+    "plans": [
+      {
+        "id": 1,
+        "turn": 1,
+        "at_move": 0,
+        "operation": "O47",
+        "red": "R25",
+        "params": {
+          "axis": "row",
+          "source": null,
+          "target": null,
+          "i": 2,
+          "j": 1,
+          "factor": "L",
+          "exponent": 2,
+          "delta": 1
+        },
+        "note": "[progress] Clear the negative entry in the last row.",
+        "attempted": true
+      }
+    ],
+    "previews": [],
+    "candidate_limit_per_turn": 2,
+    "preview_limit_per_turn": 1,
+    "preview_limit_total": 6
+  },
+  "experiment_phase": "split_signs_fixed_horizon"
+}

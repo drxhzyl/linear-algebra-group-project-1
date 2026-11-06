@@ -1,0 +1,528 @@
+{
+  "kind": "gametrix-session",
+  "version": 1,
+  "deck": "/Users/qizhengwang/Desktop/school/GameTrix/generated/deck.json",
+  "deck_sha256": "38824be5406d3dca771a06dba3b5017253913858f049328d87b5c11e3bad2035",
+  "seed": 301,
+  "objective": {
+    "id": "C11",
+    "name": "Orthogonal Columns",
+    "tier": "Core",
+    "shape": "Tall: 3×2, 4×2, or 4×3",
+    "goal": "Make a tall matrix whose columns are nonzero and pairwise orthogonal, with no zero rows. Equivalently, AᵀA is diagonal with positive diagonal entries.",
+    "A": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        -1
+      ],
+      [
+        1,
+        0
+      ]
+    ],
+    "check": "AᵀA = diag(3,2), and every row is nonzero.",
+    "note": "The columns need not have unit length, so integer solutions are possible. Appending a row r adds rᵀr to AᵀA; it changes orthogonality rather than guaranteeing it. This goal is the transpose counterpart of C12."
+  },
+  "blue": "B01",
+  "current": [
+    [
+      2,
+      3
+    ],
+    [
+      -1,
+      2
+    ],
+    [
+      -2,
+      -2
+    ],
+    [
+      -1,
+      1
+    ]
+  ],
+  "mode": "draw",
+  "player": "student_formal",
+  "turn_cap": 8,
+  "move_cap": 16,
+  "turn": 3,
+  "turn_operations": 1,
+  "moves": 3,
+  "status": "stopped",
+  "history": [
+    {
+      "type": "play",
+      "turn": 1,
+      "operation": "O22",
+      "code": "append_vector",
+      "red": "R15",
+      "params": {
+        "axis": "row",
+        "source": 0,
+        "target": null,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2
+      },
+      "before": [
+        [
+          1,
+          2,
+          2
+        ],
+        [
+          1,
+          -1,
+          2
+        ],
+        [
+          0,
+          -2,
+          -2
+        ]
+      ],
+      "after": [
+        [
+          1,
+          2,
+          2
+        ],
+        [
+          1,
+          -1,
+          2
+        ],
+        [
+          0,
+          -2,
+          -2
+        ],
+        [
+          1,
+          -1,
+          0
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "nonzero_vectors": true,
+          "orthogonal_vectors": false,
+          "no_zero_rows": true
+        },
+        "shape": [
+          4,
+          3
+        ]
+      },
+      "note": "Append a nonzero row to reach the tall shape; its opposite signs may help balance the first two columns.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "end_turn",
+      "turn": 1,
+      "note": "student budget test",
+      "drawn": {
+        "operations": [
+          "O17",
+          "O06",
+          "O30"
+        ],
+        "red": [
+          "R10",
+          "R18",
+          "R06",
+          "R01",
+          "R17"
+        ]
+      }
+    },
+    {
+      "type": "play",
+      "turn": 2,
+      "operation": "O17",
+      "code": "add_vector",
+      "red": "R04",
+      "params": {
+        "axis": "row",
+        "source": 0,
+        "target": 1,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2
+      },
+      "before": [
+        [
+          1,
+          2,
+          2
+        ],
+        [
+          1,
+          -1,
+          2
+        ],
+        [
+          0,
+          -2,
+          -2
+        ],
+        [
+          1,
+          -1,
+          0
+        ]
+      ],
+      "after": [
+        [
+          1,
+          2,
+          2
+        ],
+        [
+          0,
+          -1,
+          2
+        ],
+        [
+          0,
+          -2,
+          -2
+        ],
+        [
+          1,
+          -1,
+          0
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "nonzero_vectors": true,
+          "orthogonal_vectors": false,
+          "no_zero_rows": true
+        },
+        "shape": [
+          4,
+          3
+        ]
+      },
+      "note": "Clear the first-column entry in the second row to reduce overlap with the third column.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "end_turn",
+      "turn": 2,
+      "note": "student budget test",
+      "drawn": {
+        "operations": [
+          "O07",
+          "O11",
+          "O15"
+        ],
+        "red": [
+          "R26",
+          "R03",
+          "R29",
+          "R13",
+          "R08"
+        ]
+      }
+    },
+    {
+      "type": "play",
+      "turn": 3,
+      "operation": "O11",
+      "code": "multiply",
+      "red": "R18",
+      "params": {
+        "axis": "row",
+        "source": null,
+        "target": null,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2
+      },
+      "before": [
+        [
+          1,
+          2,
+          2
+        ],
+        [
+          0,
+          -1,
+          2
+        ],
+        [
+          0,
+          -2,
+          -2
+        ],
+        [
+          1,
+          -1,
+          0
+        ]
+      ],
+      "after": [
+        [
+          2,
+          3
+        ],
+        [
+          -1,
+          2
+        ],
+        [
+          -2,
+          -2
+        ],
+        [
+          -1,
+          1
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "nonzero_vectors": true,
+          "orthogonal_vectors": false,
+          "no_zero_rows": true
+        },
+        "shape": [
+          4,
+          2
+        ]
+      },
+      "note": "Try reducing to two columns while preserving a permitted tall shape.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "stop",
+      "turn": 3,
+      "note": "The matrix now has the required tall shape and only two columns, but I see no simple next correction to make those columns orthogonal with the available operations."
+    }
+  ],
+  "operation_draw": [
+    "O24",
+    "O01",
+    "O18",
+    "O16",
+    "O03",
+    "O25",
+    "O40",
+    "O23",
+    "O33",
+    "O27",
+    "O12",
+    "O37",
+    "O34",
+    "O38",
+    "O28",
+    "O31",
+    "O21",
+    "O19",
+    "O14",
+    "O29",
+    "O08",
+    "O13",
+    "O36",
+    "O10",
+    "O04",
+    "O02",
+    "O09",
+    "O20",
+    "O39",
+    "O35",
+    "O26"
+  ],
+  "operation_hand": [
+    "O32",
+    "O05",
+    "O06",
+    "O30",
+    "O07",
+    "O15"
+  ],
+  "operation_discard": [
+    "O22",
+    "O17",
+    "O11"
+  ],
+  "operation_cycles": 0,
+  "red_draw": [
+    "R02",
+    "R22",
+    "R05",
+    "R09",
+    "R28",
+    "R16",
+    "R12",
+    "R19",
+    "R30",
+    "R07",
+    "R20",
+    "R11",
+    "R27",
+    "R24",
+    "R14"
+  ],
+  "red_hand": [
+    "R25",
+    "R23",
+    "R21",
+    "R10",
+    "R06",
+    "R01",
+    "R17",
+    "R26",
+    "R03",
+    "R29",
+    "R13",
+    "R08"
+  ],
+  "red_discard": [
+    "R15",
+    "R04",
+    "R18"
+  ],
+  "red_cycles": 0,
+  "student_budget": {
+    "protocol": "student_tests/PROTOCOL.md",
+    "plans": [
+      {
+        "id": 1,
+        "turn": 1,
+        "at_move": 0,
+        "operation": "O22",
+        "red": "R15",
+        "params": {
+          "axis": "row",
+          "source": 0,
+          "target": null,
+          "i": null,
+          "j": null,
+          "factor": "L",
+          "exponent": 2
+        },
+        "note": "Append a nonzero row to reach the tall shape; its opposite signs may help balance the first two columns.",
+        "attempted": true
+      },
+      {
+        "id": 2,
+        "turn": 2,
+        "at_move": 1,
+        "operation": "O17",
+        "red": "R04",
+        "params": {
+          "axis": "row",
+          "source": 0,
+          "target": 1,
+          "i": null,
+          "j": null,
+          "factor": "L",
+          "exponent": 2
+        },
+        "note": "Clear the first-column entry in the second row to reduce overlap with the third column.",
+        "attempted": true
+      },
+      {
+        "id": 3,
+        "turn": 3,
+        "at_move": 2,
+        "operation": "O11",
+        "red": "R18",
+        "params": {
+          "axis": "row",
+          "source": null,
+          "target": null,
+          "i": null,
+          "j": null,
+          "factor": "L",
+          "exponent": 2
+        },
+        "note": "Try reducing to two columns while preserving a permitted tall shape.",
+        "attempted": true
+      }
+    ],
+    "previews": [
+      {
+        "turn": 2,
+        "plan": 2,
+        "result": [
+          [
+            1,
+            2,
+            2
+          ],
+          [
+            0,
+            -1,
+            2
+          ],
+          [
+            0,
+            -2,
+            -2
+          ],
+          [
+            1,
+            -1,
+            0
+          ]
+        ]
+      },
+      {
+        "turn": 3,
+        "plan": 3,
+        "result": [
+          [
+            2,
+            3
+          ],
+          [
+            -1,
+            2
+          ],
+          [
+            -2,
+            -2
+          ],
+          [
+            -1,
+            1
+          ]
+        ]
+      }
+    ],
+    "candidate_limit_per_turn": 2,
+    "preview_limit_per_turn": 1,
+    "preview_limit_total": 6
+  },
+  "experiment_phase": "formal",
+  "stop_reason": "The matrix now has the required tall shape and only two columns, but I see no simple next correction to make those columns orthogonal with the available operations."
+}

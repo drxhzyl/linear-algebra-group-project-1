@@ -1,0 +1,442 @@
+{
+  "kind": "gametrix-session",
+  "version": 1,
+  "deck": "/Users/qizhengwang/Desktop/school/GameTrix/playtests/deck_used.json",
+  "deck_sha256": "a71ff8f4cd105b923a74f191cd32e1ded855a2792d72c4005c74dd57f03615c3",
+  "seed": 304,
+  "objective": {
+    "id": "C14",
+    "name": "Zero-sum Orthogonal Rows",
+    "tier": "Advanced",
+    "shape": "Wide: 2×3, 2×4, or 3×4",
+    "goal": "Make a wide matrix with nonzero pairwise orthogonal rows, every row sum 0, and no zero columns. Equivalently, A1ₙ = 0 and AAᵀ is diagonal with positive diagonal entries, where 1ₙ is the column vector of n ones.",
+    "A": [
+      [
+        1,
+        -1,
+        0
+      ],
+      [
+        1,
+        1,
+        -2
+      ]
+    ],
+    "check": "Both row sums are 0, their dot product is 0, and AAᵀ = diag(2,6). No column is zero.",
+    "note": "This intentionally strengthens C12 by putting the all-ones vector in the nullspace. Wide shape is necessary: independent zero-sum rows lie in an (n−1)-dimensional subspace."
+  },
+  "blue": "B04",
+  "current": [
+    [
+      1,
+      -1,
+      0
+    ],
+    [
+      1,
+      1,
+      -2
+    ]
+  ],
+  "mode": "open",
+  "player": "play_rectangular",
+  "turn_cap": 8,
+  "move_cap": 8,
+  "turn": 1,
+  "turn_operations": 5,
+  "moves": 5,
+  "status": "won",
+  "history": [
+    {
+      "type": "play",
+      "turn": 1,
+      "operation": "O11",
+      "code": "multiply",
+      "red": "R16",
+      "params": {
+        "axis": "row",
+        "source": null,
+        "target": null,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2
+      },
+      "before": [
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          -1,
+          -2,
+          1
+        ],
+        [
+          2,
+          -2,
+          2
+        ]
+      ],
+      "after": [
+        [
+          2,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          4,
+          2
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": false,
+          "nonzero_vectors": true,
+          "orthogonal_vectors": false,
+          "no_zero_columns": true,
+          "row_sums_zero": false
+        },
+        "shape": [
+          3,
+          2
+        ]
+      },
+      "note": "Reduce width to two columns so transposition gives a 2 by 3 target.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "play",
+      "turn": 1,
+      "operation": "O27",
+      "code": "transpose",
+      "red": null,
+      "params": {
+        "axis": "row",
+        "source": null,
+        "target": null,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2
+      },
+      "before": [
+        [
+          2,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          4,
+          2
+        ]
+      ],
+      "after": [
+        [
+          2,
+          1,
+          4
+        ],
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "nonzero_vectors": true,
+          "orthogonal_vectors": false,
+          "no_zero_columns": true,
+          "row_sums_zero": false
+        },
+        "shape": [
+          2,
+          3
+        ]
+      },
+      "note": "Turn the reduced matrix into two length-three rows.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "play",
+      "turn": 1,
+      "operation": "O25",
+      "code": "replace_vector",
+      "red": "R15",
+      "params": {
+        "axis": "row",
+        "source": 0,
+        "target": 0,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2
+      },
+      "before": [
+        [
+          2,
+          1,
+          4
+        ],
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      "after": [
+        [
+          1,
+          -1,
+          0
+        ],
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "nonzero_vectors": true,
+          "orthogonal_vectors": false,
+          "no_zero_columns": true,
+          "row_sums_zero": false
+        },
+        "shape": [
+          2,
+          3
+        ]
+      },
+      "note": "Set first row to (1,-1,0), already nonzero and zero-sum.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "play",
+      "turn": 1,
+      "operation": "O26",
+      "code": "replace_vector",
+      "red": "R14",
+      "params": {
+        "axis": "row",
+        "source": 1,
+        "target": 1,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2
+      },
+      "before": [
+        [
+          1,
+          -1,
+          0
+        ],
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      "after": [
+        [
+          1,
+          -1,
+          0
+        ],
+        [
+          0,
+          1,
+          -2
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "nonzero_vectors": true,
+          "orthogonal_vectors": false,
+          "no_zero_columns": true,
+          "row_sums_zero": false
+        },
+        "shape": [
+          2,
+          3
+        ]
+      },
+      "note": "Set second row to (0,1,-2); adding e0 will make it zero-sum and orthogonal to row zero.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "play",
+      "turn": 1,
+      "operation": "O16",
+      "code": "add_vector",
+      "red": "R03",
+      "params": {
+        "axis": "row",
+        "source": 0,
+        "target": 1,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2
+      },
+      "before": [
+        [
+          1,
+          -1,
+          0
+        ],
+        [
+          0,
+          1,
+          -2
+        ]
+      ],
+      "after": [
+        [
+          1,
+          -1,
+          0
+        ],
+        [
+          1,
+          1,
+          -2
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": true,
+        "checks": {
+          "shape": true,
+          "nonzero_vectors": true,
+          "orthogonal_vectors": true,
+          "no_zero_columns": true,
+          "row_sums_zero": true
+        },
+        "shape": [
+          2,
+          3
+        ]
+      },
+      "note": "Add (1,0,0), producing (1,1,-2): row sums zero, dot product zero, and no zero columns.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    }
+  ],
+  "operation_draw": [],
+  "operation_hand": [
+    "O01",
+    "O02",
+    "O03",
+    "O04",
+    "O05",
+    "O06",
+    "O07",
+    "O08",
+    "O09",
+    "O10",
+    "O12",
+    "O13",
+    "O14",
+    "O15",
+    "O17",
+    "O18",
+    "O19",
+    "O20",
+    "O21",
+    "O22",
+    "O23",
+    "O24",
+    "O28",
+    "O29",
+    "O30",
+    "O31",
+    "O32",
+    "O33",
+    "O34",
+    "O35",
+    "O36",
+    "O37",
+    "O38",
+    "O39",
+    "O40"
+  ],
+  "operation_discard": [
+    "O11",
+    "O27",
+    "O25",
+    "O26",
+    "O16"
+  ],
+  "operation_cycles": 0,
+  "red_draw": [],
+  "red_hand": [
+    "R01",
+    "R02",
+    "R04",
+    "R05",
+    "R06",
+    "R07",
+    "R08",
+    "R09",
+    "R10",
+    "R11",
+    "R12",
+    "R13",
+    "R17",
+    "R18",
+    "R19",
+    "R20",
+    "R21",
+    "R22",
+    "R23",
+    "R24",
+    "R25",
+    "R26",
+    "R27",
+    "R28",
+    "R29",
+    "R30"
+  ],
+  "red_discard": [
+    "R16",
+    "R15",
+    "R14",
+    "R03"
+  ],
+  "red_cycles": 0
+}

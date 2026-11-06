@@ -1,0 +1,68 @@
+{
+  "kind": "gametrix-expansion-manifest",
+  "model": "gpt-6.1-sol",
+  "cases": [
+    {
+      "name": "split01",
+      "arm": "split",
+      "objective": "C01",
+      "blue": "B01",
+      "seed": 101,
+      "paired_original": "core01",
+      "paired_flexible": "expanded01"
+    },
+    {
+      "name": "split02",
+      "arm": "split",
+      "objective": "C04",
+      "blue": "B05",
+      "seed": 105,
+      "paired_original": "core05",
+      "paired_flexible": "expanded02"
+    },
+    {
+      "name": "split03",
+      "arm": "split",
+      "objective": "C08",
+      "blue": "B12",
+      "seed": 206,
+      "paired_original": "advanced06",
+      "paired_flexible": "expanded03"
+    },
+    {
+      "name": "split04",
+      "arm": "split",
+      "objective": "C11",
+      "blue": "B01",
+      "seed": 301,
+      "paired_original": "rect01",
+      "paired_flexible": "expanded04"
+    },
+    {
+      "name": "split05",
+      "arm": "split",
+      "objective": "C13",
+      "blue": "B03",
+      "seed": 303,
+      "paired_original": "rect03",
+      "paired_flexible": "expanded05"
+    },
+    {
+      "name": "split06",
+      "arm": "split",
+      "objective": "C14",
+      "blue": "B06",
+      "seed": 306,
+      "paired_original": "rect06",
+      "paired_flexible": "expanded06"
+    }
+  ],
+  "limits": {
+    "turns": 8,
+    "moves": 16,
+    "candidates_per_turn": 2,
+    "previews_per_turn": 1,
+    "previews_total": 6
+  },
+  "comparison": "Fixed-sign version: same physical operation IDs and seeded order as flexible +40 deck; only O41–O64 meanings changed to12fixedplus/12fixedminus. Fresh independent agents, no old solutions."
+}

@@ -1,0 +1,698 @@
+{
+  "kind": "gametrix-session",
+  "version": 1,
+  "deck": "/Users/qizhengwang/Desktop/school/GameTrix/expansion_split/generated/deck.json",
+  "deck_sha256": "e16214b744b9807ead74ec891a8a6e5bedbf7424e9455343b9a11288a422d4c8",
+  "seed": 105,
+  "objective": {
+    "id": "C04",
+    "name": "Two-way Balance",
+    "tier": "Core",
+    "shape": "Square 3–4",
+    "goal": "Make every row sum and every column sum exactly 1, with at least one negative entry.",
+    "A": [
+      [
+        1,
+        1,
+        -1
+      ],
+      [
+        -1,
+        1,
+        1
+      ],
+      [
+        1,
+        -1,
+        1
+      ]
+    ],
+    "check": "All three row sums and column sums are 1; negative entries occur.",
+    "note": "Row sums and column sums both equal to 1 force a square shape: their totals are m and n. Size 2 is excluded here because its negative-entry solutions automatically satisfy Mirror Match, reducing variety."
+  },
+  "blue": "B05",
+  "current": [
+    [
+      0,
+      0,
+      1
+    ],
+    [
+      1,
+      1,
+      -1
+    ],
+    [
+      0,
+      0,
+      1
+    ]
+  ],
+  "mode": "draw",
+  "player": "split",
+  "turn_cap": 8,
+  "move_cap": 16,
+  "turn": 4,
+  "turn_operations": 1,
+  "moves": 5,
+  "status": "won",
+  "history": [
+    {
+      "type": "play",
+      "turn": 1,
+      "operation": "O47",
+      "code": "entry_plus",
+      "red": "R02",
+      "params": {
+        "axis": "row",
+        "source": null,
+        "target": null,
+        "i": 2,
+        "j": 0,
+        "factor": "L",
+        "exponent": 2,
+        "delta": 1
+      },
+      "before": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          -1
+        ],
+        [
+          -3,
+          -3,
+          -1
+        ]
+      ],
+      "after": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          -1
+        ],
+        [
+          -2,
+          -3,
+          -1
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "row_sums_one": false,
+          "column_sums_one": false,
+          "negative_entry": true
+        },
+        "shape": [
+          3,
+          3
+        ]
+      },
+      "note": "[progress] Raise a negative entry toward a column sum of one.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "end_turn",
+      "turn": 1,
+      "note": "student budget test",
+      "drawn": {
+        "operations": [
+          "O59",
+          "O26",
+          "O11"
+        ],
+        "red": [
+          "R27",
+          "R14",
+          "R06",
+          "R13",
+          "R10"
+        ]
+      }
+    },
+    {
+      "type": "play",
+      "turn": 2,
+      "operation": "O26",
+      "code": "replace_vector",
+      "red": "R13",
+      "params": {
+        "axis": "row",
+        "source": 0,
+        "target": 2,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2,
+        "delta": 1
+      },
+      "before": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          -1
+        ],
+        [
+          -2,
+          -3,
+          -1
+        ]
+      ],
+      "after": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          -1
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "row_sums_one": true,
+          "column_sums_one": false,
+          "negative_entry": true
+        },
+        "shape": [
+          3,
+          3
+        ]
+      },
+      "note": "[progress] Replace the deeply negative bottom row with a row summing to one.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "end_turn",
+      "turn": 2,
+      "note": "student budget test",
+      "drawn": {
+        "operations": [
+          "O45",
+          "O64",
+          "O03"
+        ],
+        "red": [
+          "R03",
+          "R20",
+          "R08",
+          "R22",
+          "R29"
+        ]
+      }
+    },
+    {
+      "type": "play",
+      "turn": 3,
+      "operation": "O59",
+      "code": "entry_minus",
+      "red": "R28",
+      "params": {
+        "axis": "row",
+        "source": null,
+        "target": null,
+        "i": 1,
+        "j": 0,
+        "factor": "L",
+        "exponent": 2,
+        "delta": 1
+      },
+      "before": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          -1
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "after": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          -1
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "row_sums_one": false,
+          "column_sums_one": false,
+          "negative_entry": true
+        },
+        "shape": [
+          3,
+          3
+        ]
+      },
+      "note": "[progress] Lower the oversized first column by one.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "play",
+      "turn": 3,
+      "operation": "O45",
+      "code": "entry_plus",
+      "red": "R27",
+      "params": {
+        "axis": "row",
+        "source": null,
+        "target": null,
+        "i": 1,
+        "j": 1,
+        "factor": "L",
+        "exponent": 2,
+        "delta": 1
+      },
+      "before": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          -1
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "after": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          -1
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "row_sums_one": true,
+          "column_sums_one": false,
+          "negative_entry": true
+        },
+        "shape": [
+          3,
+          3
+        ]
+      },
+      "note": "[progress] Fill the empty middle column and restore the second row sum to one.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "end_turn",
+      "turn": 3,
+      "note": "student budget test",
+      "drawn": {
+        "operations": [
+          "O77",
+          "O17",
+          "O05"
+        ],
+        "red": [
+          "R23",
+          "R05",
+          "R16",
+          "R07",
+          "R30"
+        ]
+      }
+    },
+    {
+      "type": "play",
+      "turn": 4,
+      "operation": "O17",
+      "code": "add_vector",
+      "red": "R08",
+      "params": {
+        "axis": "row",
+        "source": 2,
+        "target": 2,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2,
+        "delta": 1
+      },
+      "before": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          -1
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "after": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          -1
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": true,
+        "checks": {
+          "shape": true,
+          "row_sums_one": true,
+          "column_sums_one": true,
+          "negative_entry": true
+        },
+        "shape": [
+          3,
+          3
+        ]
+      },
+      "note": "[progress] Transfer one unit from the first to third column while preserving the bottom row sum.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    }
+  ],
+  "operation_draw": [
+    "O50",
+    "O62",
+    "O40",
+    "O20",
+    "O42",
+    "O66",
+    "O32",
+    "O27",
+    "O01",
+    "O18",
+    "O68",
+    "O33",
+    "O14",
+    "O60",
+    "O71",
+    "O57",
+    "O02",
+    "O28",
+    "O34",
+    "O13",
+    "O21",
+    "O53",
+    "O31",
+    "O63",
+    "O78",
+    "O69",
+    "O55",
+    "O30",
+    "O10",
+    "O16",
+    "O74",
+    "O46",
+    "O61",
+    "O58",
+    "O15",
+    "O12",
+    "O19",
+    "O56",
+    "O37",
+    "O38",
+    "O07",
+    "O54",
+    "O76",
+    "O09",
+    "O04",
+    "O79",
+    "O52",
+    "O41",
+    "O23",
+    "O25",
+    "O22",
+    "O36",
+    "O73",
+    "O75",
+    "O29",
+    "O70",
+    "O67",
+    "O08",
+    "O06",
+    "O48",
+    "O24",
+    "O80",
+    "O72",
+    "O51",
+    "O65",
+    "O44",
+    "O43",
+    "O49"
+  ],
+  "operation_hand": [
+    "O39",
+    "O35",
+    "O11",
+    "O64",
+    "O03",
+    "O77",
+    "O05"
+  ],
+  "operation_discard": [
+    "O47",
+    "O26",
+    "O59",
+    "O45",
+    "O17"
+  ],
+  "operation_cycles": 0,
+  "red_draw": [
+    "R11",
+    "R26",
+    "R12",
+    "R19",
+    "R18",
+    "R17",
+    "R15",
+    "R01",
+    "R09",
+    "R24"
+  ],
+  "red_hand": [
+    "R04",
+    "R25",
+    "R21",
+    "R14",
+    "R06",
+    "R10",
+    "R03",
+    "R20",
+    "R22",
+    "R29",
+    "R23",
+    "R05",
+    "R16",
+    "R07",
+    "R30"
+  ],
+  "red_discard": [
+    "R02",
+    "R13",
+    "R28",
+    "R27",
+    "R08"
+  ],
+  "red_cycles": 0,
+  "student_budget": {
+    "protocol": "expansion_split/PROTOCOL.md",
+    "fixed_horizon": true,
+    "plans": [
+      {
+        "id": 1,
+        "turn": 1,
+        "at_move": 0,
+        "operation": "O47",
+        "red": "R02",
+        "params": {
+          "axis": "row",
+          "source": null,
+          "target": null,
+          "i": 2,
+          "j": 0,
+          "factor": "L",
+          "exponent": 2,
+          "delta": 1
+        },
+        "note": "[progress] Raise a negative entry toward a column sum of one.",
+        "attempted": true
+      },
+      {
+        "id": 2,
+        "turn": 2,
+        "at_move": 1,
+        "operation": "O26",
+        "red": "R13",
+        "params": {
+          "axis": "row",
+          "source": 0,
+          "target": 2,
+          "i": null,
+          "j": null,
+          "factor": "L",
+          "exponent": 2,
+          "delta": 1
+        },
+        "note": "[progress] Replace the deeply negative bottom row with a row summing to one.",
+        "attempted": true
+      },
+      {
+        "id": 3,
+        "turn": 3,
+        "at_move": 2,
+        "operation": "O59",
+        "red": "R28",
+        "params": {
+          "axis": "row",
+          "source": null,
+          "target": null,
+          "i": 1,
+          "j": 0,
+          "factor": "L",
+          "exponent": 2,
+          "delta": 1
+        },
+        "note": "[progress] Lower the oversized first column by one.",
+        "attempted": true
+      },
+      {
+        "id": 4,
+        "turn": 3,
+        "at_move": 3,
+        "operation": "O45",
+        "red": "R27",
+        "params": {
+          "axis": "row",
+          "source": null,
+          "target": null,
+          "i": 1,
+          "j": 1,
+          "factor": "L",
+          "exponent": 2,
+          "delta": 1
+        },
+        "note": "[progress] Fill the empty middle column and restore the second row sum to one.",
+        "attempted": true
+      },
+      {
+        "id": 5,
+        "turn": 4,
+        "at_move": 4,
+        "operation": "O17",
+        "red": "R08",
+        "params": {
+          "axis": "row",
+          "source": 2,
+          "target": 2,
+          "i": null,
+          "j": null,
+          "factor": "L",
+          "exponent": 2,
+          "delta": 1
+        },
+        "note": "[progress] Transfer one unit from the first to third column while preserving the bottom row sum.",
+        "attempted": true
+      }
+    ],
+    "previews": [],
+    "candidate_limit_per_turn": 2,
+    "preview_limit_per_turn": 1,
+    "preview_limit_total": 6
+  },
+  "experiment_phase": "split_signs_fixed_horizon"
+}

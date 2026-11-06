@@ -1,0 +1,483 @@
+{
+  "kind": "gametrix-session",
+  "version": 1,
+  "deck": "/Users/qizhengwang/Desktop/school/GameTrix/playtests/deck_used.json",
+  "deck_sha256": "a71ff8f4cd105b923a74f191cd32e1ded855a2792d72c4005c74dd57f03615c3",
+  "seed": 201,
+  "objective": {
+    "id": "C05",
+    "name": "Opposite Reflection",
+    "tier": "Core",
+    "shape": "Square 2–4",
+    "goal": "Make a nonzero skew-symmetric matrix: Aᵀ = −A.",
+    "A": [
+      [
+        0,
+        1,
+        -1
+      ],
+      [
+        -1,
+        0,
+        1
+      ],
+      [
+        1,
+        -1,
+        0
+      ]
+    ],
+    "check": "The diagonal is zero and opposite entries have opposite signs; A is nonzero.",
+    "note": "A real skew-symmetric matrix of odd size is singular; even sizes may be invertible. A single interchange can finish some specially arranged matrices, so check actual opening hands rather than assuming uniform difficulty."
+  },
+  "blue": "B07",
+  "current": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      -1,
+      0
+    ]
+  ],
+  "mode": "open",
+  "player": "play_advanced",
+  "turn_cap": 8,
+  "move_cap": 8,
+  "turn": 1,
+  "turn_operations": 5,
+  "moves": 5,
+  "status": "won",
+  "history": [
+    {
+      "type": "play",
+      "turn": 1,
+      "operation": "O30",
+      "code": "swap",
+      "red": null,
+      "params": {
+        "axis": "row",
+        "source": null,
+        "target": null,
+        "i": 1,
+        "j": 2,
+        "factor": "L",
+        "exponent": 2
+      },
+      "before": [
+        [
+          -2,
+          -2,
+          2
+        ],
+        [
+          -2,
+          -2,
+          3
+        ],
+        [
+          -2,
+          1,
+          1
+        ]
+      ],
+      "after": [
+        [
+          -2,
+          -2,
+          2
+        ],
+        [
+          -2,
+          1,
+          1
+        ],
+        [
+          -2,
+          -2,
+          3
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "skew_symmetric": false,
+          "nonzero": true
+        },
+        "shape": [
+          3,
+          3
+        ]
+      },
+      "note": "Repair the zero second LU pivot by swapping rows.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "play",
+      "turn": 1,
+      "operation": "O40",
+      "code": "lu",
+      "red": null,
+      "params": {
+        "axis": "row",
+        "source": null,
+        "target": null,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2
+      },
+      "before": [
+        [
+          -2,
+          -2,
+          2
+        ],
+        [
+          -2,
+          1,
+          1
+        ],
+        [
+          -2,
+          -2,
+          3
+        ]
+      ],
+      "after": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "skew_symmetric": false,
+          "nonzero": true
+        },
+        "shape": [
+          3,
+          3
+        ]
+      },
+      "note": "Extract the unit lower factor for a controlled first row.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "play",
+      "turn": 1,
+      "operation": "O06",
+      "code": "subtract",
+      "red": "R03",
+      "params": {
+        "axis": "row",
+        "source": null,
+        "target": null,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2
+      },
+      "before": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ]
+      ],
+      "after": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "skew_symmetric": false,
+          "nonzero": true
+        },
+        "shape": [
+          3,
+          3
+        ]
+      },
+      "note": "Subtract identity to obtain a zero first row.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "play",
+      "turn": 1,
+      "operation": "O25",
+      "code": "replace_vector",
+      "red": "R15",
+      "params": {
+        "axis": "row",
+        "source": 1,
+        "target": 1,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2
+      },
+      "before": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "after": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "skew_symmetric": false,
+          "nonzero": true
+        },
+        "shape": [
+          3,
+          3
+        ]
+      },
+      "note": "Set the positive edge of a lower-right skew block.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "play",
+      "turn": 1,
+      "operation": "O26",
+      "code": "replace_vector",
+      "red": "R04",
+      "params": {
+        "axis": "row",
+        "source": 1,
+        "target": 2,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2
+      },
+      "before": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "after": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          -1,
+          0
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": true,
+        "checks": {
+          "shape": true,
+          "skew_symmetric": true,
+          "nonzero": true
+        },
+        "shape": [
+          3,
+          3
+        ]
+      },
+      "note": "Set its negative opposite edge to finish a nonzero skew matrix.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    }
+  ],
+  "operation_draw": [],
+  "operation_hand": [
+    "O01",
+    "O02",
+    "O03",
+    "O04",
+    "O05",
+    "O07",
+    "O08",
+    "O09",
+    "O10",
+    "O11",
+    "O12",
+    "O13",
+    "O14",
+    "O15",
+    "O16",
+    "O17",
+    "O18",
+    "O19",
+    "O20",
+    "O21",
+    "O22",
+    "O23",
+    "O24",
+    "O27",
+    "O28",
+    "O29",
+    "O31",
+    "O32",
+    "O33",
+    "O34",
+    "O35",
+    "O36",
+    "O37",
+    "O38",
+    "O39"
+  ],
+  "operation_discard": [
+    "O30",
+    "O40",
+    "O06",
+    "O25",
+    "O26"
+  ],
+  "operation_cycles": 0,
+  "red_draw": [],
+  "red_hand": [
+    "R01",
+    "R02",
+    "R05",
+    "R06",
+    "R07",
+    "R08",
+    "R09",
+    "R10",
+    "R11",
+    "R12",
+    "R13",
+    "R14",
+    "R16",
+    "R17",
+    "R18",
+    "R19",
+    "R20",
+    "R21",
+    "R22",
+    "R23",
+    "R24",
+    "R25",
+    "R26",
+    "R27",
+    "R28",
+    "R29",
+    "R30"
+  ],
+  "red_discard": [
+    "R03",
+    "R15",
+    "R04"
+  ],
+  "red_cycles": 0
+}

@@ -1,0 +1,62 @@
+{
+  "kind": "gametrix-student-manifest",
+  "cases": [
+    {
+      "name": "student01",
+      "paired_original": "core01",
+      "seed": 101,
+      "objective": "C01",
+      "blue": "B01",
+      "mode": "draw"
+    },
+    {
+      "name": "student02",
+      "paired_original": "core05",
+      "seed": 105,
+      "objective": "C04",
+      "blue": "B05",
+      "mode": "draw"
+    },
+    {
+      "name": "student03",
+      "paired_original": "advanced06",
+      "seed": 206,
+      "objective": "C08",
+      "blue": "B12",
+      "mode": "draw"
+    },
+    {
+      "name": "student04",
+      "paired_original": "rect01",
+      "seed": 301,
+      "objective": "C11",
+      "blue": "B01",
+      "mode": "draw"
+    },
+    {
+      "name": "student05",
+      "paired_original": "rect03",
+      "seed": 303,
+      "objective": "C13",
+      "blue": "B03",
+      "mode": "draw"
+    },
+    {
+      "name": "student06",
+      "paired_original": "rect06",
+      "seed": 306,
+      "objective": "C14",
+      "blue": "B06",
+      "mode": "draw"
+    }
+  ],
+  "limits": {
+    "candidates_per_turn": 2,
+    "previews_per_turn": 1,
+    "previews_per_game": 6
+  },
+  "model": "gpt-6-luna",
+  "note": "Fresh players; no prior solutions shown. Same starting cards, objectives and seed as paired originals. Qualitative decision-budget test, not a human study.",
+  "phase": "pilot",
+  "interpretation": "Excluded as a block from formal comparison: protocol permitted immediate zero-effort stops. Retained unedited gameplay for transparency."
+}

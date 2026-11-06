@@ -1,0 +1,486 @@
+{
+  "kind": "gametrix-session",
+  "version": 1,
+  "deck": "/Users/qizhengwang/Desktop/school/GameTrix/generated/deck.json",
+  "deck_sha256": "38824be5406d3dca771a06dba3b5017253913858f049328d87b5c11e3bad2035",
+  "seed": 306,
+  "objective": {
+    "id": "C14",
+    "name": "Zero-sum Orthogonal Rows",
+    "tier": "Advanced",
+    "shape": "Wide: 2×3, 2×4, or 3×4",
+    "goal": "Make a wide matrix with nonzero pairwise orthogonal rows, every row sum 0, and no zero columns. Equivalently, A1ₙ = 0 and AAᵀ is diagonal with positive diagonal entries, where 1ₙ is the column vector of n ones.",
+    "A": [
+      [
+        1,
+        -1,
+        0
+      ],
+      [
+        1,
+        1,
+        -2
+      ]
+    ],
+    "check": "Both row sums are 0, their dot product is 0, and AAᵀ = diag(2,6). No column is zero.",
+    "note": "This intentionally strengthens C12 by putting the all-ones vector in the nullspace. Wide shape is necessary: independent zero-sum rows lie in an (n−1)-dimensional subspace."
+  },
+  "blue": "B06",
+  "current": [
+    [
+      -2,
+      -1,
+      -2,
+      1
+    ],
+    [
+      1,
+      -1,
+      1,
+      -1
+    ],
+    [
+      1,
+      1,
+      0,
+      0
+    ]
+  ],
+  "mode": "draw",
+  "player": "student_formal",
+  "turn_cap": 8,
+  "move_cap": 16,
+  "turn": 3,
+  "turn_operations": 1,
+  "moves": 3,
+  "status": "stopped",
+  "history": [
+    {
+      "type": "play",
+      "turn": 1,
+      "operation": "O20",
+      "code": "add_vector",
+      "red": "R03",
+      "params": {
+        "axis": "row",
+        "source": 0,
+        "target": 0,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2
+      },
+      "before": [
+        [
+          -2,
+          0,
+          -1
+        ],
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          2,
+          2,
+          1
+        ]
+      ],
+      "after": [
+        [
+          -1,
+          0,
+          -1
+        ],
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          2,
+          2,
+          1
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": false,
+          "nonzero_vectors": true,
+          "orthogonal_vectors": false,
+          "no_zero_columns": true,
+          "row_sums_zero": false
+        },
+        "shape": [
+          3,
+          3
+        ]
+      },
+      "note": "Raise the first negative entry by one to bring this row closer to zero sum.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "end_turn",
+      "turn": 1,
+      "note": "student budget test",
+      "drawn": {
+        "operations": [
+          "O35",
+          "O37",
+          "O40"
+        ],
+        "red": [
+          "R16",
+          "R10",
+          "R12",
+          "R24",
+          "R07"
+        ]
+      }
+    },
+    {
+      "type": "play",
+      "turn": 2,
+      "operation": "O35",
+      "code": "shift_minus",
+      "red": null,
+      "params": {
+        "axis": "row",
+        "source": null,
+        "target": null,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2
+      },
+      "before": [
+        [
+          -1,
+          0,
+          -1
+        ],
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          2,
+          2,
+          1
+        ]
+      ],
+      "after": [
+        [
+          -2,
+          -1,
+          -2
+        ],
+        [
+          1,
+          -1,
+          1
+        ],
+        [
+          1,
+          1,
+          0
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": false,
+          "nonzero_vectors": true,
+          "orthogonal_vectors": false,
+          "no_zero_columns": true,
+          "row_sums_zero": false
+        },
+        "shape": [
+          3,
+          3
+        ]
+      },
+      "note": "Explore lowering the positive rows by one per entry; their entries are mostly above zero.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "end_turn",
+      "turn": 2,
+      "note": "student budget test",
+      "drawn": {
+        "operations": [
+          "O05",
+          "O22",
+          "O13"
+        ],
+        "red": [
+          "R25",
+          "R06",
+          "R08",
+          "R30",
+          "R21"
+        ]
+      }
+    },
+    {
+      "type": "play",
+      "turn": 3,
+      "operation": "O22",
+      "code": "append_vector",
+      "red": "R16",
+      "params": {
+        "axis": "column",
+        "source": 0,
+        "target": null,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2
+      },
+      "before": [
+        [
+          -2,
+          -1,
+          -2
+        ],
+        [
+          1,
+          -1,
+          1
+        ],
+        [
+          1,
+          1,
+          0
+        ]
+      ],
+      "after": [
+        [
+          -2,
+          -1,
+          -2,
+          1
+        ],
+        [
+          1,
+          -1,
+          1,
+          -1
+        ],
+        [
+          1,
+          1,
+          0,
+          0
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "nonzero_vectors": true,
+          "orthogonal_vectors": false,
+          "no_zero_columns": true,
+          "row_sums_zero": false
+        },
+        "shape": [
+          3,
+          4
+        ]
+      },
+      "note": "Append a column to make the shape wide; its minus one also cancels the second row sum of one.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "stop",
+      "turn": 3,
+      "note": "After three legal turns the matrix is wide and one row has zero sum, but I have no simple next correction that also addresses orthogonality with the available operations."
+    }
+  ],
+  "operation_draw": [
+    "O21",
+    "O17",
+    "O07",
+    "O23",
+    "O38",
+    "O39",
+    "O32",
+    "O29",
+    "O19",
+    "O06",
+    "O12",
+    "O34",
+    "O36",
+    "O11",
+    "O04",
+    "O31",
+    "O01",
+    "O08",
+    "O27",
+    "O30",
+    "O15",
+    "O10",
+    "O09",
+    "O16",
+    "O26",
+    "O18",
+    "O02",
+    "O14",
+    "O33",
+    "O24",
+    "O25"
+  ],
+  "operation_hand": [
+    "O28",
+    "O03",
+    "O37",
+    "O40",
+    "O05",
+    "O13"
+  ],
+  "operation_discard": [
+    "O20",
+    "O35",
+    "O22"
+  ],
+  "operation_cycles": 0,
+  "red_draw": [
+    "R13",
+    "R14",
+    "R29",
+    "R02",
+    "R05",
+    "R15",
+    "R23",
+    "R11",
+    "R20",
+    "R26",
+    "R09",
+    "R01",
+    "R22",
+    "R17",
+    "R27"
+  ],
+  "red_hand": [
+    "R18",
+    "R04",
+    "R19",
+    "R28",
+    "R10",
+    "R12",
+    "R24",
+    "R07",
+    "R25",
+    "R06",
+    "R08",
+    "R30",
+    "R21"
+  ],
+  "red_discard": [
+    "R03",
+    "R16"
+  ],
+  "red_cycles": 0,
+  "student_budget": {
+    "protocol": "student_tests/PROTOCOL.md",
+    "plans": [
+      {
+        "id": 1,
+        "turn": 1,
+        "at_move": 0,
+        "operation": "O20",
+        "red": "R03",
+        "params": {
+          "axis": "row",
+          "source": 0,
+          "target": 0,
+          "i": null,
+          "j": null,
+          "factor": "L",
+          "exponent": 2
+        },
+        "note": "Raise the first negative entry by one to bring this row closer to zero sum.",
+        "attempted": true
+      },
+      {
+        "id": 2,
+        "turn": 2,
+        "at_move": 1,
+        "operation": "O35",
+        "red": null,
+        "params": {
+          "axis": "row",
+          "source": null,
+          "target": null,
+          "i": null,
+          "j": null,
+          "factor": "L",
+          "exponent": 2
+        },
+        "note": "Explore lowering the positive rows by one per entry; their entries are mostly above zero.",
+        "attempted": true
+      },
+      {
+        "id": 3,
+        "turn": 3,
+        "at_move": 2,
+        "operation": "O22",
+        "red": "R16",
+        "params": {
+          "axis": "column",
+          "source": 0,
+          "target": null,
+          "i": null,
+          "j": null,
+          "factor": "L",
+          "exponent": 2
+        },
+        "note": "Append a column to make the shape wide; its minus one also cancels the second row sum of one.",
+        "attempted": true
+      }
+    ],
+    "previews": [
+      {
+        "turn": 2,
+        "plan": 2,
+        "result": [
+          [
+            -2,
+            -1,
+            -2
+          ],
+          [
+            1,
+            -1,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ]
+      }
+    ],
+    "candidate_limit_per_turn": 2,
+    "preview_limit_per_turn": 1,
+    "preview_limit_total": 6
+  },
+  "experiment_phase": "formal",
+  "stop_reason": "After three legal turns the matrix is wide and one row has zero sum, but I have no simple next correction that also addresses orthogonality with the available operations."
+}

@@ -1,0 +1,444 @@
+{
+  "kind": "gametrix-session",
+  "version": 1,
+  "deck": "/Users/qizhengwang/Desktop/school/GameTrix/playtests/deck_used.json",
+  "deck_sha256": "a71ff8f4cd105b923a74f191cd32e1ded855a2792d72c4005c74dd57f03615c3",
+  "seed": 301,
+  "objective": {
+    "id": "C11",
+    "name": "Orthogonal Columns",
+    "tier": "Core",
+    "shape": "Tall: 3×2, 4×2, or 4×3",
+    "goal": "Make a tall matrix whose columns are nonzero and pairwise orthogonal, with no zero rows. Equivalently, AᵀA is diagonal with positive diagonal entries.",
+    "A": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        -1
+      ],
+      [
+        1,
+        0
+      ]
+    ],
+    "check": "AᵀA = diag(3,2), and every row is nonzero.",
+    "note": "The columns need not have unit length, so integer solutions are possible. Appending a row r adds rᵀr to AᵀA; it changes orthogonality rather than guaranteeing it. This goal is the transpose counterpart of C12."
+  },
+  "blue": "B01",
+  "current": [
+    [
+      -2,
+      -2
+    ],
+    [
+      -2,
+      4
+    ],
+    [
+      2,
+      2
+    ]
+  ],
+  "mode": "draw",
+  "player": "play_rectangular",
+  "turn_cap": 8,
+  "move_cap": 16,
+  "turn": 3,
+  "turn_operations": 2,
+  "moves": 4,
+  "status": "won",
+  "history": [
+    {
+      "type": "play",
+      "turn": 1,
+      "operation": "O05",
+      "code": "add",
+      "red": "R04",
+      "params": {
+        "axis": "row",
+        "source": null,
+        "target": null,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2
+      },
+      "before": [
+        [
+          1,
+          2,
+          2
+        ],
+        [
+          1,
+          -1,
+          2
+        ],
+        [
+          0,
+          -2,
+          -2
+        ]
+      ],
+      "after": [
+        [
+          0,
+          2,
+          2
+        ],
+        [
+          1,
+          -2,
+          2
+        ],
+        [
+          0,
+          -2,
+          -3
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": false,
+          "nonzero_vectors": true,
+          "orthogonal_vectors": false,
+          "no_zero_rows": true
+        },
+        "shape": [
+          3,
+          3
+        ]
+      },
+      "note": "Subtract identity to simplify the first column to a coordinate vector while waiting for dimension-changing products.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "end_turn",
+      "turn": 1,
+      "note": "",
+      "drawn": {
+        "operations": [
+          "O17",
+          "O06",
+          "O30"
+        ],
+        "red": [
+          "R10",
+          "R18",
+          "R06",
+          "R01",
+          "R17"
+        ]
+      }
+    },
+    {
+      "type": "play",
+      "turn": 2,
+      "operation": "O32",
+      "code": "swap",
+      "red": null,
+      "params": {
+        "axis": "row",
+        "source": null,
+        "target": null,
+        "i": 0,
+        "j": 2,
+        "factor": "L",
+        "exponent": 2
+      },
+      "before": [
+        [
+          0,
+          2,
+          2
+        ],
+        [
+          1,
+          -2,
+          2
+        ],
+        [
+          0,
+          -2,
+          -3
+        ]
+      ],
+      "after": [
+        [
+          0,
+          -2,
+          -3
+        ],
+        [
+          1,
+          -2,
+          2
+        ],
+        [
+          0,
+          2,
+          2
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": false,
+          "nonzero_vectors": true,
+          "orthogonal_vectors": false,
+          "no_zero_rows": true
+        },
+        "shape": [
+          3,
+          3
+        ]
+      },
+      "note": "Permute rows without changing column dot products; preserve shaping cards while seeking a right-product card next turn.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "end_turn",
+      "turn": 2,
+      "note": "",
+      "drawn": {
+        "operations": [
+          "O07",
+          "O11",
+          "O15"
+        ],
+        "red": [
+          "R26",
+          "R03",
+          "R29",
+          "R13",
+          "R08"
+        ]
+      }
+    },
+    {
+      "type": "play",
+      "turn": 3,
+      "operation": "O11",
+      "code": "multiply",
+      "red": "R18",
+      "params": {
+        "axis": "row",
+        "source": null,
+        "target": null,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2
+      },
+      "before": [
+        [
+          0,
+          -2,
+          -3
+        ],
+        [
+          1,
+          -2,
+          2
+        ],
+        [
+          0,
+          2,
+          2
+        ]
+      ],
+      "after": [
+        [
+          -2,
+          -3
+        ],
+        [
+          -2,
+          3
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "nonzero_vectors": true,
+          "orthogonal_vectors": false,
+          "no_zero_rows": true
+        },
+        "shape": [
+          3,
+          2
+        ]
+      },
+      "note": "Reduce to two columns (-2,-2,2) and (-3,3,2); their dot product is 4, correctable by adding (1,1,0) to column one.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "play",
+      "turn": 3,
+      "operation": "O17",
+      "code": "add_vector",
+      "red": "R13",
+      "params": {
+        "axis": "column",
+        "source": 0,
+        "target": 1,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2
+      },
+      "before": [
+        [
+          -2,
+          -3
+        ],
+        [
+          -2,
+          3
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "after": [
+        [
+          -2,
+          -2
+        ],
+        [
+          -2,
+          4
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": true,
+        "checks": {
+          "shape": true,
+          "nonzero_vectors": true,
+          "orthogonal_vectors": true,
+          "no_zero_rows": true
+        },
+        "shape": [
+          3,
+          2
+        ]
+      },
+      "note": "Add (1,1,0) to the second column, reducing the dot product by 4 to zero with no zero rows.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    }
+  ],
+  "operation_draw": [
+    "O24",
+    "O01",
+    "O18",
+    "O16",
+    "O03",
+    "O25",
+    "O40",
+    "O23",
+    "O33",
+    "O27",
+    "O12",
+    "O37",
+    "O34",
+    "O38",
+    "O28",
+    "O31",
+    "O21",
+    "O19",
+    "O14",
+    "O29",
+    "O08",
+    "O13",
+    "O36",
+    "O10",
+    "O04",
+    "O02",
+    "O09",
+    "O20",
+    "O39",
+    "O35",
+    "O26"
+  ],
+  "operation_hand": [
+    "O22",
+    "O06",
+    "O30",
+    "O07",
+    "O15"
+  ],
+  "operation_discard": [
+    "O05",
+    "O32",
+    "O11",
+    "O17"
+  ],
+  "operation_cycles": 0,
+  "red_draw": [
+    "R02",
+    "R22",
+    "R05",
+    "R09",
+    "R28",
+    "R16",
+    "R12",
+    "R19",
+    "R30",
+    "R07",
+    "R20",
+    "R11",
+    "R27",
+    "R24",
+    "R14"
+  ],
+  "red_hand": [
+    "R25",
+    "R23",
+    "R15",
+    "R21",
+    "R10",
+    "R06",
+    "R01",
+    "R17",
+    "R26",
+    "R03",
+    "R29",
+    "R08"
+  ],
+  "red_discard": [
+    "R04",
+    "R18",
+    "R13"
+  ],
+  "red_cycles": 0
+}

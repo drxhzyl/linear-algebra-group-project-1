@@ -1,0 +1,281 @@
+{
+  "kind": "gametrix-session",
+  "version": 1,
+  "deck": "/Users/qizhengwang/Desktop/school/GameTrix/playtests/deck_used.json",
+  "deck_sha256": "a71ff8f4cd105b923a74f191cd32e1ded855a2792d72c4005c74dd57f03615c3",
+  "seed": 104,
+  "objective": {
+    "id": "C03",
+    "name": "Diagonal Diversity",
+    "tier": "Core",
+    "shape": "Square 3–4",
+    "goal": "Make a diagonal matrix with every diagonal entry nonzero and at least three distinct diagonal values.",
+    "A": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        2,
+        0
+      ],
+      [
+        0,
+        0,
+        3
+      ]
+    ],
+    "check": "The diagonal values 1, 2, and 3 are nonzero and distinct.",
+    "note": "A 2×2 matrix cannot qualify. For an invertible lower triangular A with the required diagonal values, choosing U from LU can finish the goal."
+  },
+  "blue": "B04",
+  "current": [
+    [
+      2,
+      0,
+      0
+    ],
+    [
+      0,
+      -1,
+      0
+    ],
+    [
+      0,
+      0,
+      1
+    ]
+  ],
+  "mode": "open",
+  "player": "play_core",
+  "turn_cap": 8,
+  "move_cap": 8,
+  "turn": 1,
+  "turn_operations": 2,
+  "moves": 2,
+  "status": "won",
+  "history": [
+    {
+      "type": "play",
+      "turn": 1,
+      "operation": "O25",
+      "code": "replace_vector",
+      "red": "R04",
+      "params": {
+        "axis": "row",
+        "source": 1,
+        "target": 1,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2
+      },
+      "before": [
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          -1,
+          -2,
+          1
+        ],
+        [
+          2,
+          -2,
+          2
+        ]
+      ],
+      "after": [
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          -1,
+          0
+        ],
+        [
+          2,
+          -2,
+          2
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "diagonal": false,
+          "nonzero_diagonal": true,
+          "three_distinct_diagonal_values": false
+        },
+        "shape": [
+          3,
+          3
+        ]
+      },
+      "note": "Replace row 1 with -e1; this clears its off-diagonal entries and supplies a distinct nonzero diagonal.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "play",
+      "turn": 1,
+      "operation": "O26",
+      "code": "replace_vector",
+      "red": "R03",
+      "params": {
+        "axis": "row",
+        "source": 2,
+        "target": 2,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2
+      },
+      "before": [
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          -1,
+          0
+        ],
+        [
+          2,
+          -2,
+          2
+        ]
+      ],
+      "after": [
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          -1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": true,
+        "checks": {
+          "shape": true,
+          "diagonal": true,
+          "nonzero_diagonal": true,
+          "three_distinct_diagonal_values": true
+        },
+        "shape": [
+          3,
+          3
+        ]
+      },
+      "note": "Replace row 2 with e2; all off-diagonals are now zero and diagonal values are 2, -1, 1.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    }
+  ],
+  "operation_draw": [],
+  "operation_hand": [
+    "O01",
+    "O02",
+    "O03",
+    "O04",
+    "O05",
+    "O06",
+    "O07",
+    "O08",
+    "O09",
+    "O10",
+    "O11",
+    "O12",
+    "O13",
+    "O14",
+    "O15",
+    "O16",
+    "O17",
+    "O18",
+    "O19",
+    "O20",
+    "O21",
+    "O22",
+    "O23",
+    "O24",
+    "O27",
+    "O28",
+    "O29",
+    "O30",
+    "O31",
+    "O32",
+    "O33",
+    "O34",
+    "O35",
+    "O36",
+    "O37",
+    "O38",
+    "O39",
+    "O40"
+  ],
+  "operation_discard": [
+    "O25",
+    "O26"
+  ],
+  "operation_cycles": 0,
+  "red_draw": [],
+  "red_hand": [
+    "R01",
+    "R02",
+    "R05",
+    "R06",
+    "R07",
+    "R08",
+    "R09",
+    "R10",
+    "R11",
+    "R12",
+    "R13",
+    "R14",
+    "R15",
+    "R16",
+    "R17",
+    "R18",
+    "R19",
+    "R20",
+    "R21",
+    "R22",
+    "R23",
+    "R24",
+    "R25",
+    "R26",
+    "R27",
+    "R28",
+    "R29",
+    "R30"
+  ],
+  "red_discard": [
+    "R04",
+    "R03"
+  ],
+  "red_cycles": 0
+}

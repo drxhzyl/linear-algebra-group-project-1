@@ -1,0 +1,17 @@
+{
+  "kind": "gametrix-expansion-report",
+  "counts": {
+    "blue": 12,
+    "red": 30,
+    "operations": 80,
+    "objectives": 15
+  },
+  "name": "Simple operations +40",
+  "base_deck_sha256": "38824be5406d3dca771a06dba3b5017253913858f049328d87b5c11e3bad2035",
+  "added_operation_counts": {
+    "entry_tweak": 24,
+    "entry_zero": 8,
+    "combine_vectors": 8
+  },
+  "unchanged": "All original blue, red, objective and O01–O40 cards; turn draws stay 3 operations + 5 red."
+}

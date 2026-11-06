@@ -1,0 +1,350 @@
+{
+  "kind": "gametrix-session",
+  "version": 1,
+  "deck": "/Users/qizhengwang/Desktop/school/GameTrix/playtests/deck_used.json",
+  "deck_sha256": "a71ff8f4cd105b923a74f191cd32e1ded855a2792d72c4005c74dd57f03615c3",
+  "seed": 106,
+  "objective": {
+    "id": "C07",
+    "name": "Volume-Preserving Mix",
+    "tier": "Core",
+    "shape": "Square 2–4",
+    "goal": "Make det(A) = 1, with at least two nonzero entries in every row and every column.",
+    "A": [
+      [
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1
+      ]
+    ],
+    "check": "det(A) = 1; each row and column contains at least two nonzero entries.",
+    "note": "LU no longer gives an automatic win: L has only one nonzero entry in its first row, and U has at most one in its last row. Fixed printed constants also remove arbitrary determinant tuning."
+  },
+  "blue": "B06",
+  "current": [
+    [
+      -1,
+      1,
+      1
+    ],
+    [
+      -1,
+      1,
+      0
+    ],
+    [
+      -1,
+      0,
+      1
+    ]
+  ],
+  "mode": "open",
+  "player": "play_core",
+  "turn_cap": 8,
+  "move_cap": 8,
+  "turn": 1,
+  "turn_operations": 3,
+  "moves": 3,
+  "status": "won",
+  "history": [
+    {
+      "type": "play",
+      "turn": 1,
+      "operation": "O30",
+      "code": "swap",
+      "red": null,
+      "params": {
+        "axis": "row",
+        "source": null,
+        "target": null,
+        "i": 1,
+        "j": 2,
+        "factor": "L",
+        "exponent": 2
+      },
+      "before": [
+        [
+          -2,
+          0,
+          -1
+        ],
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          2,
+          2,
+          1
+        ]
+      ],
+      "after": [
+        [
+          -2,
+          0,
+          -1
+        ],
+        [
+          2,
+          2,
+          1
+        ],
+        [
+          2,
+          0,
+          2
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "determinant_one": false,
+          "two_nonzeros_per_row": true,
+          "two_nonzeros_per_column": false
+        },
+        "shape": [
+          3,
+          3
+        ]
+      },
+      "note": "Swap rows 1 and 2 to create valid leading pivots for an LU factor with unit determinant.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "play",
+      "turn": 1,
+      "operation": "O40",
+      "code": "lu",
+      "red": null,
+      "params": {
+        "axis": "row",
+        "source": null,
+        "target": null,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2
+      },
+      "before": [
+        [
+          -2,
+          0,
+          -1
+        ],
+        [
+          2,
+          2,
+          1
+        ],
+        [
+          2,
+          0,
+          2
+        ]
+      ],
+      "after": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          -1,
+          1,
+          0
+        ],
+        [
+          -1,
+          0,
+          1
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "determinant_one": true,
+          "two_nonzeros_per_row": false,
+          "two_nonzeros_per_column": false
+        },
+        "shape": [
+          3,
+          3
+        ]
+      },
+      "note": "Take the unit lower factor; determinant becomes 1, then I will fill two sparse columns with a determinant-preserving row combination.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "play",
+      "turn": 1,
+      "operation": "O16",
+      "code": "add_vector",
+      "red": "R11",
+      "params": {
+        "axis": "row",
+        "source": 2,
+        "target": 0,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2
+      },
+      "before": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          -1,
+          1,
+          0
+        ],
+        [
+          -1,
+          0,
+          1
+        ]
+      ],
+      "after": [
+        [
+          -1,
+          1,
+          1
+        ],
+        [
+          -1,
+          1,
+          0
+        ],
+        [
+          -1,
+          0,
+          1
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": true,
+        "checks": {
+          "shape": true,
+          "determinant_one": true,
+          "two_nonzeros_per_row": true,
+          "two_nonzeros_per_column": true
+        },
+        "shape": [
+          3,
+          3
+        ]
+      },
+      "note": "Add R11 row 2 = row 1 + row 2 to row 0; this integer row combination preserves det 1 and densifies all rows and columns.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    }
+  ],
+  "operation_draw": [],
+  "operation_hand": [
+    "O01",
+    "O02",
+    "O03",
+    "O04",
+    "O05",
+    "O06",
+    "O07",
+    "O08",
+    "O09",
+    "O10",
+    "O11",
+    "O12",
+    "O13",
+    "O14",
+    "O15",
+    "O17",
+    "O18",
+    "O19",
+    "O20",
+    "O21",
+    "O22",
+    "O23",
+    "O24",
+    "O25",
+    "O26",
+    "O27",
+    "O28",
+    "O29",
+    "O31",
+    "O32",
+    "O33",
+    "O34",
+    "O35",
+    "O36",
+    "O37",
+    "O38",
+    "O39"
+  ],
+  "operation_discard": [
+    "O30",
+    "O40",
+    "O16"
+  ],
+  "operation_cycles": 0,
+  "red_draw": [],
+  "red_hand": [
+    "R01",
+    "R02",
+    "R03",
+    "R04",
+    "R05",
+    "R06",
+    "R07",
+    "R08",
+    "R09",
+    "R10",
+    "R12",
+    "R13",
+    "R14",
+    "R15",
+    "R16",
+    "R17",
+    "R18",
+    "R19",
+    "R20",
+    "R21",
+    "R22",
+    "R23",
+    "R24",
+    "R25",
+    "R26",
+    "R27",
+    "R28",
+    "R29",
+    "R30"
+  ],
+  "red_discard": [
+    "R11"
+  ],
+  "red_cycles": 0
+}

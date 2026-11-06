@@ -1,0 +1,1133 @@
+{
+  "kind": "gametrix-session",
+  "version": 1,
+  "deck": "/Users/qizhengwang/Desktop/school/GameTrix/expansion_v1/generated/baseline_deck.json",
+  "deck_sha256": "38824be5406d3dca771a06dba3b5017253913858f049328d87b5c11e3bad2035",
+  "seed": 306,
+  "objective": {
+    "id": "C14",
+    "name": "Zero-sum Orthogonal Rows",
+    "tier": "Advanced",
+    "shape": "Wide: 2×3, 2×4, or 3×4",
+    "goal": "Make a wide matrix with nonzero pairwise orthogonal rows, every row sum 0, and no zero columns. Equivalently, A1ₙ = 0 and AAᵀ is diagonal with positive diagonal entries, where 1ₙ is the column vector of n ones.",
+    "A": [
+      [
+        1,
+        -1,
+        0
+      ],
+      [
+        1,
+        1,
+        -2
+      ]
+    ],
+    "check": "Both row sums are 0, their dot product is 0, and AAᵀ = diag(2,6). No column is zero.",
+    "note": "This intentionally strengthens C12 by putting the all-ones vector in the nullspace. Wide shape is necessary: independent zero-sum rows lie in an (n−1)-dimensional subspace."
+  },
+  "blue": "B06",
+  "current": [
+    [
+      0,
+      -2,
+      1,
+      1
+    ],
+    [
+      -1,
+      -1,
+      1,
+      1
+    ],
+    [
+      1,
+      -1,
+      0,
+      0
+    ]
+  ],
+  "mode": "draw",
+  "player": "control",
+  "turn_cap": 8,
+  "move_cap": 16,
+  "turn": 8,
+  "turn_operations": 1,
+  "moves": 9,
+  "status": "turn_limit",
+  "history": [
+    {
+      "type": "play",
+      "turn": 1,
+      "operation": "O20",
+      "code": "add_vector",
+      "red": "R03",
+      "params": {
+        "axis": "row",
+        "source": 0,
+        "target": 0,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2,
+        "delta": 1
+      },
+      "before": [
+        [
+          -2,
+          0,
+          -1
+        ],
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          2,
+          2,
+          1
+        ]
+      ],
+      "after": [
+        [
+          -1,
+          0,
+          -1
+        ],
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          2,
+          2,
+          1
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": false,
+          "nonzero_vectors": true,
+          "orthogonal_vectors": false,
+          "no_zero_columns": true,
+          "row_sums_zero": false
+        },
+        "shape": [
+          3,
+          3
+        ]
+      },
+      "note": "[progress] Bring the negative sum of row zero one step closer to zero.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "end_turn",
+      "turn": 1,
+      "note": "student budget test",
+      "drawn": {
+        "operations": [
+          "O35",
+          "O37",
+          "O40"
+        ],
+        "red": [
+          "R16",
+          "R10",
+          "R12",
+          "R24",
+          "R07"
+        ]
+      }
+    },
+    {
+      "type": "play",
+      "turn": 2,
+      "operation": "O28",
+      "code": "transpose",
+      "red": null,
+      "params": {
+        "axis": "row",
+        "source": null,
+        "target": null,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2,
+        "delta": 1
+      },
+      "before": [
+        [
+          -1,
+          0,
+          -1
+        ],
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          2,
+          2,
+          1
+        ]
+      ],
+      "after": [
+        [
+          -1,
+          2,
+          2
+        ],
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          -1,
+          2,
+          1
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": false,
+          "nonzero_vectors": true,
+          "orthogonal_vectors": false,
+          "no_zero_columns": true,
+          "row_sums_zero": false
+        },
+        "shape": [
+          3,
+          3
+        ]
+      },
+      "note": "[stall] Reorient the matrix while waiting for a card that can make it wide.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "play",
+      "turn": 2,
+      "operation": "O35",
+      "code": "shift_minus",
+      "red": null,
+      "params": {
+        "axis": "row",
+        "source": null,
+        "target": null,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2,
+        "delta": 1
+      },
+      "before": [
+        [
+          -1,
+          2,
+          2
+        ],
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          -1,
+          2,
+          1
+        ]
+      ],
+      "after": [
+        [
+          -2,
+          1,
+          1
+        ],
+        [
+          -1,
+          -1,
+          1
+        ],
+        [
+          -2,
+          1,
+          0
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": false,
+          "nonzero_vectors": true,
+          "orthogonal_vectors": false,
+          "no_zero_columns": true,
+          "row_sums_zero": false
+        },
+        "shape": [
+          3,
+          3
+        ]
+      },
+      "note": "[progress] Make the sum of the top row zero by subtracting one from its three entries.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "end_turn",
+      "turn": 2,
+      "note": "student budget test",
+      "drawn": {
+        "operations": [
+          "O05",
+          "O22",
+          "O13"
+        ],
+        "red": [
+          "R25",
+          "R06",
+          "R08",
+          "R30",
+          "R21"
+        ]
+      }
+    },
+    {
+      "type": "play",
+      "turn": 3,
+      "operation": "O22",
+      "code": "append_vector",
+      "red": "R18",
+      "params": {
+        "axis": "column",
+        "source": 0,
+        "target": null,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2,
+        "delta": 1
+      },
+      "before": [
+        [
+          -2,
+          1,
+          1
+        ],
+        [
+          -1,
+          -1,
+          1
+        ],
+        [
+          -2,
+          1,
+          0
+        ]
+      ],
+      "after": [
+        [
+          -2,
+          1,
+          1,
+          0
+        ],
+        [
+          -1,
+          -1,
+          1,
+          1
+        ],
+        [
+          -2,
+          1,
+          0,
+          0
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "nonzero_vectors": true,
+          "orthogonal_vectors": false,
+          "no_zero_columns": true,
+          "row_sums_zero": false
+        },
+        "shape": [
+          3,
+          4
+        ]
+      },
+      "note": "[progress] Reach the permitted wide shape and bring row one sum to zero with the appended unit column.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "end_turn",
+      "turn": 3,
+      "note": "student budget test",
+      "drawn": {
+        "operations": [
+          "O21",
+          "O17",
+          "O07"
+        ],
+        "red": [
+          "R13",
+          "R14",
+          "R29",
+          "R02",
+          "R05"
+        ]
+      }
+    },
+    {
+      "type": "play",
+      "turn": 4,
+      "operation": "O17",
+      "code": "add_vector",
+      "red": "R16",
+      "params": {
+        "axis": "column",
+        "source": 1,
+        "target": 0,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2,
+        "delta": 1
+      },
+      "before": [
+        [
+          -2,
+          1,
+          1,
+          0
+        ],
+        [
+          -1,
+          -1,
+          1,
+          1
+        ],
+        [
+          -2,
+          1,
+          0,
+          0
+        ]
+      ],
+      "after": [
+        [
+          -2,
+          1,
+          1,
+          0
+        ],
+        [
+          -1,
+          -1,
+          1,
+          1
+        ],
+        [
+          -1,
+          1,
+          0,
+          0
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "nonzero_vectors": true,
+          "orthogonal_vectors": false,
+          "no_zero_columns": true,
+          "row_sums_zero": true
+        },
+        "shape": [
+          3,
+          4
+        ]
+      },
+      "note": "[progress] Raise only the first entry in row two so its sum reaches zero.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "end_turn",
+      "turn": 4,
+      "note": "student budget test",
+      "drawn": {
+        "operations": [
+          "O23",
+          "O38",
+          "O39"
+        ],
+        "red": [
+          "R15",
+          "R23",
+          "R11",
+          "R20",
+          "R26"
+        ]
+      }
+    },
+    {
+      "type": "play",
+      "turn": 5,
+      "operation": "O13",
+      "code": "multiply",
+      "red": "R05",
+      "params": {
+        "axis": "row",
+        "source": null,
+        "target": null,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2,
+        "delta": 1
+      },
+      "before": [
+        [
+          -2,
+          1,
+          1,
+          0
+        ],
+        [
+          -1,
+          -1,
+          1,
+          1
+        ],
+        [
+          -1,
+          1,
+          0,
+          0
+        ]
+      ],
+      "after": [
+        [
+          -2,
+          1,
+          1,
+          0
+        ],
+        [
+          -1,
+          -1,
+          1,
+          1
+        ],
+        [
+          -1,
+          1,
+          0,
+          0
+        ]
+      ],
+      "changed": false,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "nonzero_vectors": true,
+          "orthogonal_vectors": false,
+          "no_zero_columns": true,
+          "row_sums_zero": true
+        },
+        "shape": [
+          3,
+          4
+        ]
+      },
+      "note": "[stall] Preserve the wide shape and zero row sums with identity multiplication while waiting for a targeted row edit.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "end_turn",
+      "turn": 5,
+      "note": "student budget test",
+      "drawn": {
+        "operations": [
+          "O32",
+          "O29",
+          "O19"
+        ],
+        "red": [
+          "R09",
+          "R01",
+          "R22",
+          "R17",
+          "R27"
+        ]
+      }
+    },
+    {
+      "type": "play",
+      "turn": 6,
+      "operation": "O32",
+      "code": "swap",
+      "red": null,
+      "params": {
+        "axis": "column",
+        "source": null,
+        "target": null,
+        "i": 0,
+        "j": 1,
+        "factor": "L",
+        "exponent": 2,
+        "delta": 1
+      },
+      "before": [
+        [
+          -2,
+          1,
+          1,
+          0
+        ],
+        [
+          -1,
+          -1,
+          1,
+          1
+        ],
+        [
+          -1,
+          1,
+          0,
+          0
+        ]
+      ],
+      "after": [
+        [
+          1,
+          -2,
+          1,
+          0
+        ],
+        [
+          -1,
+          -1,
+          1,
+          1
+        ],
+        [
+          1,
+          -1,
+          0,
+          0
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "nonzero_vectors": true,
+          "orthogonal_vectors": false,
+          "no_zero_columns": true,
+          "row_sums_zero": true
+        },
+        "shape": [
+          3,
+          4
+        ]
+      },
+      "note": "[stall] Swap the first two columns to preserve the achieved row sums while waiting for a clearer orthogonality edit.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "end_turn",
+      "turn": 6,
+      "note": "student budget test",
+      "drawn": {
+        "operations": [
+          "O06",
+          "O12",
+          "O34"
+        ],
+        "red": [
+          "R16",
+          "R03",
+          "R05",
+          "R18"
+        ]
+      }
+    },
+    {
+      "type": "play",
+      "turn": 7,
+      "operation": "O19",
+      "code": "add_vector",
+      "red": "R25",
+      "params": {
+        "axis": "row",
+        "source": 2,
+        "target": 0,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2,
+        "delta": 1
+      },
+      "before": [
+        [
+          1,
+          -2,
+          1,
+          0
+        ],
+        [
+          -1,
+          -1,
+          1,
+          1
+        ],
+        [
+          1,
+          -1,
+          0,
+          0
+        ]
+      ],
+      "after": [
+        [
+          0,
+          -2,
+          1,
+          1
+        ],
+        [
+          -1,
+          -1,
+          1,
+          1
+        ],
+        [
+          1,
+          -1,
+          0,
+          0
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "nonzero_vectors": true,
+          "orthogonal_vectors": false,
+          "no_zero_columns": true,
+          "row_sums_zero": true
+        },
+        "shape": [
+          3,
+          4
+        ]
+      },
+      "note": "[progress] Reduce the difference between the first two entries of row zero while preserving its zero sum.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "end_turn",
+      "turn": 7,
+      "note": "student budget test",
+      "drawn": {
+        "operations": [
+          "O36",
+          "O11",
+          "O04"
+        ],
+        "red": [
+          "R25"
+        ]
+      }
+    },
+    {
+      "type": "play",
+      "turn": 8,
+      "operation": "O12",
+      "code": "multiply",
+      "red": "R05",
+      "params": {
+        "axis": "row",
+        "source": null,
+        "target": null,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2,
+        "delta": 1
+      },
+      "before": [
+        [
+          0,
+          -2,
+          1,
+          1
+        ],
+        [
+          -1,
+          -1,
+          1,
+          1
+        ],
+        [
+          1,
+          -1,
+          0,
+          0
+        ]
+      ],
+      "after": [
+        [
+          0,
+          -2,
+          1,
+          1
+        ],
+        [
+          -1,
+          -1,
+          1,
+          1
+        ],
+        [
+          1,
+          -1,
+          0,
+          0
+        ]
+      ],
+      "changed": false,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "nonzero_vectors": true,
+          "orthogonal_vectors": false,
+          "no_zero_columns": true,
+          "row_sums_zero": true
+        },
+        "shape": [
+          3,
+          4
+        ]
+      },
+      "note": "[stall] Keep the permitted shape and zero row sums; no clear improving edit is visible in this hand.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "end_turn",
+      "turn": 8,
+      "note": "student budget test",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    }
+  ],
+  "operation_draw": [
+    "O31",
+    "O01",
+    "O08",
+    "O27",
+    "O30",
+    "O15",
+    "O10",
+    "O09",
+    "O16",
+    "O26",
+    "O18",
+    "O02",
+    "O14",
+    "O33",
+    "O24",
+    "O25"
+  ],
+  "operation_hand": [
+    "O03",
+    "O37",
+    "O40",
+    "O05",
+    "O21",
+    "O07",
+    "O23",
+    "O38",
+    "O39",
+    "O29",
+    "O06",
+    "O34",
+    "O36",
+    "O11",
+    "O04"
+  ],
+  "operation_discard": [
+    "O20",
+    "O28",
+    "O35",
+    "O22",
+    "O17",
+    "O13",
+    "O32",
+    "O19",
+    "O12"
+  ],
+  "operation_cycles": 0,
+  "red_draw": [],
+  "red_hand": [
+    "R04",
+    "R19",
+    "R28",
+    "R10",
+    "R12",
+    "R24",
+    "R07",
+    "R06",
+    "R08",
+    "R30",
+    "R21",
+    "R13",
+    "R14",
+    "R29",
+    "R02",
+    "R15",
+    "R23",
+    "R11",
+    "R20",
+    "R26",
+    "R09",
+    "R01",
+    "R22",
+    "R17",
+    "R27",
+    "R16",
+    "R03",
+    "R18",
+    "R25"
+  ],
+  "red_discard": [
+    "R05"
+  ],
+  "red_cycles": 2,
+  "student_budget": {
+    "protocol": "expansion_v1/PROTOCOL.md",
+    "fixed_horizon": true,
+    "plans": [
+      {
+        "id": 1,
+        "turn": 1,
+        "at_move": 0,
+        "operation": "O20",
+        "red": "R03",
+        "params": {
+          "axis": "row",
+          "source": 0,
+          "target": 0,
+          "i": null,
+          "j": null,
+          "factor": "L",
+          "exponent": 2,
+          "delta": 1
+        },
+        "note": "[progress] Bring the negative sum of row zero one step closer to zero.",
+        "attempted": true
+      },
+      {
+        "id": 2,
+        "turn": 2,
+        "at_move": 1,
+        "operation": "O28",
+        "red": null,
+        "params": {
+          "axis": "row",
+          "source": null,
+          "target": null,
+          "i": null,
+          "j": null,
+          "factor": "L",
+          "exponent": 2,
+          "delta": 1
+        },
+        "note": "[stall] Reorient the matrix while waiting for a card that can make it wide.",
+        "attempted": true
+      },
+      {
+        "id": 3,
+        "turn": 2,
+        "at_move": 2,
+        "operation": "O35",
+        "red": null,
+        "params": {
+          "axis": "row",
+          "source": null,
+          "target": null,
+          "i": null,
+          "j": null,
+          "factor": "L",
+          "exponent": 2,
+          "delta": 1
+        },
+        "note": "[progress] Make the sum of the top row zero by subtracting one from its three entries.",
+        "attempted": true
+      },
+      {
+        "id": 4,
+        "turn": 3,
+        "at_move": 3,
+        "operation": "O22",
+        "red": "R18",
+        "params": {
+          "axis": "column",
+          "source": 0,
+          "target": null,
+          "i": null,
+          "j": null,
+          "factor": "L",
+          "exponent": 2,
+          "delta": 1
+        },
+        "note": "[progress] Reach the permitted wide shape and bring row one sum to zero with the appended unit column.",
+        "attempted": true
+      },
+      {
+        "id": 5,
+        "turn": 4,
+        "at_move": 4,
+        "operation": "O17",
+        "red": "R16",
+        "params": {
+          "axis": "column",
+          "source": 1,
+          "target": 0,
+          "i": null,
+          "j": null,
+          "factor": "L",
+          "exponent": 2,
+          "delta": 1
+        },
+        "note": "[progress] Raise only the first entry in row two so its sum reaches zero.",
+        "attempted": true
+      },
+      {
+        "id": 6,
+        "turn": 5,
+        "at_move": 5,
+        "operation": "O13",
+        "red": "R05",
+        "params": {
+          "axis": "row",
+          "source": null,
+          "target": null,
+          "i": null,
+          "j": null,
+          "factor": "L",
+          "exponent": 2,
+          "delta": 1
+        },
+        "note": "[stall] Preserve the wide shape and zero row sums with identity multiplication while waiting for a targeted row edit.",
+        "attempted": true
+      },
+      {
+        "id": 7,
+        "turn": 6,
+        "at_move": 6,
+        "operation": "O32",
+        "red": null,
+        "params": {
+          "axis": "column",
+          "source": null,
+          "target": null,
+          "i": 0,
+          "j": 1,
+          "factor": "L",
+          "exponent": 2,
+          "delta": 1
+        },
+        "note": "[stall] Swap the first two columns to preserve the achieved row sums while waiting for a clearer orthogonality edit.",
+        "attempted": true
+      },
+      {
+        "id": 8,
+        "turn": 7,
+        "at_move": 7,
+        "operation": "O19",
+        "red": "R25",
+        "params": {
+          "axis": "row",
+          "source": 2,
+          "target": 0,
+          "i": null,
+          "j": null,
+          "factor": "L",
+          "exponent": 2,
+          "delta": 1
+        },
+        "note": "[progress] Reduce the difference between the first two entries of row zero while preserving its zero sum.",
+        "attempted": true
+      },
+      {
+        "id": 9,
+        "turn": 8,
+        "at_move": 8,
+        "operation": "O12",
+        "red": "R05",
+        "params": {
+          "axis": "row",
+          "source": null,
+          "target": null,
+          "i": null,
+          "j": null,
+          "factor": "L",
+          "exponent": 2,
+          "delta": 1
+        },
+        "note": "[stall] Keep the permitted shape and zero row sums; no clear improving edit is visible in this hand.",
+        "attempted": true
+      }
+    ],
+    "previews": [],
+    "candidate_limit_per_turn": 2,
+    "preview_limit_per_turn": 1,
+    "preview_limit_total": 6
+  },
+  "experiment_phase": "expansion_fixed_horizon"
+}

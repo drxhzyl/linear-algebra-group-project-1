@@ -1,0 +1,746 @@
+{
+  "kind": "gametrix-session",
+  "version": 1,
+  "deck": "/Users/qizhengwang/Desktop/school/GameTrix/playtests/deck_used.json",
+  "deck_sha256": "a71ff8f4cd105b923a74f191cd32e1ded855a2792d72c4005c74dd57f03615c3",
+  "seed": 102,
+  "objective": {
+    "id": "C02+",
+    "name": "Signed Identity +",
+    "tier": "Core",
+    "shape": "Square 2–4",
+    "goal": "Make I_n for n = 2, 3, or 4.",
+    "A": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "check": "This is I₃ and wins the +1 variant. Negating it wins the −1 variant.",
+    "note": "LU can finish the +1 variant from an upper triangular matrix by choosing L = I. Dimension changes may make a smaller identity easier to construct; generation tests must include those routes.",
+    "sign": 1
+  },
+  "blue": "B02",
+  "current": [
+    [
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0
+    ],
+    [
+      "-1/2",
+      0,
+      1
+    ]
+  ],
+  "mode": "draw",
+  "player": "play_core",
+  "turn_cap": 8,
+  "move_cap": 16,
+  "turn": 8,
+  "turn_operations": 0,
+  "moves": 7,
+  "status": "stopped",
+  "history": [
+    {
+      "type": "play",
+      "turn": 1,
+      "operation": "O31",
+      "code": "swap",
+      "red": null,
+      "params": {
+        "axis": "row",
+        "source": null,
+        "target": null,
+        "i": 0,
+        "j": 1,
+        "factor": "L",
+        "exponent": 2
+      },
+      "before": [
+        [
+          3,
+          -3,
+          3
+        ],
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          -3,
+          0,
+          -2
+        ]
+      ],
+      "after": [
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          3,
+          -3,
+          3
+        ],
+        [
+          -3,
+          0,
+          -2
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "identity": false
+        },
+        "shape": [
+          3,
+          3
+        ]
+      },
+      "note": "Swap rows 0 and 1 to test an alternate elimination pivot while preserving shape and identity distance.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "end_turn",
+      "turn": 1,
+      "note": "",
+      "drawn": {
+        "operations": [
+          "O18",
+          "O02",
+          "O16"
+        ],
+        "red": [
+          "R28",
+          "R19",
+          "R23",
+          "R13",
+          "R18"
+        ]
+      }
+    },
+    {
+      "type": "play",
+      "turn": 2,
+      "operation": "O14",
+      "code": "multiply",
+      "red": "R11",
+      "params": {
+        "axis": "row",
+        "source": null,
+        "target": null,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2
+      },
+      "before": [
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          3,
+          -3,
+          3
+        ],
+        [
+          -3,
+          0,
+          -2
+        ]
+      ],
+      "after": [
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          -3,
+          3
+        ],
+        [
+          -2,
+          1,
+          -2
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "identity": false
+        },
+        "shape": [
+          3,
+          3
+        ]
+      },
+      "note": "Multiply by the available square red card to explore a nonsingular right-action path; exact determinant remains non-unit.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "end_turn",
+      "turn": 2,
+      "note": "",
+      "drawn": {
+        "operations": [
+          "O33",
+          "O27",
+          "O07"
+        ],
+        "red": [
+          "R26",
+          "R22",
+          "R03",
+          "R09",
+          "R29"
+        ]
+      }
+    },
+    {
+      "type": "play",
+      "turn": 3,
+      "operation": "O02",
+      "code": "add",
+      "red": "R03",
+      "params": {
+        "axis": "row",
+        "source": null,
+        "target": null,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2
+      },
+      "before": [
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          -3,
+          3
+        ],
+        [
+          -2,
+          1,
+          -2
+        ]
+      ],
+      "after": [
+        [
+          1,
+          0,
+          2
+        ],
+        [
+          0,
+          -2,
+          3
+        ],
+        [
+          -2,
+          1,
+          -1
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "identity": false
+        },
+        "shape": [
+          3,
+          3
+        ]
+      },
+      "note": "Add I3 to move the diagonal entries one unit toward the target while preserving the existing off-diagonal corrections for later moves.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "end_turn",
+      "turn": 3,
+      "note": "",
+      "drawn": {
+        "operations": [
+          "O10",
+          "O06",
+          "O24"
+        ],
+        "red": [
+          "R05",
+          "R08",
+          "R30",
+          "R21",
+          "R01"
+        ]
+      }
+    },
+    {
+      "type": "play",
+      "turn": 4,
+      "operation": "O11",
+      "code": "multiply",
+      "red": "R09",
+      "params": {
+        "axis": "row",
+        "source": null,
+        "target": null,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2
+      },
+      "before": [
+        [
+          1,
+          0,
+          2
+        ],
+        [
+          0,
+          -2,
+          3
+        ],
+        [
+          -2,
+          1,
+          -1
+        ]
+      ],
+      "after": [
+        [
+          1,
+          2,
+          2
+        ],
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          -2,
+          0,
+          -1
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "identity": false
+        },
+        "shape": [
+          3,
+          3
+        ]
+      },
+      "note": "Right-multiply by R09; preview gives two diagonal entries 1 and preserves full rank, leaving an unresolved third diagonal and off-diagonals.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "end_turn",
+      "turn": 4,
+      "note": "",
+      "drawn": {
+        "operations": [
+          "O20",
+          "O37",
+          "O17"
+        ],
+        "red": [
+          "R12",
+          "R10",
+          "R16",
+          "R24",
+          "R02"
+        ]
+      }
+    },
+    {
+      "type": "play",
+      "turn": 5,
+      "operation": "O18",
+      "code": "add_vector",
+      "red": "R12",
+      "params": {
+        "axis": "row",
+        "source": 0,
+        "target": 0,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2
+      },
+      "before": [
+        [
+          1,
+          2,
+          2
+        ],
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          -2,
+          0,
+          -1
+        ]
+      ],
+      "after": [
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          -2,
+          0,
+          -1
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "identity": false
+        },
+        "shape": [
+          3,
+          3
+        ]
+      },
+      "note": "Add R12 row 0 (1,-2,0) to row 0; this clears one off-diagonal entry and changes determinant to 2.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "end_turn",
+      "turn": 5,
+      "note": "",
+      "drawn": {
+        "operations": [
+          "O04",
+          "O13",
+          "O19"
+        ],
+        "red": [
+          "R14",
+          "R15",
+          "R07",
+          "R04",
+          "R06"
+        ]
+      }
+    },
+    {
+      "type": "play",
+      "turn": 6,
+      "operation": "O16",
+      "code": "add_vector",
+      "red": "R07",
+      "params": {
+        "axis": "row",
+        "source": 2,
+        "target": 2,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2
+      },
+      "before": [
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          -2,
+          0,
+          -1
+        ]
+      ],
+      "after": [
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          -1,
+          0,
+          0
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "identity": false
+        },
+        "shape": [
+          3,
+          3
+        ]
+      },
+      "note": "Add R07 row 2 (1,0,1) to row 2; both wrong entries move one unit closer to the identity row.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "end_turn",
+      "turn": 6,
+      "note": "",
+      "drawn": {
+        "operations": [
+          "O40",
+          "O30",
+          "O35"
+        ],
+        "red": [
+          "R07",
+          "R03",
+          "R12",
+          "R11",
+          "R09"
+        ]
+      }
+    },
+    {
+      "type": "play",
+      "turn": 7,
+      "operation": "O40",
+      "code": "lu",
+      "red": null,
+      "params": {
+        "axis": "row",
+        "source": null,
+        "target": null,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2
+      },
+      "before": [
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          -1,
+          0,
+          0
+        ]
+      ],
+      "after": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          "-1/2",
+          0,
+          1
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "identity": false
+        },
+        "shape": [
+          3,
+          3
+        ]
+      },
+      "note": "Take L: it yields two exact identity rows and a single -1/2 off-diagonal, the closest structured candidate found; determinant is 1.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "end_turn",
+      "turn": 7,
+      "note": "",
+      "drawn": {
+        "operations": [
+          "O15",
+          "O21",
+          "O01"
+        ],
+        "red": []
+      }
+    },
+    {
+      "type": "stop",
+      "turn": 8,
+      "note": "Reached the assigned 8-turn cap still short of I3; the LU(L) candidate has one -1/2 off-diagonal. This is inconclusive, not a proof of impossibility."
+    }
+  ],
+  "operation_draw": [
+    "O08",
+    "O28",
+    "O36",
+    "O12",
+    "O09",
+    "O39",
+    "O23",
+    "O22",
+    "O03",
+    "O32",
+    "O29",
+    "O34",
+    "O25",
+    "O38",
+    "O26",
+    "O05"
+  ],
+  "operation_hand": [
+    "O33",
+    "O27",
+    "O07",
+    "O10",
+    "O06",
+    "O24",
+    "O20",
+    "O37",
+    "O17",
+    "O04",
+    "O13",
+    "O19",
+    "O30",
+    "O35",
+    "O15",
+    "O21",
+    "O01"
+  ],
+  "operation_discard": [
+    "O31",
+    "O14",
+    "O02",
+    "O11",
+    "O18",
+    "O16",
+    "O40"
+  ],
+  "operation_cycles": 0,
+  "red_draw": [],
+  "red_hand": [
+    "R25",
+    "R17",
+    "R27",
+    "R20",
+    "R28",
+    "R19",
+    "R23",
+    "R13",
+    "R18",
+    "R26",
+    "R22",
+    "R29",
+    "R05",
+    "R08",
+    "R30",
+    "R21",
+    "R01",
+    "R10",
+    "R16",
+    "R24",
+    "R02",
+    "R14",
+    "R15",
+    "R04",
+    "R06",
+    "R07",
+    "R03",
+    "R12",
+    "R11",
+    "R09"
+  ],
+  "red_discard": [],
+  "red_cycles": 1,
+  "stop_reason": "Reached the assigned 8-turn cap still short of I3; the LU(L) candidate has one -1/2 off-diagonal. This is inconclusive, not a proof of impossibility."
+}

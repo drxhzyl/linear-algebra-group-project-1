@@ -1,0 +1,543 @@
+{
+  "kind": "gametrix-session",
+  "version": 1,
+  "deck": "/Users/qizhengwang/Desktop/school/GameTrix/playtests/deck_used.json",
+  "deck_sha256": "a71ff8f4cd105b923a74f191cd32e1ded855a2792d72c4005c74dd57f03615c3",
+  "seed": 204,
+  "objective": {
+    "id": "C09",
+    "name": "Three-step Collapse",
+    "tier": "Advanced",
+    "shape": "Square 3–4",
+    "goal": "Make A³ = 0 while A² ≠ 0.",
+    "A": [
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "check": "A² has a 1 in position (1,3), while A³ is the zero matrix.",
+    "note": "Size 2 cannot have nilpotency index 3. Zero matrices and rank-1 shortcuts do not qualify. Check powers exactly rather than treating a zero determinant as sufficient."
+  },
+  "blue": "B10",
+  "current": [
+    [
+      0,
+      2,
+      0
+    ],
+    [
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      0
+    ]
+  ],
+  "mode": "draw",
+  "player": "play_advanced",
+  "turn_cap": 8,
+  "move_cap": 16,
+  "turn": 5,
+  "turn_operations": 1,
+  "moves": 5,
+  "status": "won",
+  "history": [
+    {
+      "type": "play",
+      "turn": 1,
+      "operation": "O19",
+      "code": "add_vector",
+      "red": "R24",
+      "params": {
+        "axis": "row",
+        "source": 2,
+        "target": 1,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2
+      },
+      "before": [
+        [
+          0,
+          -2,
+          -1
+        ],
+        [
+          2,
+          -2,
+          -1
+        ],
+        [
+          0,
+          -2,
+          -2
+        ]
+      ],
+      "after": [
+        [
+          0,
+          -2,
+          -1
+        ],
+        [
+          2,
+          -1,
+          0
+        ],
+        [
+          0,
+          -2,
+          -2
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "cube_zero": false,
+          "square_nonzero": true
+        },
+        "shape": [
+          3,
+          3
+        ]
+      },
+      "note": "Reduce the second diagonal magnitude while clearing its third entry toward triangular nilpotency.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "end_turn",
+      "turn": 1,
+      "note": "",
+      "drawn": {
+        "operations": [
+          "O15",
+          "O34",
+          "O20"
+        ],
+        "red": [
+          "R09",
+          "R21",
+          "R29",
+          "R15",
+          "R26"
+        ]
+      }
+    },
+    {
+      "type": "play",
+      "turn": 2,
+      "operation": "O15",
+      "code": "multiply",
+      "red": "R20",
+      "params": {
+        "axis": "row",
+        "source": null,
+        "target": null,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2
+      },
+      "before": [
+        [
+          0,
+          -2,
+          -1
+        ],
+        [
+          2,
+          -1,
+          0
+        ],
+        [
+          0,
+          -2,
+          -2
+        ]
+      ],
+      "after": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": false,
+          "cube_zero": false,
+          "square_nonzero": false
+        },
+        "shape": [
+          3,
+          2
+        ]
+      },
+      "note": "Create a sparse rank-one rectangle with an upper chain entry, preparing nilpotency.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "end_turn",
+      "turn": 2,
+      "note": "",
+      "drawn": {
+        "operations": [
+          "O25",
+          "O35",
+          "O07"
+        ],
+        "red": [
+          "R30",
+          "R25",
+          "R19",
+          "R05",
+          "R17"
+        ]
+      }
+    },
+    {
+      "type": "play",
+      "turn": 3,
+      "operation": "O20",
+      "code": "add_vector",
+      "red": "R02",
+      "params": {
+        "axis": "row",
+        "source": 1,
+        "target": 1,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2
+      },
+      "before": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "after": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": false,
+          "cube_zero": false,
+          "square_nonzero": false
+        },
+        "shape": [
+          3,
+          2
+        ]
+      },
+      "note": "Zero the middle row; appending column two from R21 would complete a length-three nilpotent chain.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "end_turn",
+      "turn": 3,
+      "note": "",
+      "drawn": {
+        "operations": [
+          "O13",
+          "O38",
+          "O12"
+        ],
+        "red": [
+          "R12",
+          "R04",
+          "R01",
+          "R06",
+          "R28"
+        ]
+      }
+    },
+    {
+      "type": "play",
+      "turn": 4,
+      "operation": "O38",
+      "code": "double",
+      "red": null,
+      "params": {
+        "axis": "row",
+        "source": null,
+        "target": null,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2
+      },
+      "before": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "after": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": false,
+          "cube_zero": false,
+          "square_nonzero": false
+        },
+        "shape": [
+          3,
+          2
+        ]
+      },
+      "note": "Scale the existing chain edge while retaining its sparse nilpotent completion plan.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "end_turn",
+      "turn": 4,
+      "note": "",
+      "drawn": {
+        "operations": [
+          "O24",
+          "O09",
+          "O03"
+        ],
+        "red": [
+          "R11",
+          "R23",
+          "R14",
+          "R18",
+          "R13"
+        ]
+      }
+    },
+    {
+      "type": "play",
+      "turn": 5,
+      "operation": "O24",
+      "code": "append_vector",
+      "red": "R21",
+      "params": {
+        "axis": "column",
+        "source": 1,
+        "target": null,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2
+      },
+      "before": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "after": [
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": true,
+        "checks": {
+          "shape": true,
+          "cube_zero": true,
+          "square_nonzero": true
+        },
+        "shape": [
+          3,
+          3
+        ]
+      },
+      "note": "Append e2 to complete the weighted nilpotent chain with nonzero square and zero cube.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    }
+  ],
+  "operation_draw": [
+    "O36",
+    "O05",
+    "O17",
+    "O10",
+    "O14",
+    "O23",
+    "O29",
+    "O22",
+    "O04",
+    "O27",
+    "O40",
+    "O33",
+    "O01",
+    "O32",
+    "O16",
+    "O37",
+    "O39",
+    "O31",
+    "O08",
+    "O30",
+    "O18",
+    "O11",
+    "O26",
+    "O21",
+    "O28"
+  ],
+  "operation_hand": [
+    "O02",
+    "O06",
+    "O34",
+    "O25",
+    "O35",
+    "O07",
+    "O13",
+    "O12",
+    "O09",
+    "O03"
+  ],
+  "operation_discard": [
+    "O19",
+    "O15",
+    "O20",
+    "O38",
+    "O24"
+  ],
+  "operation_cycles": 0,
+  "red_draw": [
+    "R10",
+    "R16",
+    "R07",
+    "R03",
+    "R08"
+  ],
+  "red_hand": [
+    "R22",
+    "R27",
+    "R09",
+    "R29",
+    "R15",
+    "R26",
+    "R30",
+    "R25",
+    "R19",
+    "R05",
+    "R17",
+    "R12",
+    "R04",
+    "R01",
+    "R06",
+    "R28",
+    "R11",
+    "R23",
+    "R14",
+    "R18",
+    "R13"
+  ],
+  "red_discard": [
+    "R24",
+    "R20",
+    "R02",
+    "R21"
+  ],
+  "red_cycles": 0
+}

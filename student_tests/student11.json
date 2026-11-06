@@ -1,0 +1,498 @@
+{
+  "kind": "gametrix-session",
+  "version": 1,
+  "deck": "/Users/qizhengwang/Desktop/school/GameTrix/generated/deck.json",
+  "deck_sha256": "38824be5406d3dca771a06dba3b5017253913858f049328d87b5c11e3bad2035",
+  "seed": 303,
+  "objective": {
+    "id": "C13",
+    "name": "Rectangular Balance",
+    "tier": "Core",
+    "shape": "Any non-square shape, each dimension 2–4",
+    "goal": "For an m×n matrix with m ≠ n, make every row sum n and every column sum m, with at least one negative entry.",
+    "A": [
+      [
+        -1,
+        3,
+        1
+      ],
+      [
+        3,
+        -1,
+        1
+      ]
+    ],
+    "check": "Here m = 2 and n = 3: each row sums to 3 and each column sums to 2; negative entries occur.",
+    "note": "These totals agree at mn, so rectangular solutions are possible. The negative-entry requirement excludes the all-ones matrix. Appending changes both the shape and the required row or column sums; check the complete result again."
+  },
+  "blue": "B03",
+  "current": [
+    [
+      1,
+      0,
+      1,
+      2
+    ],
+    [
+      2,
+      3,
+      -1,
+      0
+    ],
+    [
+      2,
+      3,
+      1,
+      0
+    ]
+  ],
+  "mode": "draw",
+  "player": "student_formal",
+  "turn_cap": 8,
+  "move_cap": 16,
+  "turn": 3,
+  "turn_operations": 1,
+  "moves": 3,
+  "status": "stopped",
+  "history": [
+    {
+      "type": "play",
+      "turn": 1,
+      "operation": "O21",
+      "code": "append_vector",
+      "red": "R23",
+      "params": {
+        "axis": "column",
+        "source": 0,
+        "target": null,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2
+      },
+      "before": [
+        [
+          0,
+          -1,
+          0
+        ],
+        [
+          0,
+          1,
+          -3
+        ],
+        [
+          1,
+          2,
+          0
+        ]
+      ],
+      "after": [
+        [
+          0,
+          -1,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          -3,
+          0
+        ],
+        [
+          1,
+          2,
+          0,
+          -1
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "row_sums_n": false,
+          "column_sums_m": false,
+          "negative_entry": true
+        },
+        "shape": [
+          3,
+          4
+        ]
+      },
+      "note": "Append a length-three column to reach a rectangular shape while retaining negative entries.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "end_turn",
+      "turn": 1,
+      "note": "student budget test",
+      "drawn": {
+        "operations": [
+          "O05",
+          "O33",
+          "O29"
+        ],
+        "red": [
+          "R11",
+          "R03",
+          "R22",
+          "R12",
+          "R01"
+        ]
+      }
+    },
+    {
+      "type": "play",
+      "turn": 2,
+      "operation": "O33",
+      "code": "shift_plus",
+      "red": null,
+      "params": {
+        "axis": "row",
+        "source": null,
+        "target": null,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2
+      },
+      "before": [
+        [
+          0,
+          -1,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          -3,
+          0
+        ],
+        [
+          1,
+          2,
+          0,
+          -1
+        ]
+      ],
+      "after": [
+        [
+          1,
+          0,
+          1,
+          2
+        ],
+        [
+          1,
+          2,
+          -2,
+          1
+        ],
+        [
+          2,
+          3,
+          1,
+          0
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "row_sums_n": false,
+          "column_sums_m": false,
+          "negative_entry": true
+        },
+        "shape": [
+          3,
+          4
+        ]
+      },
+      "note": "Raise the mostly low entries by one; the first row currently sums to zero and needs four.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "end_turn",
+      "turn": 2,
+      "note": "student budget test",
+      "drawn": {
+        "operations": [
+          "O35",
+          "O31",
+          "O07"
+        ],
+        "red": [
+          "R29",
+          "R15",
+          "R30",
+          "R13",
+          "R04"
+        ]
+      }
+    },
+    {
+      "type": "play",
+      "turn": 3,
+      "operation": "O20",
+      "code": "add_vector",
+      "red": "R29",
+      "params": {
+        "axis": "row",
+        "source": 0,
+        "target": 1,
+        "i": null,
+        "j": null,
+        "factor": "L",
+        "exponent": 2
+      },
+      "before": [
+        [
+          1,
+          0,
+          1,
+          2
+        ],
+        [
+          1,
+          2,
+          -2,
+          1
+        ],
+        [
+          2,
+          3,
+          1,
+          0
+        ]
+      ],
+      "after": [
+        [
+          1,
+          0,
+          1,
+          2
+        ],
+        [
+          2,
+          3,
+          -1,
+          0
+        ],
+        [
+          2,
+          3,
+          1,
+          0
+        ]
+      ],
+      "changed": true,
+      "check": {
+        "won": false,
+        "checks": {
+          "shape": true,
+          "row_sums_n": false,
+          "column_sums_m": false,
+          "negative_entry": true
+        },
+        "shape": [
+          3,
+          4
+        ]
+      },
+      "note": "The second row is short of four; add the visible row whose sum is two.",
+      "drawn": {
+        "operations": [],
+        "red": []
+      }
+    },
+    {
+      "type": "stop",
+      "turn": 3,
+      "note": "Three legal turns produced a rectangle and a useful row correction, but I see no simple next move to balance the remaining rows and columns with this hand."
+    }
+  ],
+  "operation_draw": [
+    "O25",
+    "O18",
+    "O34",
+    "O24",
+    "O23",
+    "O37",
+    "O08",
+    "O32",
+    "O09",
+    "O12",
+    "O17",
+    "O30",
+    "O38",
+    "O13",
+    "O15",
+    "O19",
+    "O39",
+    "O14",
+    "O27",
+    "O40",
+    "O10",
+    "O28",
+    "O22",
+    "O11",
+    "O02",
+    "O03",
+    "O06",
+    "O36",
+    "O01",
+    "O04",
+    "O16"
+  ],
+  "operation_hand": [
+    "O26",
+    "O05",
+    "O29",
+    "O35",
+    "O31",
+    "O07"
+  ],
+  "operation_discard": [
+    "O21",
+    "O33",
+    "O20"
+  ],
+  "operation_cycles": 0,
+  "red_draw": [
+    "R14",
+    "R07",
+    "R18",
+    "R26",
+    "R27",
+    "R17",
+    "R10",
+    "R19",
+    "R16",
+    "R25",
+    "R08",
+    "R28",
+    "R21",
+    "R09",
+    "R24"
+  ],
+  "red_hand": [
+    "R20",
+    "R06",
+    "R05",
+    "R02",
+    "R11",
+    "R03",
+    "R22",
+    "R12",
+    "R01",
+    "R15",
+    "R30",
+    "R13",
+    "R04"
+  ],
+  "red_discard": [
+    "R23",
+    "R29"
+  ],
+  "red_cycles": 0,
+  "student_budget": {
+    "protocol": "student_tests/PROTOCOL.md",
+    "plans": [
+      {
+        "id": 1,
+        "turn": 1,
+        "at_move": 0,
+        "operation": "O21",
+        "red": "R23",
+        "params": {
+          "axis": "column",
+          "source": 0,
+          "target": null,
+          "i": null,
+          "j": null,
+          "factor": "L",
+          "exponent": 2
+        },
+        "note": "Append a length-three column to reach a rectangular shape while retaining negative entries.",
+        "attempted": true
+      },
+      {
+        "id": 2,
+        "turn": 2,
+        "at_move": 1,
+        "operation": "O33",
+        "red": null,
+        "params": {
+          "axis": "row",
+          "source": null,
+          "target": null,
+          "i": null,
+          "j": null,
+          "factor": "L",
+          "exponent": 2
+        },
+        "note": "Raise the mostly low entries by one; the first row currently sums to zero and needs four.",
+        "attempted": true
+      },
+      {
+        "id": 3,
+        "turn": 3,
+        "at_move": 2,
+        "operation": "O20",
+        "red": "R29",
+        "params": {
+          "axis": "row",
+          "source": 0,
+          "target": 1,
+          "i": null,
+          "j": null,
+          "factor": "L",
+          "exponent": 2
+        },
+        "note": "The second row is short of four; add the visible row whose sum is two.",
+        "attempted": true
+      }
+    ],
+    "previews": [
+      {
+        "turn": 2,
+        "plan": 2,
+        "result": [
+          [
+            1,
+            0,
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            -2,
+            1
+          ],
+          [
+            2,
+            3,
+            1,
+            0
+          ]
+        ]
+      }
+    ],
+    "candidate_limit_per_turn": 2,
+    "preview_limit_per_turn": 1,
+    "preview_limit_total": 6
+  },
+  "experiment_phase": "formal",
+  "stop_reason": "Three legal turns produced a rectangle and a useful row correction, but I see no simple next move to balance the remaining rows and columns with this hand."
+}

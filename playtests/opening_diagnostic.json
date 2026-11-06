@@ -1,0 +1,293 @@
+{
+  "kind": "gametrix-opening-diagnostic",
+  "deck_sha256": "a71ff8f4cd105b923a74f191cd32e1ded855a2792d72c4005c74dd57f03615c3",
+  "assumptions": "Uniform independent deck shuffles, 3 operations and 5 red cards, invertible 3x3 starts; legal unchanged results allowed; no rescue draw or free pass.",
+  "per_blue": [
+    {
+      "blue": "B01",
+      "lu_legal": true,
+      "probability": "265127/140795928",
+      "percent": 0.18830587202777624
+    },
+    {
+      "blue": "B02",
+      "lu_legal": true,
+      "probability": "265127/140795928",
+      "percent": 0.18830587202777624
+    },
+    {
+      "blue": "B03",
+      "lu_legal": false,
+      "probability": "348139/140795928",
+      "percent": 0.24726496351513802
+    },
+    {
+      "blue": "B04",
+      "lu_legal": true,
+      "probability": "265127/140795928",
+      "percent": 0.18830587202777624
+    },
+    {
+      "blue": "B05",
+      "lu_legal": false,
+      "probability": "348139/140795928",
+      "percent": 0.24726496351513802
+    },
+    {
+      "blue": "B06",
+      "lu_legal": false,
+      "probability": "348139/140795928",
+      "percent": 0.24726496351513802
+    },
+    {
+      "blue": "B07",
+      "lu_legal": false,
+      "probability": "348139/140795928",
+      "percent": 0.24726496351513802
+    },
+    {
+      "blue": "B08",
+      "lu_legal": false,
+      "probability": "348139/140795928",
+      "percent": 0.24726496351513802
+    },
+    {
+      "blue": "B09",
+      "lu_legal": true,
+      "probability": "265127/140795928",
+      "percent": 0.18830587202777624
+    },
+    {
+      "blue": "B10",
+      "lu_legal": false,
+      "probability": "348139/140795928",
+      "percent": 0.24726496351513802
+    },
+    {
+      "blue": "B11",
+      "lu_legal": false,
+      "probability": "348139/140795928",
+      "percent": 0.24726496351513802
+    },
+    {
+      "blue": "B12",
+      "lu_legal": true,
+      "probability": "265127/140795928",
+      "percent": 0.18830587202777624
+    }
+  ],
+  "uniform_blue_mean": {
+    "probability": "12377/5557734",
+    "percent": 0.22269867539540397
+  },
+  "blocked_example": {
+    "mode": "draw",
+    "player": "diagnostic",
+    "seed": 399,
+    "blue": "B01",
+    "turn": 1,
+    "turn_operations": 0,
+    "moves": 0,
+    "status": "active",
+    "current": [
+      [
+        1,
+        2,
+        2
+      ],
+      [
+        1,
+        -1,
+        2
+      ],
+      [
+        0,
+        -2,
+        -2
+      ]
+    ],
+    "objective": {
+      "id": "C01",
+      "name": "Mirror Match",
+      "shape": "Square 2–4",
+      "goal": "Make an invertible, non-diagonal symmetric matrix: Aᵀ = A and det(A) ≠ 0."
+    },
+    "facts": {
+      "shape": [
+        3,
+        3
+      ],
+      "rank": 3,
+      "determinant": 6,
+      "row_sums": [
+        5,
+        2,
+        -4
+      ],
+      "column_sums": [
+        2,
+        -1,
+        2
+      ]
+    },
+    "check": {
+      "won": false,
+      "checks": {
+        "shape": true,
+        "symmetric": false,
+        "invertible": true,
+        "non_diagonal": true
+      },
+      "shape": [
+        3,
+        3
+      ]
+    },
+    "remaining": {
+      "operation": {
+        "hand": 3,
+        "draw": 37,
+        "discard": 0
+      },
+      "red": {
+        "hand": 5,
+        "draw": 25,
+        "discard": 0
+      }
+    },
+    "operation_hand": {
+      "subtract": [
+        "O10"
+      ],
+      "add": [
+        "O05",
+        "O03"
+      ]
+    },
+    "red_hand": [
+      {
+        "id": "R17",
+        "shape": [
+          2,
+          3
+        ],
+        "matrix": [
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ]
+        ]
+      },
+      {
+        "id": "R21",
+        "shape": [
+          3,
+          4
+        ],
+        "matrix": [
+          [
+            0,
+            0,
+            0,
+            -1
+          ],
+          [
+            1,
+            1,
+            0,
+            1
+          ],
+          [
+            -1,
+            0,
+            1,
+            0
+          ]
+        ]
+      },
+      {
+        "id": "R02",
+        "shape": [
+          2,
+          2
+        ],
+        "matrix": [
+          [
+            -1,
+            0
+          ],
+          [
+            0,
+            -1
+          ]
+        ]
+      },
+      {
+        "id": "R05",
+        "shape": [
+          4,
+          4
+        ],
+        "matrix": [
+          [
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ]
+        ]
+      },
+      {
+        "id": "R30",
+        "shape": [
+          4,
+          2
+        ],
+        "matrix": [
+          [
+            1,
+            -1
+          ],
+          [
+            1,
+            -1
+          ],
+          [
+            1,
+            -1
+          ],
+          [
+            -1,
+            1
+          ]
+        ]
+      }
+    ]
+  },
+  "example_note": "First blocked seed in 0..9999 for B01. Deliberately selected diagnostic; exclude from random-play win statistics.",
+  "scope": "Proves a turn cannot legally proceed under the present rules. Does not prove the objective is mathematically unreachable with other cards or rules."
+}

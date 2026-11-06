@@ -1,0 +1,153 @@
+{
+  "kind": "gametrix-session",
+  "version": 1,
+  "deck": "/Users/qizhengwang/Desktop/school/GameTrix/generated/deck.json",
+  "deck_sha256": "38824be5406d3dca771a06dba3b5017253913858f049328d87b5c11e3bad2035",
+  "seed": 306,
+  "objective": {
+    "id": "C14",
+    "name": "Zero-sum Orthogonal Rows",
+    "tier": "Advanced",
+    "shape": "Wide: 2×3, 2×4, or 3×4",
+    "goal": "Make a wide matrix with nonzero pairwise orthogonal rows, every row sum 0, and no zero columns. Equivalently, A1ₙ = 0 and AAᵀ is diagonal with positive diagonal entries, where 1ₙ is the column vector of n ones.",
+    "A": [
+      [
+        1,
+        -1,
+        0
+      ],
+      [
+        1,
+        1,
+        -2
+      ]
+    ],
+    "check": "Both row sums are 0, their dot product is 0, and AAᵀ = diag(2,6). No column is zero.",
+    "note": "This intentionally strengthens C12 by putting the all-ones vector in the nullspace. Wide shape is necessary: independent zero-sum rows lie in an (n−1)-dimensional subspace."
+  },
+  "blue": "B06",
+  "current": [
+    [
+      -2,
+      0,
+      -1
+    ],
+    [
+      2,
+      0,
+      2
+    ],
+    [
+      2,
+      2,
+      1
+    ]
+  ],
+  "mode": "draw",
+  "player": "student",
+  "turn_cap": 8,
+  "move_cap": 16,
+  "turn": 1,
+  "turn_operations": 0,
+  "moves": 0,
+  "status": "stopped",
+  "history": [
+    {
+      "type": "stop",
+      "turn": 1,
+      "note": "The starting matrix is square, while the objective requires a wide shape; this hand has no append operation, and I cannot see a useful first move toward that shape."
+    }
+  ],
+  "operation_draw": [
+    "O35",
+    "O37",
+    "O40",
+    "O05",
+    "O22",
+    "O13",
+    "O21",
+    "O17",
+    "O07",
+    "O23",
+    "O38",
+    "O39",
+    "O32",
+    "O29",
+    "O19",
+    "O06",
+    "O12",
+    "O34",
+    "O36",
+    "O11",
+    "O04",
+    "O31",
+    "O01",
+    "O08",
+    "O27",
+    "O30",
+    "O15",
+    "O10",
+    "O09",
+    "O16",
+    "O26",
+    "O18",
+    "O02",
+    "O14",
+    "O33",
+    "O24",
+    "O25"
+  ],
+  "operation_hand": [
+    "O20",
+    "O28",
+    "O03"
+  ],
+  "operation_discard": [],
+  "operation_cycles": 0,
+  "red_draw": [
+    "R16",
+    "R10",
+    "R12",
+    "R24",
+    "R07",
+    "R25",
+    "R06",
+    "R08",
+    "R30",
+    "R21",
+    "R13",
+    "R14",
+    "R29",
+    "R02",
+    "R05",
+    "R15",
+    "R23",
+    "R11",
+    "R20",
+    "R26",
+    "R09",
+    "R01",
+    "R22",
+    "R17",
+    "R27"
+  ],
+  "red_hand": [
+    "R03",
+    "R18",
+    "R04",
+    "R19",
+    "R28"
+  ],
+  "red_discard": [],
+  "red_cycles": 0,
+  "student_budget": {
+    "protocol": "student_tests/PILOT_PROTOCOL.md",
+    "plans": [],
+    "previews": [],
+    "candidate_limit_per_turn": 2,
+    "preview_limit_per_turn": 1,
+    "preview_limit_total": 6
+  },
+  "stop_reason": "The starting matrix is square, while the objective requires a wide shape; this hand has no append operation, and I cannot see a useful first move toward that shape.",
+  "experiment_phase": "pilot"
+}

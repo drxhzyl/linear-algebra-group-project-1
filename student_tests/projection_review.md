@@ -1,0 +1,5 @@
+# Limited-calculation student play review
+
+- **student03 (seed 206, Projection):** Stopped after one committed addition of a visible 3×3 card. Its entries did not reveal a simple projection pattern, and I could not identify a sensible next correction from the cards in view. No win; this was an honest planning stop, not evidence that the goal is impossible.
+- **student04 (seed 301, Orthogonal Columns):** Committed an addition using the negative identity card as a simple diagonal adjustment, then appended a visible row vector to reach the allowed 4×3 shape. The new matrix still did not show an obvious route to pairwise orthogonal columns, so I stopped. No win; I did not establish impossibility.
+- The visible aims for the two committed choices were straightforward, but the follow-up choices became unclear once those moves failed to produce a recognizable goal pattern. I made one preview in student03. In student04 I accidentally requested a stale plan for preview after ending the turn; the wrapper rejected it and the rejected preview did not consume the budget. I then played the current plan directly.
